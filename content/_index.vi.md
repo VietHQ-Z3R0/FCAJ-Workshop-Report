@@ -8,11 +8,11 @@ chapter: false
 # Báo cáo thực tập
 
 ### Thông tin sinh viên:
-&emsp; **Họ và tên:** Kung Cẩm Thành
+&emsp; **Họ và tên:** Hoàng Quốc Việt
 
-&emsp; **Số điện thoại:** 0908122927
+&emsp; **Số điện thoại:** 0386235270
 
-&emsp; **Email:** madlyhamm@gmail.com
+&emsp; **Email:** viet03948@gmail.com
 
 &emsp; **Trường:** Đại học FPT
 

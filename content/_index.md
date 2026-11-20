@@ -8,11 +8,11 @@ chapter: false
 # Internship Report
 
 ### Student Information:
-&emsp; **Full Name:** Kung Cẩm Thành
+&emsp; **Full Name:** Hoàng Quốc Việt
 
-&emsp; **Phone Number:** 0908122927 
+&emsp; **Phone Number:** 0386235270
 
-&emsp; **Email:** madlyhamm@gmail.com
+&emsp; **Email:** viet03948@gmail.com
 
 &emsp; **University:** FPT University
 
