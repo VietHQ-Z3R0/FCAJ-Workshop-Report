@@ -1,4 +1,3 @@
-
 ---
 title: "Self-evaluation"
 date: 2026-11-07
