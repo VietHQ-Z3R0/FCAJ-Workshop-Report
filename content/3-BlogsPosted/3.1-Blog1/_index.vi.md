@@ -1,42 +1,47 @@
 ---
 title: "Blog 1"
-date: 2026-11-07
+date: 2026-10-22
 weight: 1
 chapter: false
 pre: " <b> 3.1. </b> "
 ---
 
-# Một cái ghế, hai người, và một database không biết nhường nhịn
+# QUẢN LÝ VÒNG ĐỜI ĐỐI TƯỢNG TRÊN AMAZON S3 ĐỂ TỐI ƯU CHI PHÍ LƯU TRỮ
 
-Hãy tưởng tượng một nền tảng kết nối khách hàng với đối tác, nơi mỗi công việc chỉ được một người nhận. Partner A và Partner B cùng thấy một công việc, và cả hai cùng bấm “Nhận việc” gần như cùng lúc.
+## Tổng quan
 
-Nếu backend xử lý theo kiểu:
+Các đối tượng được lưu trên Amazon S3 không phải lúc nào cũng cần giữ nguyên một storage class trong suốt vòng đời. Chẳng hạn, một tệp có thể được truy cập thường xuyên ngay sau khi tải lên nhưng ít được sử dụng hơn sau một khoảng thời gian. Việc giữ tất cả dữ liệu trong storage class có chi phí cao có thể làm tăng chi phí lưu trữ không cần thiết.
 
-1. Kiểm tra xem công việc còn trống không.  
-2. Nếu còn thì cập nhật người nhận.
+Amazon S3 Lifecycle hỗ trợ tự động hóa quá trình này. Thông qua lifecycle rules, quản trị viên có thể xác định thời điểm đối tượng được chuyển sang storage class khác hoặc hết hạn sau khi không còn cần thiết. Cách tiếp cận này giảm thao tác dọn dẹp thủ công và giúp quản lý dữ liệu nhất quán hơn khi dung lượng lưu trữ tăng lên.
 
-thì chúc mừng, bạn vừa tạo ra một công việc có hai chủ. Một cái ghế mà hai người cùng ngồi.
+## Các điểm chính cần nắm
 
-**Giải quyết thế nào?**
+* Một lifecycle configuration gồm các rules áp dụng cho toàn bộ đối tượng trong bucket hoặc cho nhóm đối tượng được chọn bằng bộ lọc như prefix hay object tags.
+* Hành động **Transition** chuyển các đối tượng đủ điều kiện sang storage class được chọn sau một khoảng thời gian hoặc tại một thời điểm xác định.
+* Hành động **Expiration** xóa đối tượng khi đạt đến thời hạn lưu trữ đã cấu hình.
+* Với bucket bật versioning, lifecycle còn có thể quản lý các phiên bản cũ thông qua những hành động riêng như chuyển hoặc hết hạn noncurrent versions.
+* Mỗi storage class có đặc điểm khác nhau về chi phí, khả năng truy xuất, tính sẵn sàng và thời gian lưu trữ tối thiểu. Vì vậy, cần chọn storage class dựa trên tần suất truy cập dự kiến, không chỉ dựa vào giá lưu trữ.
+* Lifecycle rules phù hợp để tự động hóa chính sách lưu giữ dữ liệu cho tệp tải lên tạm thời, application logs, bản sao lưu và dữ liệu lưu trữ dài hạn.
 
-Thay vì để hai bên tự “thương lượng” với nhau, ta giao việc đó cho Amazon DynamoDB làm người gác cửa. Cách làm như sau:
+## Ví dụ sử dụng
 
-* AWS Lambda nhận request và tạo một transaction bằng `TransactWriteItems`.  
-* DynamoDB thực hiện hai thao tác nguyên tử trong cùng một transaction: cập nhật công việc chỉ khi trạng thái vẫn là `OPEN`, đồng thời ghi lại Idempotency Key để chống xử lý trùng.  
-* Chỉ một transaction giành được công việc. Người còn lại nhận về kết quả xung đột.  
-* Nếu người thắng gửi lại request vì bị timeout, backend sẽ đọc kết quả idempotency đã lưu thay vì chạy lại các side effect.
+Xét một ứng dụng tiếp nhận tệp thông qua quy trình upload. Các đối tượng mới tải lên có thể cần được giữ trong storage class dễ truy cập trong lúc hệ thống xử lý. Khi những tệp này không còn được sử dụng thường xuyên, lifecycle rule có thể chuyển chúng sang storage class tiết kiệm hơn. Các đối tượng tạm thời cũng có thể được tự động hết hạn sau khoảng thời gian lưu giữ do ứng dụng quy định.
 
-Cái hay ở đây là mình không cần đoán xem ai bấm nhanh hơn vài mili giây. Database sẽ quyết định dựa trên trạng thái thực tế ngay tại thời điểm ghi.
+Cách làm này tách biệt logic upload và xử lý của ứng dụng khỏi công việc quản lý lưu trữ dài hạn. Ứng dụng không cần chạy một tác vụ định kỳ để kiểm tra từng đối tượng rồi tự di chuyển hoặc xóa chúng.
 
-**Cần kiểm chứng điều gì?**
+## Những điểm cần lưu ý
 
-Bắn hai request từ hai người khác nhau vào cùng một công việc, gần như đồng thời. Kết quả đúng phải là chỉ một người nhận được việc. Sau đó replay request của người thắng và kiểm tra xem có phát sinh tác dụng phụ trùng lặp nào không.
+Trước khi bật lifecycle rule, cần xác định chính xác nhóm đối tượng chịu tác động và kiểm tra yêu cầu lưu giữ dữ liệu. Với bucket bật versioning, việc hết hạn phiên bản hiện tại có thể tạo delete marker thay vì xóa vĩnh viễn mọi phiên bản đã lưu. Vì vậy, các phiên bản cũ có thể cần lifecycle actions riêng. Ngoài ra, cần xem xét phí truy xuất và thời gian lưu trữ tối thiểu của storage class được chọn.
 
-Một transaction, một người thắng, không cần trọng tài.
+## Hình ảnh
 
-*Lưu ý: đây là kiến trúc và thiết kế kiểm thử đề xuất, chưa phải kết quả triển khai thực tế.*
+<!-- Thêm sơ đồ kiến trúc S3 Lifecycle hoặc ảnh chụp cấu hình lifecycle rule tại đây. -->
 
+## Link
 
-#AWS #DynamoDB #Serverless #RaceCondition #Engineering
+<!-- Dán đường dẫn bài đăng Facebook trong AWS Study Group tại đây. -->
 
-![](/images/report/image1.png)
+## Tài liệu hướng dẫn
+
+* [Quản lý vòng đời lưu trữ Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lifecycle-mgmt.html)
+* [Các thành phần của lifecycle configuration](https://docs.aws.amazon.com/AmazonS3/latest/userguide/intro-lifecycle-rules.html)

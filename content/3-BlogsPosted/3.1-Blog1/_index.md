@@ -1,42 +1,47 @@
 ---
 title: "Blog 1"
-date: 2026-11-07
+date: 2026-10-22
 weight: 1
 chapter: false
 pre: " <b> 3.1. </b> "
 ---
 
-# One Chair, Two People, and an Unforgiving Database
+# MANAGING AMAZON S3 OBJECT LIFECYCLE TO OPTIMIZE STORAGE COSTS
 
-Imagine a platform connecting customers with service partners, where each job can only be accepted by one person. Partner A and Partner B see the same listing, and both click "Accept Job" almost simultaneously.
+## Overview
 
-If the backend handles it naively:
+Objects stored in Amazon S3 do not always need to remain in the same storage class throughout their lifetime. For example, files that are accessed frequently immediately after upload may become rarely accessed after a period of time. Keeping every object in a high-cost storage class can therefore increase storage expenses unnecessarily.
 
-1. Check if the job is still available.  
-2. If available, update the assignee.
+Amazon S3 Lifecycle helps automate this process. By defining lifecycle rules, an administrator can specify when objects should transition to another storage class or expire after they are no longer required. This reduces the need for manual cleanup and makes storage management more consistent as the amount of data grows.
 
-Congratulations, you've just assigned two owners to a single job. One chair, two people trying to sit at once.
+## Key points to know
 
-**How to Solve This?**
+* A lifecycle configuration contains rules that apply to all objects in a bucket or to objects selected by filters such as a prefix or object tags.
+* A **Transition** action moves eligible objects to a selected S3 storage class after a specified period or date.
+* An **Expiration** action removes objects when they reach the configured retention age.
+* For versioning-enabled buckets, lifecycle management can also handle noncurrent object versions through separate noncurrent-version transition and expiration actions.
+* Storage classes have different cost, retrieval, availability, and minimum-storage-duration characteristics. The target class should match the expected access pattern rather than being selected by storage price alone.
+* Lifecycle rules are useful for automating retention policies for temporary uploads, application logs, backups, and archived files.
 
-Instead of having two sides negotiate with each other, we appoint Amazon DynamoDB as the strict gatekeeper:
+## Example use case
 
-* AWS Lambda receives the request and builds a transaction using `TransactWriteItems`.  
-* DynamoDB executes two atomic operations in the same transaction: it updates the job status only if its current state is `OPEN`, and simultaneously persists an Idempotency Key to guard against duplicate processing.  
-* Only one transaction wins the job. The competing transaction receives a conditional check failure/conflict error.  
-* If the winner resends the request due to a network timeout, the backend reads the stored idempotency result rather than re-executing side effects.
+Consider an application that receives files through an upload workflow. Recently uploaded objects may need to remain in a frequently accessible storage class while the application processes them. After the files become inactive, a lifecycle rule can transition eligible objects to a more economical storage class. Temporary objects can also be expired after the retention period defined by the application.
 
-The elegance here is that we don't need to guess who clicked a few milliseconds faster. The database decides deterministically based on real-time state at the exact moment of write.
+This approach separates the application's upload and processing logic from long-term storage housekeeping. The application does not need to run a scheduled job to inspect every object and move or delete it individually.
 
-**What Needs Verification?**
+## Important considerations
 
-Fire two concurrent requests from different users targeting the same job record. The expected outcome is that exactly one user claims the job. Then, replay the winner's request and verify that no duplicate side effects are triggered.
+Before enabling a lifecycle rule, define which objects it should affect and confirm the retention requirements. In a versioning-enabled bucket, expiring the current version may create a delete marker rather than permanently deleting every stored version. Noncurrent versions may therefore need their own lifecycle actions. Also review retrieval charges and minimum storage duration for the chosen storage class.
 
-One transaction, one winner, no human referee required.
+## Image
 
-*Note: This architecture and testing design is a proposed pattern.*
+<!-- Add the S3 Lifecycle architecture diagram or a screenshot of the lifecycle rule here. -->
 
+## Link
 
-#AWS #DynamoDB #Serverless #RaceCondition #Engineering
+<!-- Paste the Facebook AWS Study Group post URL here. -->
 
-![](/images/report/image1.png)
+## Guide
+
+* [Managing your Amazon S3 storage lifecycle](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lifecycle-mgmt.html)
+* [Lifecycle configuration elements](https://docs.aws.amazon.com/AmazonS3/latest/userguide/intro-lifecycle-rules.html)

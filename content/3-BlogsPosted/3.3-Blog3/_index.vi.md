@@ -1,47 +1,47 @@
 ---
 title: "Blog 3"
-date: 2026-11-07
+date: 2026-11-05
 weight: 3
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
 
-# Đối tác đã tắt ứng dụng, nhưng công việc vẫn phải tìm đến họ
+# AURORA SERVERLESS V2: TỰ ĐỘNG TẠM DỪNG VÀ KHỞI ĐỘNG LẠI ĐỂ TỐI ƯU CHI PHÍ DATABASE
 
-Một tình huống khá quen thuộc: khách hàng đăng yêu cầu dịch vụ, hệ thống cần tìm các đối tác phù hợp và gửi lời mời báo giá. Nhưng đối tác lại đang offline. Họ không mở app, không có mạng, có khi điện thoại còn đang nằm úp trên bàn.
+## Tổng quan
 
-Vậy có phải ta phải chờ họ online rồi mới gửi lời mời được không? Không cần. Hãy thử xây một hệ thống mà backend vẫn làm việc bình thường ngay cả khi người nhận chưa xuất hiện.
+Một số ứng dụng sử dụng database nhiều trong giờ làm việc nhưng có thời gian dài ít hoạt động ngoài khung giờ đó. Với cấu hình database luôn duy trì compute capacity, chi phí có thể không phản ánh sát nhu cầu sử dụng thực tế.
 
-**Kiến trúc đề xuất**
+Amazon Aurora Serverless v2 có thể tự động điều chỉnh capacity dựa trên workload. Với các phiên bản Aurora engine được hỗ trợ, dịch vụ còn có thể giảm capacity xuống **0 Aurora Capacity Units (ACUs)** và tự động tạm dừng sau một khoảng thời gian được cấu hình mà không có hoạt động do người dùng khởi tạo. Khi có yêu cầu kết nối mới, database có thể tự động hoạt động trở lại.
 
-1. Khách hàng tạo công việc qua Amazon API Gateway.  
-2. AWS Lambda lưu công việc vào DynamoDB và phát sự kiện `JobCreated` tới Amazon EventBridge.  
-3. EventBridge chuyển sự kiện vào Amazon SQS để xử lý bất đồng bộ.  
-4. Một Lambda Matcher tìm danh sách đối tác phù hợp qua GSI của DynamoDB, dựa trên khu vực và loại dịch vụ.  
-5. Hệ thống lưu từng lời mời vào bảng Offers, dùng cặp `partnerId + jobId` làm định danh để chống trùng.  
-6. Amazon SNS gửi push notification như một lời nhắc, chứ không phải nơi lưu lời mời.
+## Các điểm chính cần nắm
 
-**Điểm mấu chốt**
+* Capacity của Aurora Serverless v2 được đo bằng ACUs. Mỗi ACU đại diện cho một tổ hợp tài nguyên xử lý và bộ nhớ.
+* Để sử dụng automatic pause, cần cấu hình minimum capacity của cluster bằng **0 ACUs** và thiết lập khoảng thời gian không hoạt động trước khi tạm dừng.
+* Khi một instance đủ điều kiện không có kết nối do người dùng khởi tạo trong khoảng thời gian đã cấu hình, instance có thể tự động pause; yêu cầu kết nối tiếp theo có thể kích hoạt quá trình resume.
+* Không phát sinh chi phí instance capacity trong thời gian instance ở trạng thái paused. Tuy nhiên, vẫn cần tính đến các khoản phí database khác, chẳng hạn storage, khi ước tính tổng chi phí.
+* Automatic pause chỉ khả dụng với các phiên bản engine Aurora PostgreSQL và Aurora MySQL cùng cấu hình được hỗ trợ. Cần kiểm tra compatibility và limitations hiện hành trước khi bật.
+* Ứng dụng cần chấp nhận độ trễ trong lúc instance resume. AWS ghi nhận thời gian resume điển hình có thể khoảng 15 giây với một hoặc một số ít kết nối đến.
 
-Lời mời được lưu trước, thông báo gửi sau. Nên dù đối tác đang offline lúc công việc được tạo, lời mời vẫn nằm yên trong database. Khi họ mở app trở lại, frontend gọi `GET /my-offers` và backend trả về những lời mời đã lưu.
+## Ví dụ sử dụng
 
-Mình không cần hy vọng push notification lúc nào cũng đến nơi. Push chỉ là tiếng gõ cửa, còn DynamoDB mới là nơi giữ lá thư.
+Xét một ứng dụng phát triển nội bộ chủ yếu được sử dụng vào buổi sáng và có rất ít lưu lượng vào ban đêm. Khi Aurora Serverless v2 được cấu hình minimum capacity bằng 0 ACUs, database instance đủ điều kiện có thể tự động pause sau khoảng thời gian không hoạt động đã thiết lập. Khi người dùng quay lại và ứng dụng mở kết nối database, instance sẽ resume để tiếp tục xử lý yêu cầu.
 
-Còn nếu EventBridge phát lại sự kiện, hoặc SQS giao một message nhiều lần thì sao? Conditional Put sẽ ngăn việc tạo ra nhiều lời mời giống hệt nhau. Những message cứ lỗi mãi có thể được chuyển sang Dead-Letter Queue để kiểm tra sau.
+Cách triển khai này có thể giảm chi phí compute capacity trong những khoảng thời gian dài không sử dụng mà không cần quản trị viên phải dừng và khởi động database thủ công mỗi ngày. Tính năng phù hợp nhất với workload có thể chấp nhận độ trễ resume và không yêu cầu truy cập database liên tục với độ trễ thấp.
 
-**Cần kiểm chứng điều gì?**
+## Những điểm cần lưu ý
 
-* Tạo một công việc khi đối tác đang offline.  
-* Xác nhận lời mời vẫn được lưu.  
-* Mở app sau đó và lấy lại lời mời.  
-* Replay cùng một event nhiều lần, kiểm tra số lượng offer không bị nhân đôi.  
-* Thử một message lỗi để kiểm tra DLQ.
+Automatic pause không xảy ra chỉ vì ứng dụng không gửi câu lệnh SQL. Các kết nối do người dùng khởi tạo vẫn đang mở có thể ngăn instance pause; một số tính năng hoặc cấu hình cluster cũng có thể ảnh hưởng đến điều kiện này. Cần xác nhận engine version hỗ trợ 0 ACUs, đọc các giới hạn được AWS công bố và kiểm thử cơ chế retry/timeout khi kết nối. Các CloudWatch metrics như `ServerlessDatabaseCapacity` có thể giúp xác minh instance đã giảm về zero capacity hay chưa.
 
-Một hệ thống tốt không cần người dùng online 24/7 thì backend mới hoàn thành được việc của mình.
+## Hình ảnh
 
-*Lưu ý: đây là kiến trúc và thiết kế kiểm thử đề xuất, chưa phải kết quả triển khai thực tế.*
+<!-- Thêm sơ đồ Aurora Serverless v2 hoặc ảnh chụp cấu hình minimum capacity và auto-pause tại đây. -->
 
+## Link
 
-#AWS #EventDrivenArchitecture #SQS #EventBridge #Lambda #DynamoDB #SNS
+<!-- Dán đường dẫn bài đăng Facebook trong AWS Study Group tại đây. -->
 
-![](/images/report/image3.png)
+## Tài liệu hướng dẫn
+
+* [Scaling về 0 ACUs với automatic pause và resume](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2-auto-pause.html)
+* [Cách Aurora Serverless v2 hoạt động](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.how-it-works.html)

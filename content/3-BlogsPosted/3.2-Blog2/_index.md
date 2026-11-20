@@ -1,50 +1,47 @@
 ---
 title: "Blog 2"
-date: 2026-11-07
+date: 2026-10-28
 weight: 2
 chapter: false
 pre: " <b> 3.2. </b> "
 ---
 
-# You Have a Valid Passport, But Do You Have the Right to Renovate Your Neighbor's House?
+# AWS SAVINGS PLANS: OPTIMIZING COMPUTE COSTS THROUGH LONG-TERM USAGE COMMITMENTS
 
-There is an intriguing security vulnerability in web application development that is easy to overlook. A user signs in successfully, provides a cryptographically valid token, and the API responds normally. But does that mean they have the right to edit every post in the system? Absolutely not.
+## Overview
 
-Consider this scenario:
+In many cloud environments, compute workloads run continuously or follow a predictable usage pattern. Paying On-Demand rates for all of this baseline usage can make costs harder to optimize. AWS Savings Plans provide a pricing model that offers lower rates in exchange for a commitment to a consistent amount of eligible compute usage, measured in dollars per hour, over a one- or three-year term.
 
-* User A logs in successfully.  
-* User B creates a post with ID `123`.  
-* User A issues a `PATCH /posts/123` request to update B's post.
+Savings Plans do not require an application to use a fixed number of instances at all times. Instead, AWS applies the benefit automatically to eligible usage, subject to the plan type and its terms. This can make them useful for workloads with a stable baseline while retaining the flexibility to scale resources when demand changes.
 
-If the backend only verifies that the JWT signature is valid, User A can alter User B's data at will (IDOR vulnerability).
+## Key points to know
 
-**Two Distinct Concepts**
+* A Savings Plan is based on a usage commitment expressed as a fixed amount of spend per hour for a one- or three-year term.
+* **Compute Savings Plans** provide flexibility across eligible Amazon EC2 instance usage regardless of instance family, size, operating system, tenancy, or AWS Region, and also apply to eligible AWS Fargate and AWS Lambda usage.
+* **EC2 Instance Savings Plans** provide discounted pricing for eligible EC2 usage within a chosen instance family and AWS Region, while allowing flexibility across sizes, operating systems, and tenancy within the plan's scope.
+* AWS applies Savings Plans benefits automatically to eligible usage; usage beyond the commitment is billed at the applicable On-Demand rates.
+* Payment options include No Upfront, Partial Upfront, and All Upfront, depending on the plan and purchase options available.
+* AWS Cost Explorer provides recommendations and reports that help evaluate commitment levels, utilization, and coverage.
 
-* **Authentication**: Who are you?  
-* **Authorization**: What are you permitted to do with this specific resource?
+## Example use case
 
-**How to Solve This?**
+Suppose an application has a compute workload that runs throughout the month with a relatively stable baseline, but it also experiences occasional traffic spikes. A team can review historical usage and Cost Explorer recommendations to estimate a commitment that covers part of the predictable baseline. The application can continue scaling when demand increases, while usage covered by the Savings Plan receives the applicable discounted rate.
 
-An architectural pattern that handles this cleanly:
+The commitment should be selected carefully. If eligible usage is consistently lower than the committed amount, part of the hourly commitment may remain unused. For this reason, historical usage, expected growth, workload changes, and the plan's flexibility should be reviewed before purchase.
 
-1. Amazon Cognito manages user identities and issues signed JWTs.  
-2. API Gateway JWT Authorizer verifies token authenticity before the request ever reaches backend compute.  
-3. AWS Lambda extracts the caller's unique `sub` from the verified token claims, rather than trusting any `ownerId` sent in the request payload.  
-4. When updating the record, Lambda issues a DynamoDB `UpdateItem` guarded by a condition expression: `ownerId = :callerSub`.
+## Important considerations
 
-If the caller is not the owner, the condition fails atomically and the operation is rejected.
+Savings Plans reduce eligible compute rates; they do not automatically reduce every AWS charge. Before purchasing, confirm which services and usage types are covered by the selected plan, compare one-year and three-year terms, and review estimated utilization and coverage. A conservative commitment based on a stable baseline is generally easier to manage than committing to short-lived peak demand.
 
-Key takeaway: Hiding the Edit button on the frontend is NOT security. An attacker can always forge HTTP calls directly against the endpoint.
+## Image
 
-**What Needs Verification?**
+<!-- Add the Savings Plans illustration, Cost Explorer screenshot, or comparison diagram here. -->
 
-Log in with User A's credentials, use A's valid token to attempt modifying User B's post. The expected result is successful authentication but strict authorization failure (403 Forbidden).
+## Link
 
-Holding a valid passport doesn't mean you own every house in the city.
+<!-- Paste the Facebook AWS Study Group post URL here. -->
 
-*Note: This architecture and testing design is a proposed pattern.*
+## Guide
 
-
-#AWS #Cognito #APIGateway #DynamoDB #CyberSecurity #Authorization
-
-![](/images/report/image2.png)
+* [What are Savings Plans?](https://docs.aws.amazon.com/savingsplans/latest/userguide/what-is-savings-plans.html)
+* [Savings Plans FAQs](https://aws.amazon.com/savingsplans/faqs/)

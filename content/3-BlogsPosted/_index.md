@@ -1,20 +1,18 @@
 ---
 title: "Blogs Posted"
-date: 2026-11-07
+date: 2026-10-22
 weight: 3
 chapter: false
 pre: " <b> 3. </b> "
 ---
 
-During my internship, I authored three technical blog posts published to the [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj) community, focusing on real-world cloud architecture, cybersecurity authorization patterns, and serverless concurrency control.
+This section presents three technical posts shared with the [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj). Each post summarizes an AWS service or capability, explains a practical use case, and links to the relevant AWS documentation.
 
-### Published Blog Articles
+### [Blog 1 - MANAGING AMAZON S3 OBJECT LIFECYCLE TO OPTIMIZE STORAGE COSTS](3.1-Blog1/)
+Published on 22 October 2026. This post explains how Amazon S3 Lifecycle rules automate object transitions and expiration based on retention requirements and access patterns.
 
-* **[Blog 1: One Chair, Two People, and an Unforgiving Database](3.1-Blog1/)**  
-  Solving distributed race conditions and duplicate job claims using DynamoDB atomic transactions (`TransactWriteItems`) and Idempotency Keys.
+### [Blog 2 - AWS SAVINGS PLANS: OPTIMIZING COMPUTE COSTS THROUGH LONG-TERM USAGE COMMITMENTS](3.2-Blog2/)
+Published on 28 October 2026. This post introduces Savings Plans and explains how commitment-based pricing can reduce eligible compute costs while preserving flexibility for changing workloads.
 
-* **[Blog 2: You Have a Valid Passport, But Do You Have the Right to Renovate Your Neighbor's House?](3.2-Blog2/)**  
-  Deconstructing Authentication vs. Authorization in modern cloud apps with Amazon Cognito, API Gateway JWT Authorizers, and DynamoDB condition expressions.
-
-* **[Blog 3: The Partner Has Closed the App, But Work Still Has to Find Them](3.3-Blog3/)**  
-  Building decoupled, offline-tolerant notification architectures with Amazon EventBridge, SQS FIFO queues, Lambda workers, and DynamoDB single-table design.
+### [Blog 3 - AURORA SERVERLESS V2: AUTOMATIC PAUSE AND RESUME FOR DATABASE COST OPTIMIZATION](3.3-Blog3/)
+Published on 5 November 2026. This post discusses Aurora Serverless v2 automatic pause and resume, the 0-ACU configuration, and key considerations for intermittent workloads.
