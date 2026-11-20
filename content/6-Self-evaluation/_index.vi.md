@@ -6,43 +6,57 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-# Báo cáo tự đánh giá kết quả thực tập
+# BÁO CÁO TỰ ĐÁNH GIÁ
 
-Trong suốt thời gian thực tập tại **Công ty TNHH Amazon Web Services Việt Nam (Workforce Bootcamp - First Cloud AI Journey)** từ **14/09/2026 đến 04/12/2026**, tôi đã có cơ hội quý báu để học hỏi, thực hành và áp dụng các kiến thức chuyên ngành An toàn thông tin và Điện toán đám mây tích lũy tại Đại học FPT vào môi trường sản xuất thực tế.
+Trong thời gian thực tập tại **Công ty TNHH Amazon Web Services Việt Nam (Workforce Bootcamp – First Cloud AI Journey)** từ **14/09/2026 đến 04/12/2026**, tôi có cơ hội mở rộng kiến thức về Điện toán đám mây, tìm hiểu các dịch vụ AWS và vận dụng những kiến thức chuyên ngành An toàn thông tin tại Đại học FPT vào các hoạt động kỹ thuật thực tế.
 
-Tôi đã tích cực tham gia với vai trò kỹ sư Backend AI và Hạ tầng đám mây cho dự án nền tảng kinh tế tuần hoàn **ReLoop**, chịu trách nhiệm thiết kế pipeline nhận diện thiết bị và kiểm duyệt nội dung tự động sử dụng Amazon Bedrock (Amazon Nova Pro), Amazon Rekognition, cấu trúc bảng đơn DynamoDB và Bedrock Guardrails phòng thủ tấn công visual prompt injection. Qua dự án này, tôi đã nâng cao rõ rệt năng lực chuyên môn về kiến trúc Serverless, tích hợp công cụ AI đa phương thức, DevSecOps, Hạ tầng dưới dạng mã (Terraform), đồng thời rèn luyện kỹ năng viết tài liệu kỹ thuật, rà soát mã nguồn (code review) và cộng tác nhóm linh hoạt theo mô hình Agile.
+Trong quá trình thực tập, tôi tham gia với vai trò **Thực tập sinh AWS Cloud Engineering**, đóng góp vào các hoạt động nghiên cứu và kỹ thuật liên quan đến dự án **ReLoop** – nền tảng kinh tế tuần hoàn kết nối người sở hữu thiết bị điện tử đã qua sử dụng với các đối tác tái sử dụng và tái chế. Công việc của tôi tập trung vào nghiên cứu các dịch vụ AWS, rà soát kiến trúc đám mây, tìm hiểu tài nguyên hạ tầng và phân tích cách các thành phần cloud hỗ trợ chức năng của ứng dụng.
 
-Về thái độ làm việc, tôi luôn nêu cao tinh thần trách nhiệm, chủ động hoàn thành các đầu việc được giao, tuân thủ nghiêm ngặt các quy tắc bảo mật doanh nghiệp, tích cực trao đổi cùng đồng nghiệp giữa các nhánh frontend và backend để giải quyết điểm nghẽn kỹ thuật, đảm bảo tiến độ xuyên suốt 12 tuần làm việc.
+Tôi đã có cơ hội tìm hiểu nhiều dịch vụ AWS như Amazon S3, Amazon CloudFront, Amazon API Gateway, AWS Lambda, Amazon Cognito và Amazon DynamoDB. Bên cạnh đó, tôi tham gia rà soát môi trường phát triển của ReLoop, kiểm tra CloudFront Distribution và các Origin, tổng hợp thông tin về các S3 Bucket và phân tích mối quan hệ giữa các thành phần trong kiến trúc đám mây. Tôi cũng nghiên cứu phương pháp tối ưu chi phí cơ sở dữ liệu thông qua Amazon Aurora Serverless v2 và tìm hiểu các cơ chế bảo mật ứng dụng web liên quan đến việc xử lý các HTTP Request đáng ngờ.
+
+Một nội dung đáng chú ý trong kỳ thực tập là hoạt động nghiên cứu và chia sẻ kiến thức kỹ thuật. Tôi đã chuẩn bị và đăng tải ba bài viết chuyên môn về **Amazon S3 Lifecycle (22/10/2026), AWS Savings Plans (28/10/2026) và Amazon Aurora Serverless v2 (05/11/2026)**. Những hoạt động này giúp tôi cải thiện khả năng nghiên cứu tài liệu AWS chính thức, phân tích các tình huống kỹ thuật và trình bày kiến thức chuyên môn bằng tiếng Anh. Ngoài ra, tôi còn tham gia rà soát sơ đồ kiến trúc, kiểm tra luồng kết nối giữa các dịch vụ và tổng hợp tài liệu kỹ thuật phục vụ dự án ReLoop.
+
+Về thái độ làm việc, tôi luôn duy trì tinh thần cầu tiến và chủ động tìm hiểu những vấn đề kỹ thuật còn chưa nắm rõ. Qua quá trình thực tập, tôi từng bước chủ động hơn trong việc nghiên cứu dịch vụ AWS, nhận diện các vấn đề kiến trúc và trao đổi những nội dung kỹ thuật liên quan đến dự án. Đồng thời, tôi nhận thức rõ hơn tầm quan trọng của việc cập nhật tiến độ công việc thường xuyên, quản lý tài nguyên đám mây, kiểm soát chi phí và trao đổi thông tin hiệu quả với các thành viên trong nhóm.
 
 Để nhìn nhận khách quan quá trình thực tập, tôi tự đánh giá bản thân theo các tiêu chí sau:
 
 | STT | Tiêu chí đánh giá | Mô tả | Tốt | Khá | Trung bình |
 | :---: | :--- | :--- | :---: | :---: | :---: |
-| 1 | **Kiến thức & kỹ năng chuyên môn** | Nắm vững chuyên môn, áp dụng thực tế, sử dụng thành thạo công cụ, chất lượng công việc | ☐ | ✅ | ☐ |
-| 2 | **Khả năng học hỏi** | Khả năng tiếp thu kiến thức mới và tốc độ nắm bắt công việc | ✅ | ☐ | ☐ |
-| 3 | **Tính chủ động** | Tinh thần tự giác, chủ động tìm kiếm công việc mà không chờ nhắc nhở | ✅ | ☐ | ☐ |
-| 4 | **Ý thức trách nhiệm** | Hoàn thành công việc đúng hạn và đảm bảo chất lượng cam kết | ✅ | ☐ | ☐ |
-| 5 | **Tính kỷ luật** | Tuân thủ giờ giấc, nội quy và quy trình làm việc | ☐ | ✅ | ☐ |
-| 6 | **Tinh thần cầu tiến** | Sẵn sàng lắng nghe góp ý và không ngừng hoàn thiện bản thân | ✅ | ☐ | ☐ |
-| 7 | **Kỹ năng giao tiếp** | Khả năng trình bày ý tưởng và báo cáo công việc rõ ràng, mạch lạc | ✅ | ☐ | ☐ |
-| 8 | **Làm việc nhóm** | Phối hợp hiệu quả với đồng nghiệp và tích cực trong hoạt động nhóm | ✅ | ☐ | ☐ |
-| 9 | **Tác phong làm việc** | Tôn trọng đồng nghiệp, đối tác và văn hóa doanh nghiệp | ✅ | ☐ | ☐ |
-| 10 | **Kỹ năng giải quyết vấn đề** | Nhận diện vấn đề, đề xuất giải pháp sáng tạo và khả thi | ☐ | ✅ | ☐ |
-| 11 | **Đóng góp cho dự án/tập thể** | Hiệu quả công việc thực tế, sáng kiến và sự ghi nhận từ nhóm | ✅ | ☐ | ☐ |
-| 12 | **Đánh giá chung** | Nhận định tổng thể về toàn bộ quá trình thực tập | ✅ | ☐ | ☐ |
+| 1 | **Kiến thức & kỹ năng chuyên môn** | Khả năng nắm bắt kiến thức AWS, nghiên cứu dịch vụ đám mây và vận dụng kiến thức kỹ thuật vào công việc thực tế | ☐ | ✅ | ☐ |
+| 2 | **Khả năng học hỏi** | Khả năng tiếp thu kiến thức mới, chủ động nghiên cứu tài liệu và thích nghi với công nghệ chưa từng tiếp xúc | ✅ | ☐ | ☐ |
+| 3 | **Tính chủ động** | Chủ động tìm hiểu dịch vụ AWS, nhận diện vấn đề kỹ thuật và nghiên cứu các phương án giải quyết | ✅ | ☐ | ☐ |
+| 4 | **Ý thức trách nhiệm** | Theo dõi công việc được giao, duy trì chất lượng đầu ra và cập nhật tiến độ dự án | ☐ | ✅ | ☐ |
+| 5 | **Tính kỷ luật** | Tuân thủ thời gian, duy trì việc ghi chép công việc và thực hiện các quy trình kỹ thuật | ☐ | ✅ | ☐ |
+| 6 | **Tinh thần cầu tiến** | Sẵn sàng tiếp thu góp ý, rút kinh nghiệm và không ngừng cải thiện năng lực chuyên môn | ✅ | ☐ | ☐ |
+| 7 | **Kỹ năng giao tiếp** | Khả năng trình bày ý tưởng kỹ thuật, trao đổi vấn đề và báo cáo tiến độ rõ ràng | ☐ | ✅ | ☐ |
+| 8 | **Làm việc nhóm** | Phối hợp với các thành viên và đóng góp vào những hoạt động chung của dự án | ☐ | ✅ | ☐ |
+| 9 | **Tác phong làm việc** | Có thái độ tôn trọng đồng nghiệp và tinh thần trách nhiệm trong công việc | ✅ | ☐ | ☐ |
+| 10 | **Kỹ năng giải quyết vấn đề** | Khả năng nhận diện vấn đề kỹ thuật, nghiên cứu nguyên nhân gốc và đánh giá các phương án xử lý | ☐ | ✅ | ☐ |
+| 11 | **Đóng góp cho dự án/tập thể** | Đóng góp thông qua nghiên cứu AWS, rà soát kiến trúc, tài liệu dự án và các bài viết kỹ thuật | ☐ | ✅ | ☐ |
+| 12 | **Đánh giá chung** | Đánh giá tổng thể về kiến thức, kỹ năng, thái độ và những đóng góp trong kỳ thực tập | ☐ | ✅ | ☐ |
 
 ---
 
-### **Những điểm cần cải thiện**
+### Những điểm cần cải thiện
 
-* **Tính kỷ luật & chuẩn mực vận hành doanh nghiệp:** Mặc dù đã tuân thủ tốt các nội quy cơ bản và giờ giấc làm việc, việc chuyển đổi từ tư duy học thuật sang môi trường kỹ thuật đám mây doanh nghiệp đòi hỏi sự nghiêm ngặt hơn về quy chuẩn vận hành. Tôi cần duy trì kỷ luật chặt chẽ trong việc kiểm soát tài nguyên—như chủ động theo dõi cảnh báo ngân sách AWS, quản lý thông tin xác thực an toàn, chuẩn hóa đặt tên nhánh git và tuân thủ thời hạn sprint mà không dồn kiểm thử tích hợp đến giai đoạn cuối.  
-* **Tư duy giải quyết vấn đề ở cấp độ hệ thống:** Khi gặp sự cố kỹ thuật, ban đầu tôi thường thiên về các giải pháp xử lý nhanh mang tính cục bộ (như vá chuỗi regex hoặc thử nghiệm cấu hình) thay vì lùi lại để phân tích các ràng buộc nền tảng của hệ thống. Tôi cần nâng cao tầm nhìn kiến trúc—chủ động đánh giá kỹ các trường hợp biên, tính bất biến của lược đồ dữ liệu, vòng đời dữ liệu và bài toán đánh đổi chi phí (on-demand vs. provisioned) trước khi viết mã.  
-* **Chủ động giao tiếp kỹ thuật & xử lý tình huống phát sinh:** Trong các tình huống phát sinh trở ngại ngoài dự kiến—như cạn kiệt quota dịch vụ, khóa thuộc tính lược đồ, hay giới hạn API bên thứ ba—tôi cần cải thiện kỹ năng đề xuất giải pháp có cấu trúc (nêu rõ vấn đề, tác động thực tế và 2–3 phương án xử lý khả thi) để xin ý kiến mentor kịp thời, tránh việc tự mình mày mò quá lâu gây ảnh hưởng đến tiến độ chung.
+- **Kiến thức AWS thực hành và tư duy kiến trúc:** Mặc dù đã có cơ hội tìm hiểu nhiều dịch vụ AWS và tham gia rà soát kiến trúc ReLoop, kinh nghiệm thực hành của tôi vẫn đang trong quá trình phát triển. Một số nội dung mới dừng ở mức nghiên cứu tài liệu và phân tích kiến trúc thay vì triển khai độc lập ở mức chuyên sâu. Tôi cần tăng cường thực hành với IAM, VPC, Lambda, API Gateway, DynamoDB và các dịch vụ cơ sở dữ liệu AWS. Đồng thời, cần cải thiện khả năng phân tích mối quan hệ giữa các dịch vụ, luồng dữ liệu, khả năng mở rộng và các yếu tố chi phí trước khi đưa ra quyết định kiến trúc.
+
+- **Kỷ luật kỹ thuật và quy trình vận hành:** Tôi cần duy trì tính nhất quán hơn trong việc cập nhật Daily Worklog, quản lý tài liệu kỹ thuật và lưu trữ minh chứng dự án. Công việc Cloud Engineering cũng đòi hỏi sự cẩn thận trong quản lý tài nguyên, đặc biệt khi sử dụng các tài khoản AWS có thể phát sinh chi phí. Tôi cần hình thành thói quen theo dõi AWS Budgets, quản lý thông tin xác thực an toàn, sắp xếp Git Repository và tuân thủ quy trình phát triển có cấu trúc.
+
+- **Khả năng giải quyết vấn đề và giao tiếp kỹ thuật:** Khi gặp vấn đề kỹ thuật mới, đôi khi tôi dành quá nhiều thời gian thử nghiệm các giải pháp riêng lẻ mà chưa phân tích đầy đủ nguyên nhân nền tảng. Tôi cần cải thiện khả năng xác định nguyên nhân gốc, thu thập thông tin liên quan và đánh giá các phương án xử lý. Bên cạnh đó, tôi cần trình bày khó khăn kỹ thuật có hệ thống hơn bằng cách nêu rõ vấn đề, mức độ ảnh hưởng và những giải pháp đề xuất khi trao đổi với mentor hoặc các thành viên trong nhóm.
+
+- **Kiến thức bảo mật và kiểm thử thực tế:** Nền tảng An toàn thông tin giúp tôi có cơ sở để tiếp cận các khái niệm bảo mật, tuy nhiên tôi cần tích lũy thêm kinh nghiệm áp dụng vào môi trường đám mây. Đặc biệt, tôi cần củng cố kiến thức về nguyên tắc Least Privilege trong IAM, bảo vệ API, AWS WAF, giám sát bảo mật, phân tích log và kiểm soát quyền truy cập tài nguyên.
 
 ---
 
-### **Kế hoạch hành động và giải pháp khắc phục**
+### Kế hoạch hành động và giải pháp khắc phục
 
-1. **Áp dụng quy trình chẩn đoán sự cố bài bản:** Thay vì vội vã đưa ra bản vá tức thời, ghi chép rõ nguyên nhân lỗi, tra cứu tài liệu đặc tả chính thức của dịch vụ và kiểm chứng nguyên nhân gốc qua nhật ký chỉ số CloudWatch trước khi commit thay đổi.  
-2. **Chuẩn hóa báo cáo tiến độ hàng ngày:** Chia sẻ bản tin cập nhật ngắn gọn về các đầu việc đã hoàn thành, vướng mắc hiện tại và hỗ trợ cụ thể cần thiết để giữ nhịp cộng tác xuyên suốt với mentor và đồng đội.  
-3. **Kỹ thuật theo danh mục kiểm tra (Checklist-Driven Engineering):** Duy trì danh mục kiểm tra trước khi triển khai cho từng tính năng, bao gồm rà soát quyền tối thiểu IAM, kiểm thử xử lý đồng thời lạc quan và đánh giá tác động chi phí trước khi mở Pull Request.
+1. **Xây dựng lộ trình thực hành AWS có hệ thống:** Thực hiện các bài tập thực hành với IAM, VPC, S3, CloudFront, Lambda, API Gateway và DynamoDB. Mỗi bài thực hành cần có ghi chú cấu hình, kết quả kiểm thử và minh chứng cụ thể nhằm kết nối kiến thức lý thuyết với quá trình triển khai thực tế.
+
+2. **Cải thiện quy trình phân tích và xử lý sự cố:** Áp dụng phương pháp xử lý sự cố theo từng bước, bao gồm xác định hiện tượng, thu thập log và thông tin liên quan, tra cứu tài liệu AWS chính thức, phân tích nguyên nhân gốc và kiểm chứng giải pháp trước khi thay đổi cấu hình hệ thống.
+
+3. **Củng cố kiến thức bảo mật đám mây:** Tiếp tục tìm hiểu về IAM Least Privilege, quản lý thông tin xác thực an toàn, bảo mật API, AWS WAF và giám sát hệ thống. Chủ động thực hành đánh giá cấu hình bảo mật và nhận diện những điểm có thể phát sinh rủi ro trong môi trường phát triển được cho phép.
+
+4. **Nâng cao khả năng quản lý công việc và tài liệu:** Duy trì việc cập nhật Daily Worklog theo ngày và theo tuần, đồng thời sắp xếp tài liệu kỹ thuật, hình ảnh minh chứng và kết quả kiểm thử xuyên suốt quá trình thực hiện dự án. Phân biệt rõ công việc đã hoàn thành, đang thực hiện và dự kiến để nâng cao độ chính xác khi báo cáo.
+
+5. **Duy trì tinh thần tự học và nghiên cứu chuyên môn:** Tiếp tục nghiên cứu kiến trúc AWS và AWS Well-Architected Framework, đặc biệt là các trụ cột Security, Reliability, Performance Efficiency và Cost Optimization. Tăng cường đọc tài liệu tiếng Anh và viết các bài phân tích tình huống thực tế để cải thiện khả năng nghiên cứu và truyền đạt kiến thức kỹ thuật.
