@@ -6,41 +6,43 @@ chapter: false
 pre: " <b> 1.9. </b> "
 ---
 
-# **Week 9 Work Log: Pentest with AWS Security Agent, Fixes, CSP, SES Email, Budgets & Proposal Part 2**
+# **Week 9 Work Log: Serverless Integration, Event-Driven Architecture & Cloud Mastery Session**
 
 ## **1. Weekly Objectives**
 
-* Review the automated pentest results and fix every fixable finding.
-* Enforce a strict Content-Security-Policy on the web app.
-* Remove the Cognito email limit with Amazon SES and add budget alerts.
-* Submit Proposal Part 2 with real costs and security results.
-* Attend Event 6 (Cloud Mastery) at the AWS office.
+* Explore serverless application integration patterns.
+* Understand reliable webhook processing and duplicate-event prevention.
+* Research AWS messaging and event-driven architecture.
+* Continue developing technical knowledge-sharing materials.
+* Attend the **Cloud Mastery – Cloud Sharing Session for Students** at AWS Vietnam Office.
 
 ## **2. Weekly Execution Schedule**
 
 | Day | Task Description | Start Date | Completion Date | Reference Material |
 | :--- | :--- | :--- | :--- | :--- |
-| **Day 2** | • Review the AWS Security Agent black-box pentest of the dev site (run over the weekend, 11/08; 3.63 task-hours): 7 findings, none high | 11/09/2026 | 11/09/2026 | AWS Security Agent report |
-| **Day 3** | • Fix and deploy the findings (security headers, error messages, input checks); re-run the smoke test | 11/10/2026 | 11/10/2026 | Fix PRs, smoke-aws.py |
-| **Day 4** | • Move the Content-Security-Policy from report-only to enforced on CloudFront; check every page for blocked resources | 11/11/2026 | 11/11/2026 | infra/web.tf |
-| **Day 5** | • Switch Cognito email to Amazon SES so sign-ups are not blocked by the default limit (~50 emails/day) | 11/12/2026 | 11/12/2026 | Amazon SES Docs |
-| **Day 6** | • AWS Budgets alerts at 50% / 80% of the remaining credits; review credit balance and cost per service<br>• Submit **Proposal Part 2**: updated proposal with real Cost Explorer costs, pentest results and the hardening work | 11/13/2026 | 11/13/2026 | AWS Billing Console, [Proposal](../../2-proposal/) |
-| **Day 7** | • Attend [Event 6: Cloud Mastery](../../4-eventparticipated/4.6-event6/) (morning, AWS Vietnam Office). Long open Q&A with students on cloud careers and skills, then a live Quiz.com game | 11/14/2026 | 11/14/2026 | [Event 6](../../4-eventparticipated/4.6-event6/) |
+| **Day 1** | Reviewed API Gateway and Lambda integration patterns for serverless applications | 11/09/2026 | 11/09/2026 | [Serverless API Development](https://cloudjourney.awsstudygroup.com/4-modernize/) |
+| **Day 2** | Researched webhook idempotency and duplicate-request handling in backend systems | 11/10/2026 | 11/10/2026 | [AWS Lambda Asynchronous Invocation](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async-error-handling.html) |
+| **Day 3** | Studied asynchronous messaging with Amazon SQS, Amazon SNS and dead-letter queues | 11/11/2026 | 11/11/2026 | [Event Processing with SQS and SNS](https://cloudjourney.awsstudygroup.com/4-modernize/) |
+| **Day 4** | Explored AWS Step Functions and compensation patterns for multi-step workflows | 11/12/2026 | 11/12/2026 | [Getting Started with AWS Step Functions](https://cloudjourney.awsstudygroup.com/4-modernize/) |
+| **Day 5** | Organized technical research notes and reviewed additional AWS engineering topics | 11/13/2026 | 11/13/2026 | [AWS Cloud Day Developer Lounge – AWS Study Group](https://www.youtube.com/watch?v=62YaE5kac3s) |
+| **Day 6 (Sat)** | **Event:** Attended [Event 5: Cloud Mastery – Cloud Sharing Session for Students](../../4-eventparticipated/4.5-event5/) at AWS Vietnam Office (Bitexco Financial Tower) | 11/14/2026 | 11/14/2026 | [Event 5 Report](../../4-eventparticipated/4.5-event5/) |
 
 ## **3. Key Achievements & Outcomes**
 
 ### **Theoretical Foundation**
 
-* Learned how an automated black-box pentest finds issues from the outside, the same way an attacker would.
-* Understood why a CSP should run in report-only mode first, then be enforced once no real page breaks.
+* Improved understanding of API Gateway and Lambda integration patterns.
+* Learned the purpose of asynchronous processing in distributed applications.
+* Studied idempotency as a mechanism for preventing duplicate event processing.
+* Explored the roles of SQS, SNS and dead-letter queues, and how AWS Step Functions coordinates multi-step workflows.
 
-### **Environment Setup & Configuration**
+### **Technical Research**
 
-* Strict CSP, HSTS and X-Frame-Options headers enforced on CloudFront.
-* Cognito sending email through Amazon SES; AWS Budgets alerts at 50% / 80%.
-* Proposal Part 2 submitted on 11/13/2026.
+* Investigated how idempotency records can help control repeated requests.
+* Studied event-driven communication patterns and compensation mechanisms in Saga-style workflows.
+* Organized technical topics around practical cloud engineering problems.
 
-### **Practical Skills & Operations**
+### **Documentation & Community Engagement**
 
-* Closed all fixable pentest findings and confirmed them with a re-test.
-* Kept the pentest within budget by stopping it at about 3.5 task-hours.
+* Organized technical research materials for AWS knowledge sharing and improved connecting AWS concepts with real application scenarios.
+* Attended **Cloud Mastery – Cloud Sharing Session for Students** on 14/11/2026, joining the extended Q&A on cloud careers and the live Quiz.com review game.

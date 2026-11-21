@@ -6,41 +6,41 @@ chapter: false
 pre: " <b> 1.2. </b> "
 ---
 
-# **Nhật ký công việc Tuần 2: Serverless cơ bản: S3, DynamoDB, Lambda, API Gateway và Khởi động Buildrathon**
+# **Nhật ký công việc Tuần 2: Nền tảng AWS Cloud, Quản lý tài khoản & Khởi động Buildrathon**
 
 ## **1. Mục tiêu tuần**
 
-* Học các khối serverless chính: S3, DynamoDB, Lambda và API Gateway.
-* Thiết lập giám sát và hàng rào chi phí (CloudWatch, AWS Budgets) ngay từ đầu.
-* Tham dự Sự kiện 1 (Khởi động Buildrathon), nơi nhóm chọn ReLoop làm đồ án (bắt đầu phát triển từ Tuần 4).
+* Hiểu rõ các khái niệm nền tảng về điện toán đám mây.
+* Khám phá hạ tầng toàn cầu của AWS và cách tổ chức dịch vụ.
+* Làm quen với quản lý tài khoản AWS.
+* Nắm vững các khái niệm cơ bản về thanh toán (billing) và tối ưu chi phí.
+* Tham dự sự kiện **Khởi động Buildrathon** cùng CMC Global.
 
 ## **2. Lịch trình thực hiện**
 
 | Ngày | Mô tả công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | :--- | :--- | :--- | :--- | :--- |
-| **Ngày 2** | • Amazon S3: bucket, Block Public Access, versioning, lifecycle rule và CORS | 09/21/2026 | 09/21/2026 | AWS Cloud Journey |
-| **Ngày 3** | • Presigned URL (hết hạn sau 300 giây) để trình duyệt tải lên/tải xuống trực tiếp mà không mở công khai bucket | 09/22/2026 | 09/22/2026 | Tài liệu Amazon S3 |
-| **Ngày 4** | • Amazon DynamoDB: partition key / sort key (PK/SK), chế độ On-Demand, ý tưởng thiết kế một bảng | 09/23/2026 | 09/23/2026 | AWS Cloud Journey |
-| **Ngày 5** | • AWS Lambda + API Gateway HTTP API: hàm đầu tiên, route, CORS, log trên CloudWatch | 09/24/2026 | 09/24/2026 | AWS Cloud Journey |
-| **Ngày 6** | • Tạo cảnh báo AWS Budgets ở mức 50% / 80% / 100% và tìm hiểu metric, alarm của CloudWatch | 09/25/2026 | 09/25/2026 | AWS Billing Console |
-| **Ngày 7** | • Tham gia [Sự kiện 1: Khởi động Buildrathon – Code the Future cùng CMC Global](../../4-eventparticipated/4.1-event1/) (10:30 – 12:00 tại Bitexco Financial Tower). Khám phá Generative AI, quy trình Agentic AI và kiến trúc RAG. Nhóm chọn ReLoop làm đề tài đồ án tại đây; đặc tả và thiết kế ở Tuần 3–4, bắt đầu code từ 10/09/2026. | 09/26/2026 | 09/26/2026 | Sự kiện 1 / CMC Global & AWS |
+| **Ngày 1** | Học các khái niệm cơ bản về điện toán đám mây, mô hình dịch vụ và mô hình triển khai | 09/21/2026 | 09/21/2026 | [AWS Cloud Computing Fundamentals](https://cloudjourney.awsstudygroup.com/1-explore/) |
+| **Ngày 2** | Tìm hiểu về AWS Regions, Availability Zones và Edge Locations | 09/22/2026 | 09/22/2026 | [AWS Global Infrastructure](https://aws.amazon.com/about-aws/global-infrastructure/) |
+| **Ngày 3** | Nghiên cứu mô hình Trách nhiệm chia sẻ (AWS Shared Responsibility Model) và trách nhiệm bảo mật đám mây | 09/23/2026 | 09/23/2026 | [AWS Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/) |
+| **Ngày 4** | Tìm hiểu cơ chế tính phí AWS, giới hạn Free Tier và giám sát chi phí | 09/24/2026 | 09/24/2026 | [Managing Costs with AWS Budgets](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html) |
+| **Ngày 5** | Tìm hiểu AWS Budgets và các biện pháp cơ bản phòng tránh phát sinh chi phí ngoài ý muốn | 09/25/2026 | 09/25/2026 | [AWS Cost Optimization](https://cloudjourney.awsstudygroup.com/3-optimize/) |
+| **Ngày 6 (T7)** | **Sự kiện:** Tham dự [Sự kiện 1: Buildrathon – Khởi động: Kiến tạo tương lai cùng CMC Global](../../4-eventparticipated/4.1-event1/) tại Bitexco Financial Tower | 09/26/2026 | 09/26/2026 | [Báo cáo Sự kiện 1](../../4-eventparticipated/4.1-event1/) |
 
 ## **3. Kết quả đạt được**
 
 ### **Cơ sở lý thuyết**
 
-* Hiểu vì sao serverless (trả theo request, không có máy chủ chạy không) hợp với nhóm nhỏ có ít credit.
-* Nắm cách thiết kế PK/SK tốt giúp DynamoDB trả lời mọi truy vấn mà không phải quét bảng.
-* Rút ra từ Sự kiện 1 cách công cụ GenAI và quy trình agent giúp tăng tốc khi xây dựng sản phẩm kiểu hackathon.
+* Hiểu các đặc trưng và lợi ích cốt lõi của điện toán đám mây.
+* Nắm được cách AWS tổ chức hạ tầng toàn cầu.
+* Làm quen với mô hình trách nhiệm chia sẻ và nhận thức tầm quan trọng của việc kiểm soát chi phí.
 
-### **Cài đặt & Thiết lập môi trường**
+### **Quản lý tài khoản AWS**
 
-* Bucket S3 riêng tư có Block Public Access, lifecycle và CORS cho trình duyệt tải ảnh.
-* Bảng DynamoDB thực hành ở chế độ On-Demand.
-* Cảnh báo AWS Budgets ở mức 50% / 80% / 100% gửi qua email.
+* Thành thạo hơn trong việc điều hướng AWS Management Console.
+* Hiểu rõ các khái niệm cơ bản về billing, hạn mức Free Tier và vai trò của cảnh báo AWS Budgets.
 
-### **Kỹ năng thực hành & Vận hành**
+### **Kỹ năng thực hành & Hoạt động cộng đồng**
 
-* Dựng một endpoint Lambda + HTTP API nhỏ và theo dõi log trên CloudWatch.
-* Tải file lên/xuống bằng presigned URL mà không mở công khai bucket nào.
-* Cùng nhóm tham gia buổi khởi động Buildrathon và thống nhất xây dựng ReLoop, chợ đồ điện tử cũ.
+* Nhận diện các nhóm dịch vụ AWS phổ biến và mục đích sử dụng.
+* Tham gia sự kiện **Buildrathon – Khởi động: Kiến tạo tương lai cùng CMC Global** ngày 26/09/2026, mở rộng góc nhìn về thử thách xây dựng ứng dụng đám mây và làm việc nhóm.

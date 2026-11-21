@@ -6,37 +6,37 @@ chapter: false
 pre: " <b> 1.10. </b> "
 ---
 
-# **Nhật ký công việc Tuần 10: Load Test, Sửa Throttling, Một Đường Deploy và Môi trường Production**
+# **Nhật ký công việc Tuần 10: Rà soát kiến trúc AWS của ReLoop & Kiểm chứng tích hợp dịch vụ**
 
 ## **1. Mục tiêu tuần**
 
-* Chứng minh hệ thống chịu được tải tăng đột biến sau khi nâng giới hạn song song.
-* Đưa mọi lần deploy về một đường CI/CD, mỗi thành viên một IAM user.
-* Dựng môi trường production từ cùng bộ Terraform.
+* Rà soát tổng thể kiến trúc AWS của hệ thống ReLoop.
+* Kiểm chứng các luồng giao tiếp giữa dịch vụ và ranh giới kiến trúc.
+* Xem xét chi tiết phần xác thực, lưu trữ, backend và tích hợp AI.
+* Nâng cao độ chính xác và tính rõ ràng của tài liệu kiến trúc AWS.
 
 ## **2. Lịch trình thực hiện**
 
 | Ngày | Mô tả công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | :--- | :--- | :--- | :--- | :--- |
-| **Ngày 2** | • Chạy lại loadtest.mjs (80 request song song) so với mốc cũ 26% lỗi 5xx; với giới hạn song song 1.000, lỗi 5xx không còn | 11/16/2026 | 11/16/2026 | loadtest.mjs |
-| **Ngày 3** | • Sửa throttling: API Gateway giới hạn 20 request/giây, burst 50; luật tốc độ WAF và API trả 429 kèm Retry-After thay vì báo lỗi | 11/17/2026 | 11/17/2026 | Tài liệu API Gateway |
-| **Ngày 4** | • Một đường deploy CI/CD duy nhất trên GitHub Actions từ bản đã commit; mỗi thành viên một IAM user; lên kế hoạch gỡ access key của root | 11/18/2026 | 11/18/2026 | GitHub Actions, IAM |
-| **Ngày 5** | • Dựng stack production từ cùng các module Terraform với bộ biến riêng | 11/19/2026 | 11/19/2026 | infra/*.tf |
-| **Ngày 6** | • Chạy smoke test trên production và sửa các lỗi riêng của môi trường còn lại | 11/20/2026 | 11/20/2026 | smoke-aws.py |
+| **Ngày 1** | Bắt đầu rà soát sơ đồ kiến trúc AWS của ReLoop và xác định các tương tác dịch vụ chính | 11/16/2026 | 11/16/2026 | [Modernize Applications on AWS](https://cloudjourney.awsstudygroup.com/4-modernize/) |
+| **Ngày 2** | Rà soát CloudFront origins, S3 Origin Access Control (OAC) và định tuyến yêu cầu qua API Gateway | 11/17/2026 | 11/17/2026 | [CloudFront Origin Access Control](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html) |
+| **Ngày 3** | Kiểm tra xác thực Cognito, phân quyền JWT Authorizer và Lambda trigger khởi tạo hồ sơ người dùng | 11/18/2026 | 11/18/2026 | [API Gateway JWT Authorizer](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-jwt-authorizer.html) |
+| **Ngày 4** | Rà soát luồng S3 Presigned URL, truy xuất dữ liệu DynamoDB và tích hợp các dịch vụ AI | 11/19/2026 | 11/19/2026 | [S3 Presigned URLs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-presigned-url.html) |
+| **Ngày 5** | Tinh chỉnh sơ đồ kiến trúc và rà soát kết nối EventBridge, xử lý AI cùng hệ thống giám sát | 11/20/2026 | 11/20/2026 | [Kimi K3 – Amazon Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-moonshot-ai-kimi-k3.html) |
 
 ## **3. Kết quả đạt được**
 
-### **Cơ sở lý thuyết**
+### **Hiểu biết kiến trúc**
 
-* Hiểu khác biệt giữa sập khi tải cao (5xx) và từ chối lịch sự (429 + Retry-After).
-* Hiểu vì sao một đường deploy từ bản đã commit giúp hai máy không ghi đè lên nhau.
+* Triển khai rà soát chi tiết kiến trúc ReLoop từ ngày 16/11/2026, làm rõ mối quan hệ giữa CloudFront, API Gateway và backend.
+* Kiểm tra luồng xác thực Amazon Cognito – JWT và sự tách biệt giữa bucket web tĩnh với bucket ảnh thiết bị.
 
-### **Cài đặt & Thiết lập môi trường**
+### **Phân tích kỹ thuật**
 
-* API Gateway giới hạn 20/giây, burst 50; luật tốc độ WAF trả 429.
-* Stack production dựng từ cùng module Terraform với dev.
+* Rà soát cơ chế Presigned URL cho tải lên/tải xuống trực tiếp trình duyệt – S3 và thao tác đọc/ghi DynamoDB.
+* Xem xét vai trò của Amazon Rekognition (kiểm duyệt ảnh, OCR), Amazon Bedrock Kimi K3 & Guardrails, lịch trình EventBridge và giám sát CloudWatch.
 
-### **Kỹ năng thực hành & Vận hành**
+### **Tài liệu & Sản phẩm**
 
-* So sánh kết quả load test trước và sau khi sửa, ghi lại cho báo cáo cuối kỳ.
-* Chỉ deploy qua CI, không deploy tay từ laptop.
+* Tinh chỉnh sơ đồ kiến trúc AWS của ReLoop, chuẩn hóa nhãn và chiều luồng giao tiếp dịch vụ để đưa vào tài liệu đồ án cuối kỳ.

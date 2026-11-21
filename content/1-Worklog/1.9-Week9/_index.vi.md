@@ -6,41 +6,39 @@ chapter: false
 pre: " <b> 1.9. </b> "
 ---
 
-# **Nhật ký công việc Tuần 9: Pentest bằng AWS Security Agent, Sửa lỗi, CSP, Email SES, Budgets và Đề xuất Phần 2**
+# **Nhật ký công việc Tuần 9: Tích hợp Serverless, Kiến trúc hướng sự kiện & Buổi chia sẻ Cloud Mastery**
 
 ## **1. Mục tiêu tuần**
 
-* Xem kết quả pentest tự động và sửa mọi mục sửa được.
-* Bật Content-Security-Policy chặt cho ứng dụng web.
-* Gỡ giới hạn email của Cognito bằng Amazon SES và thêm cảnh báo ngân sách.
-* Nộp Đề xuất (Phần 2) với chi phí thật và kết quả bảo mật.
-* Tham dự Sự kiện 6 (Cloud Mastery) tại văn phòng AWS.
+* Khám phá các mẫu tích hợp ứng dụng Serverless.
+* Hiểu cơ chế xử lý webhook tin cậy và phòng chống trùng lặp sự kiện (idempotency).
+* Nghiên cứu dịch vụ hàng đợi, nhắn tin và kiến trúc hướng sự kiện trên AWS.
+* Tiếp tục xây dựng ghi chú nghiên cứu và tài liệu chia sẻ kỹ thuật.
+* Tham dự buổi chia sẻ **Cloud Mastery – Buổi chia sẻ về Cloud cho sinh viên** tại Văn phòng AWS Việt Nam.
 
 ## **2. Lịch trình thực hiện**
 
 | Ngày | Mô tả công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | :--- | :--- | :--- | :--- | :--- |
-| **Ngày 2** | • Xem kết quả pentest hộp đen bằng AWS Security Agent trên web dev (chạy cuối tuần, 11/08; 3,63 task-hour): 7 phát hiện, không có mức cao | 11/09/2026 | 11/09/2026 | Báo cáo AWS Security Agent |
-| **Ngày 3** | • Sửa và deploy các phát hiện (header bảo mật, thông báo lỗi, kiểm dữ liệu đầu vào); chạy lại smoke test | 11/10/2026 | 11/10/2026 | PR sửa lỗi, smoke-aws.py |
-| **Ngày 4** | • Chuyển Content-Security-Policy từ chế độ chỉ báo cáo sang chặn thật trên CloudFront; kiểm mọi trang xem có tài nguyên bị chặn | 11/11/2026 | 11/11/2026 | infra/web.tf |
-| **Ngày 5** | • Chuyển email của Cognito sang Amazon SES để đăng ký không bị chặn bởi giới hạn mặc định (~50 email/ngày) | 11/12/2026 | 11/12/2026 | Tài liệu Amazon SES |
-| **Ngày 6** | • Cảnh báo AWS Budgets ở mức 50% / 80% số credit còn lại; rà soát số dư credit và chi phí từng dịch vụ<br>• **Nộp Đề xuất (Phần 2)**: bản đề xuất cập nhật với chi phí thật từ Cost Explorer, kết quả pentest và phần gia cố | 11/13/2026 | 11/13/2026 | AWS Billing Console, [Đề xuất](../../2-proposal/) |
-| **Ngày 7** | • Tham dự [Sự kiện 6: Cloud Mastery](../../4-eventparticipated/4.6-event6/) (buổi sáng, Văn phòng AWS Việt Nam). Hỏi đáp kéo dài với sinh viên về định hướng và chuyên môn Cloud, sau đó chơi Quiz.com trực tiếp | 11/14/2026 | 11/14/2026 | [Sự kiện 6](../../4-eventparticipated/4.6-event6/) |
+| **Ngày 1** | Rà soát các mô hình tích hợp API Gateway và Lambda cho ứng dụng Serverless | 11/09/2026 | 11/09/2026 | [Serverless API Development](https://cloudjourney.awsstudygroup.com/4-modernize/) |
+| **Ngày 2** | Nghiên cứu tính lũy đẳng (webhook idempotency) và xử lý yêu cầu trùng lặp ở tầng backend | 11/10/2026 | 11/10/2026 | [AWS Lambda Asynchronous Invocation](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async-error-handling.html) |
+| **Ngày 3** | Học về nhắn tin bất đồng bộ với Amazon SQS, Amazon SNS và dead-letter queues (DLQ) | 11/11/2026 | 11/11/2026 | [Event Processing with SQS and SNS](https://cloudjourney.awsstudygroup.com/4-modernize/) |
+| **Ngày 4** | Tìm hiểu AWS Step Functions và mô hình bù trừ (compensation) cho quy trình nhiều bước | 11/12/2026 | 11/12/2026 | [Getting Started with AWS Step Functions](https://cloudjourney.awsstudygroup.com/4-modernize/) |
+| **Ngày 5** | Tổng hợp ghi chú nghiên cứu kỹ thuật và ôn tập các chủ đề kỹ thuật AWS mở rộng | 11/13/2026 | 11/13/2026 | [AWS Cloud Day Developer Lounge – AWS Study Group](https://www.youtube.com/watch?v=62YaE5kac3s) |
+| **Ngày 6 (T7)** | **Sự kiện:** Tham dự [Sự kiện 5: Cloud Mastery – Buổi chia sẻ về Cloud cho sinh viên](../../4-eventparticipated/4.5-event5/) tại Văn phòng AWS Việt Nam (Bitexco Financial Tower) | 11/14/2026 | 11/14/2026 | [Báo cáo Sự kiện 5](../../4-eventparticipated/4.5-event5/) |
 
 ## **3. Kết quả đạt được**
 
 ### **Cơ sở lý thuyết**
 
-* Hiểu cách pentest hộp đen tự động tìm lỗi từ bên ngoài, giống cách kẻ tấn công nhìn hệ thống.
-* Hiểu vì sao CSP nên chạy chế độ chỉ báo cáo trước, rồi mới bật chặn khi không trang nào bị lỗi.
+* Củng cố hiểu biết về mô hình tích hợp API Gateway – Lambda và vai trò của xử lý bất đồng bộ trong hệ thống phân tán.
+* Nắm vững cơ chế idempotency chống xử lý trùng lặp, vai trò của SQS, SNS, DLQ và điều phối luồng đa bước bằng AWS Step Functions.
 
-### **Cài đặt & Thiết lập môi trường**
+### **Nghiên cứu kỹ thuật**
 
-* Header CSP chặt, HSTS và X-Frame-Options được áp trên CloudFront.
-* Cognito gửi email qua Amazon SES; cảnh báo AWS Budgets ở mức 50% / 80%.
-* Đã nộp Đề xuất (Phần 2) ngày 11/13/2026.
+* Tìm hiểu cách dùng bản ghi idempotency để kiểm soát yêu cầu lặp lại và mẫu Saga compensation trong luồng giao dịch phân tán.
 
-### **Kỹ năng thực hành & Vận hành**
+### **Tài liệu & Hoạt động cộng đồng**
 
-* Đóng mọi phát hiện pentest sửa được và xác nhận bằng kiểm thử lại.
-* Giữ pentest trong ngân sách bằng cách dừng ở khoảng 3,5 task-hour.
+* Hệ thống hóa tài liệu nghiên cứu chia sẻ kiến thức AWS gắn liền với các bài toán kỹ thuật thực tế.
+* Tham dự sự kiện **Cloud Mastery** ngày 14/11/2026, tham gia phiên hỏi đáp định hướng nghề nghiệp Cloud và trò chơi Quiz.com ôn tập cuối buổi.

@@ -6,37 +6,43 @@ chapter: false
 pre: " <b> 1.5. </b> "
 ---
 
-# **Week 5 Work Log: Secure S3 Uploads, Rekognition Moderation & AI Listing with Bedrock Nova Pro**
+# **Week 5 Work Log: ReLoop Requirements Analysis & AWS Architecture Planning**
 
 ## **1. Weekly Objectives**
 
-* Let sellers upload photos straight to S3 safely, with size, type and ownership checks.
-* Block unsafe photos automatically with Amazon Rekognition.
-* Choose an AI model that the AWS credits cover and build the first AI listing assistant.
+* Develop a clearer understanding of ReLoop project requirements.
+* Identify the main user roles and application workflows.
+* Research AWS services suitable for frontend hosting, authentication and backend processing.
+* Establish the initial cloud architecture direction.
 
 ## **2. Weekly Execution Schedule**
 
 | Day | Task Description | Start Date | Completion Date | Reference Material |
 | :--- | :--- | :--- | :--- | :--- |
-| **Day 2** | • S3ImageStore: presigned POST (300 s, max 5 MB, JPEG/PNG/WebP, up to 6 photos per listing); assertOwnImageKeys so users can only attach their own photos | 10/12/2026 | 10/12/2026 | imageStore.ts |
-| **Day 3** | • Rekognition DetectModerationLabels (MinConfidence 70); unsafe photos return 422 IMAGE_REJECTED; lifecycle rules delete unattached photos after 1 day and all photos after 90 days | 10/13/2026 | 10/13/2026 | Amazon Rekognition Docs |
-| **Day 4** | • Check Billing → Credits → applicable products; drop SageMaker and Rekognition Custom Labels (hourly cost, need training data); pick Amazon Nova Pro (apac.amazon.nova-pro-v1:0), billed per token and covered by credits | 10/14/2026 | 10/14/2026 | AWS Billing Console, Bedrock Docs |
-| **Day 5** | • Implement BedrockAnalyzer with the Converse API and forced toolChoice so the model must return JSON matching our AiResult schema (temperature 0, maxTokens 2048) | 10/15/2026 | 10/15/2026 | analyzer.ts |
-| **Day 6** | • Run AI analysis in the background (Lambda self-invoke, InvocationType=Event) and test on real laptop and component photos | 10/16/2026 | 10/16/2026 | aiService.ts |
+| **Day 1** | Analyzed ReLoop requirements and identified the main application participants and objectives | 10/12/2026 | 10/12/2026 | [Modernize Applications on AWS](https://cloudjourney.awsstudygroup.com/4-modernize/) |
+| **Day 2** | Outlined device submission, image upload and partner registration workflows | 10/13/2026 | 10/13/2026 | [Serverless Application Architecture](https://cloudjourney.awsstudygroup.com/4-modernize/) |
+| **Day 3** | Researched Amazon S3 and CloudFront for static website hosting and image delivery | 10/14/2026 | 10/14/2026 | [CloudFront OAC – AWS Documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html) |
+| **Day 4** | Studied Amazon Cognito, API Gateway and AWS Lambda for authentication and backend processing | 10/15/2026 | 10/15/2026 | [Serverless Authentication with Amazon Cognito](https://cloudjourney.awsstudygroup.com/4-modernize/) |
+| **Day 5** | Organized the initial AWS service mapping and ReLoop architecture notes | 10/16/2026 | 10/16/2026 | [Serverless Backend with Lambda, S3 and DynamoDB](https://cloudjourney.awsstudygroup.com/4-modernize/) |
 
 ## **3. Key Achievements & Outcomes**
 
-### **Theoretical Foundation**
+### **Requirements Analysis**
 
-* Learned why third-party models sold through AWS Marketplace may not use promotional credits, while Amazon's own Nova models do and cost nothing when idle.
-* Understood how presigned POST policies enforce file size and type on the S3 side, not just in the browser.
+* Established the initial functional direction of ReLoop.
+* Identified device owners and registered partners as the main application participants.
+* Outlined the basic workflows for device submission and partner quotation.
 
-### **Environment Setup & Configuration**
+### **AWS Architecture Research**
 
-* Photo flow: presign → direct upload → moderate → tag; lifecycle 1 day (unattached) / 90 days (all).
-* AI_MODEL_ID=apac.amazon.nova-pro-v1:0 with Converse tool use locked to the AiResult schema.
+* Researched Amazon S3 for frontend assets and device image storage.
+* Studied Amazon CloudFront for content delivery.
+* Explored Amazon Cognito for user authentication.
+* Reviewed API Gateway and Lambda for backend processing.
+* Investigated DynamoDB as a potential database solution.
 
-### **Practical Skills & Operations**
+### **Technical Planning**
 
-* Tested Nova Pro on a Dell Latitude 5490 sticker photo; it returned valid JSON matching our schema on the first try.
-* Verified that a user cannot attach another user's photo key to a listing.
+* Developed a better understanding of serverless application architecture.
+* Organized an initial mapping between application functions and AWS services.
+* Established the basis for further project development.

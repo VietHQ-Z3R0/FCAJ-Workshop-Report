@@ -6,39 +6,39 @@ chapter: false
 pre: " <b> 1.4. </b> "
 ---
 
-# **Nhật ký công việc Tuần 4: Kiến trúc ReLoop, Đề xuất Phần 1 và Bắt đầu phát triển**
+# **Nhật ký công việc Tuần 4: Hòa nhập nhóm & Định hướng dự án ReLoop**
 
 ## **1. Mục tiêu tuần**
 
-* Chốt kiến trúc hệ thống: một Lambda sau HTTP API, mỗi dịch vụ AWS có adapter nhỏ riêng.
-* Thiết kế trên giấy mọi cách truy vấn DynamoDB trước khi viết code.
-* Hoàn tất kiểm tra chi phí và tính khả thi, nộp Đề xuất (Phần 1).
-* Bắt đầu phát triển ReLoop vào thứ Sáu: bảng chính, bucket ảnh, đăng nhập Cognito và giao diện React.
+* Làm quen với nhóm thực tập và môi trường làm việc.
+* Thiết lập kênh trao đổi và phối hợp với các thành viên trong nhóm.
+* Thảo luận các hướng đi tiềm năng cho đồ án thực tập.
+* Xác định ý tưởng ban đầu và mục tiêu của dự án ReLoop.
 
 ## **2. Lịch trình thực hiện**
 
 | Ngày | Mô tả công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | :--- | :--- | :--- | :--- | :--- |
-| **Ngày 2** | • Rà soát kiến trúc: một Lambda + HTTP API, các adapter (Table, ImageStore, Analyzer, AuthProvider) để sau này cùng code chạy trên máy cá nhân với bản giả trong bộ nhớ | 10/05/2026 | 10/05/2026 | Ghi chú kiến trúc |
-| **Ngày 3** | • Thiết kế trên giấy mọi cách truy vấn DynamoDB: mẫu khóa PK/SK và GSI1 (USER#, LISTING#, QUOTE#, TXN#…); quy tắc: không quét bảng | 10/06/2026 | 10/06/2026 | Bảng cách truy vấn |
-| **Ngày 4** | • Kiểm tra chi phí và tính khả thi: bỏ nạp/rút tiền ngân hàng, chuyển sang trả tiền khi bàn giao, chọn Lambda arm64, DynamoDB On-Demand; soạn bản nháp đề xuất | 10/07/2026 | 10/07/2026 | AWS Pricing Calculator |
-| **Ngày 5** | • Hoàn thiện và **nộp Đề xuất (Phần 1)** (vấn đề, kiến trúc, cách truy vấn, ước tính chi phí, lộ trình) | 10/08/2026 | 10/08/2026 | [Đề xuất](../../2-proposal/) |
-| **Ngày 6** | • **Bắt đầu phát triển ReLoop:** viết backend/src/store/keys.ts từ bảng cách truy vấn; tạo reloop-core-table (On-Demand, PITR) và bucket reloop-device-images; user pool Cognito có xác minh email, group (Admins, FinanceAdmins, Partners), trigger đăng ký ghi USER#sub / PROFILE và JWT authorizer cho route riêng tư; dựng ứng dụng Vite + React reloop-ui với Amplify Authenticator; thử đăng ký → xác minh email → đăng nhập | 10/09/2026 | 10/09/2026 | Tài liệu Amazon Cognito, reloop-ui |
+| **Ngày 1** | Tiếp tục làm quen môi trường thực tập và chủ động kết nối với các thành viên trong nhóm | 10/05/2026 | 10/05/2026 | [FCJ Workforce Program](https://cloudjourney.awsstudygroup.com/8-fcjworkforce/) |
+| **Ngày 2** | Tiếp tục trao đổi nhóm và rà soát các yêu cầu phối hợp làm việc ban đầu | 10/06/2026 | 10/06/2026 | [AWS Study Group](https://www.youtube.com/@AWSStudyGroup) |
+| **Ngày 3** | Hoàn tất quá trình làm quen nhóm và thiết lập nhịp giao tiếp ổn định với các thành viên | 10/07/2026 | 10/07/2026 | [FCJ Workforce Program](https://cloudjourney.awsstudygroup.com/8-fcjworkforce/) |
+| **Ngày 4** | Thảo luận ý tưởng dự án và thống nhất chọn ReLoop làm hướng đề tài chính | 10/08/2026 | 10/08/2026 | [Modernize Applications on AWS](https://cloudjourney.awsstudygroup.com/4-modernize/) |
+| **Ngày 5** | Bắt đầu phác thảo khái niệm ReLoop và xác định các yêu cầu chức năng ban đầu | 10/09/2026 | 10/09/2026 | [Modernize Applications on AWS](https://cloudjourney.awsstudygroup.com/4-modernize/) |
 
 ## **3. Kết quả đạt được**
 
-### **Cơ sở lý thuyết**
+### **Hòa nhập nhóm**
 
-* Hiểu cách mẫu adapter giữ nghiệp vụ tách khỏi AWS, nên test chạy được mà không tốn tiền AWS.
-* Hiểu cách JWT của Cognito mang ID người dùng và group để API Gateway kiểm trên mọi route riêng tư.
+* Hoàn tất quá trình làm quen nhóm vào ngày 07/10/2026.
+* Thiết lập kênh giao tiếp thông suốt và nắm rõ kỳ vọng cộng tác trong môi trường thực tập.
 
-### **Cài đặt & Thiết lập môi trường**
+### **Định hướng dự án**
 
-* Đã nộp Đề xuất (Phần 1) ngày 10/08/2026.
-* Từ 10/09/2026: reloop-core-table (On-Demand, PITR) và bucket reloop-device-images (riêng tư) ở ap-southeast-1.
-* User pool Cognito có xác minh email, group người dùng và JWT authorizer trên HTTP API.
+* Thống nhất chọn **ReLoop** làm hướng đề tài vào ngày 08/10/2026.
+* Xác định ReLoop là nền tảng kinh tế tuần hoàn kết nối chủ sở hữu thiết bị điện tử cũ với các đối tác tái sử dụng và tái chế.
+* Định hình các phân hệ chức năng ban đầu: gửi thông tin thiết bị, ghép nối đối tác và quản lý báo giá.
 
-### **Kỹ năng thực hành & Vận hành**
+### **Lập kế hoạch kỹ thuật**
 
-* Liệt kê mọi cách truy vấn trước khi viết code truy vấn, rồi chuyển thành keys.ts ngay ngày đầu phát triển.
-* Trình diễn cho nhóm luồng đăng ký và đăng nhập đầu tiên chạy được trên ứng dụng React vào cuối ngày phát triển đầu tiên.
+* Bắt đầu xác định các dịch vụ AWS phù hợp với ứng dụng đề xuất.
+* Xây dựng định hướng cho giai đoạn phân tích kiến trúc tiếp theo.

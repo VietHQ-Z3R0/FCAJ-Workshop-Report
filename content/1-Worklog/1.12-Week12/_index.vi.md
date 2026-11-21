@@ -6,37 +6,40 @@ chapter: false
 pre: " <b> 1.12. </b> "
 ---
 
-# **Nhật ký công việc Tuần 12: Tài liệu Workshop, Báo cáo Cuối kỳ, Demo và Bàn giao**
+# **Nhật ký công việc Tuần 12: Hoàn thiện dự án ReLoop & Tổng kết tài liệu thực tập**
+
+**Thời gian:** 30/11/2026 – 04/12/2026  
+**Trạng thái:** *Dự kiến – Sẽ cập nhật theo biên bản hoàn thành và sản phẩm thực tế.*
 
 ## **1. Mục tiêu tuần**
 
-* Hoàn thành tài liệu workshop và báo cáo thực tập cuối kỳ.
-* Tổng duyệt và trình bày demo cuối kỳ.
-* Bàn giao dự án để có thể tiếp tục chạy trong thời hạn credit.
+* Hoàn tất rà soát lần cuối cho dự án ReLoop.
+* Tổng hợp tài liệu kiến trúc AWS và tài liệu kỹ thuật dự án.
+* Hệ thống hóa các bài blog kỹ thuật đã xuất bản cùng minh chứng đi kèm.
+* Hoàn thiện nhật ký công việc (Daily Worklog) và báo cáo thực tập cuối kỳ.
+* Tổng kết kiến thức kỹ thuật và kinh nghiệm tích lũy trong suốt kỳ thực tập.
 
 ## **2. Lịch trình thực hiện**
 
 | Ngày | Mô tả công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | :--- | :--- | :--- | :--- | :--- |
-| **Ngày 2** | • Viết hướng dẫn workshop (kiến trúc, các bước deploy, dọn dẹp) dựa trên RELOOP_TECHNICAL_REFERENCE | 11/30/2026 | 11/30/2026 | RELOOP_TECHNICAL_REFERENCE |
-| **Ngày 3** | • Viết bản nháp báo cáo cuối kỳ: kết quả, chi phí, bảo mật, bài học rút ra | 12/01/2026 | 12/01/2026 | Báo cáo cuối kỳ |
-| **Ngày 4** | • Tổng duyệt demo trên production với tài khoản thử thật | 12/02/2026 | 12/02/2026 | Kịch bản demo |
-| **Ngày 5** | • Demo cuối kỳ với mentor; ghi nhận góp ý | 12/03/2026 | 12/03/2026 | Demo |
-| **Ngày 6** | • Bàn giao: tài liệu, Terraform, runbook, tình trạng chi phí và credit; kết thúc kỳ thực tập | 12/04/2026 | 12/04/2026 | Bộ tài liệu bàn giao |
+| **Ngày 1** | Rà soát bản triển khai cuối cùng của ReLoop và ghi nhận trạng thái hoàn thành thực tế | 11/30/2026 | 11/30/2026 | [FCJ Workforce Program](https://cloudjourney.awsstudygroup.com/8-fcjworkforce/) |
+| **Ngày 2** | Tổng hợp sơ đồ kiến trúc AWS hoàn chỉnh, thông tin hạ tầng và tài liệu kỹ thuật | 12/01/2026 | 12/01/2026 | [AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/the-pillars-of-the-framework.html) |
+| **Ngày 3** | Hệ thống hóa các bài blog kỹ thuật AWS, đường dẫn Facebook và ảnh chụp minh chứng dự án | 12/02/2026 | 12/02/2026 | [AWS Study Group – YouTube](https://www.youtube.com/@AWSStudyGroup) |
+| **Ngày 4** | Hoàn thiện Daily Worklog và tổng hợp kiến thức kỹ thuật cùng thành quả kỳ thực tập | 12/03/2026 | 12/03/2026 | [The First Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
+| **Ngày 5** | Rà soát và hoàn thiện báo cáo thực tập cùng toàn bộ hồ sơ nộp cuối kỳ | 12/04/2026 | 12/04/2026 | [FCJ Workforce Program](https://cloudjourney.awsstudygroup.com/8-fcjworkforce/) |
 
-## **3. Kết quả đạt được**
+## **3. Kết quả dự kiến**
 
-### **Cơ sở lý thuyết**
+### **Hoàn thiện dự án & Tài liệu**
 
-* Hiểu rằng tài liệu tốt là một phần của sản phẩm: giúp người khác vận hành và sửa hệ thống mà không cần mình.
-* Nhìn lại cả hành trình, từ EC2 đầu tiên tới một sản phẩm serverless có bảo mật trên AWS.
+* Hoàn tất rà soát cuối cùng cho dự án ReLoop, tổng hợp sơ đồ kiến trúc AWS, thông tin hạ tầng và tài liệu kỹ thuật theo mốc 28–30/11/2026.
 
-### **Cài đặt & Thiết lập môi trường**
+### **Tổng hợp kiến thức kỹ thuật**
 
-* Hướng dẫn workshop và bộ tài liệu bàn giao lưu cùng repository.
-* Stack dev và production tiếp tục chạy trong thời hạn credit (tới 28/02/2027).
+* Hệ thống hóa toàn bộ kiến thức đã tích lũy: quản lý tài khoản AWS, nền tảng đám mây, IAM, mạng, compute, lưu trữ, cơ sở dữ liệu, kiến trúc Serverless, xử lý AI, bảo mật, giám sát và tối ưu chi phí.
 
-### **Kỹ năng thực hành & Vận hành**
+### **Sản phẩm bàn giao kỳ thực tập**
 
-* Trình bày demo trực tiếp trọn luồng: AI điền tin, ghép tin, báo giá, giao dịch và đánh giá.
-* Trả lời câu hỏi của mentor về đánh đổi kiến trúc, chi phí và bảo mật.
+* Tổng hợp 3 bài blog kỹ thuật AWS kèm link Facebook minh chứng.
+* Hoàn thiện nhật ký công việc 12 tuần, ảnh chụp minh chứng, sơ đồ kiến trúc và tài liệu tham khảo trước hạn 04/12/2026.

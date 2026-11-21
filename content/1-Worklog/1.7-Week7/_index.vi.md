@@ -6,37 +6,41 @@ chapter: false
 pre: " <b> 1.7. </b> "
 ---
 
-# **Nhật ký công việc Tuần 7: Giao diện mới, Phòng thủ Prompt Injection, Chuyển sang Kimi K3 và Gấu bông Thông minh**
+# **Nhật ký công việc Tuần 7: Tối ưu chi phí AWS – Savings Plans & Reserved Instances**
 
 ## **1. Mục tiêu tuần**
 
-* Làm lại giao diện theo thiết kế của PO: Chợ công khai, cổng đối tác và cổng Admin.
-* Chặn chữ độc hại trong ảnh điều khiển AI (prompt injection).
-* Khắc phục kết quả tiếng Việt kém của AI; tham dự Sự kiện 5 (Gấu bông thông minh cùng Operation Smile Việt Nam).
+* Hiểu rõ các mô hình định giá compute trên AWS.
+* Khám phá AWS Savings Plans và Reserved Instances.
+* So sánh các lựa chọn định giá theo cam kết sử dụng dài hạn.
+* Soạn thảo và xuất bản bài blog kỹ thuật về tối ưu chi phí AWS.
 
 ## **2. Lịch trình thực hiện**
 
 | Ngày | Mô tả công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | :--- | :--- | :--- | :--- | :--- |
-| **Ngày 2** | • Tham gia [Sự kiện 5: Gấu bông thông minh cho trẻ em – Hợp tác cùng Operation Smile Việt Nam](../../4-eventparticipated/4.5-event5/) (13:30 – 15:30 tại Văn phòng AWS Việt Nam, EC2 Tầng 36 Bitexco). Lắp ráp và lập trình gấu bông IoT tương tác hỗ trợ bệnh nhi. Bắt đầu làm giao diện mới theo thiết kế của PO. | 10/26/2026 | 10/26/2026 | Sự kiện 5 / Operation Smile & AWS |
-| **Ngày 3** | • Rekognition DetectText đọc chữ trong ảnh; Bedrock Guardrail (PROMPT_ATTACK, HIGH) lọc nội dung; textScreener (ngưỡng 12 ký tự) gắn cờ tin vào IMGFLAG / REVIEWQ#LISTING để Admin duyệt | 10/27/2026 | 10/27/2026 | Tài liệu Bedrock Guardrails |
-| **Ngày 4** | • Đánh giá trên ảnh thiết bị thật: tiếng Việt của Nova Pro kém; chuyển AI sang Kimi K3 trên Bedrock (28/10). Cùng ngày, hai máy deploy code khác nhau lên cùng một Lambda, cho thấy rõ cần một đường deploy duy nhất | 10/28/2026 | 10/28/2026 | Bảng đánh giá AI |
-| **Ngày 5** | • Từ điển linh kiện tiếng Việt; tách kết quả AI thành observedTextAndLabels và identifiedComponents; sửa lỗi dấu tiếng Việt phát hiện khi red-team | 10/29/2026 | 10/29/2026 | Từ điển, analyzer.ts |
-| **Ngày 6** | • Phát hành giao diện mới (Chợ công khai, cổng đối tác 2 cấp, cổng Admin); chạy lại đánh giá AI: độ chính xác trên bộ thử của nhóm tăng từ khoảng 40% lên 92% | 10/30/2026 | 10/30/2026 | reloop-ui, đánh giá AI |
+| **Ngày 1** | Ôn tập các mô hình định giá compute AWS và sự khác biệt giữa On-Demand với định giá theo cam kết | 10/26/2026 | 10/26/2026 | [Optimizing the System](https://cloudjourney.awsstudygroup.com/3-optimize/) |
+| **Ngày 2** | Nghiên cứu AWS Savings Plans và phân biệt Compute Savings Plans với EC2 Instance Savings Plans | 10/27/2026 | 10/27/2026 | [AWS Savings Plans Documentation](https://docs.aws.amazon.com/savingsplans/latest/userguide/what-is-savings-plans.html) |
+| **Ngày 3** | Soạn thảo và xuất bản bài blog kỹ thuật giải thích AWS Savings Plans ([Blog 2](../../3-blogsposted/3.2-blog2/)) | 10/28/2026 | 10/28/2026 | [AWS Study Group – Creating a Savings Plans Budget](https://www.youtube.com/watch?v=NoF8eEIEA6M) |
+| **Ngày 4** | So sánh Savings Plans với Reserved Instances và rà soát các tình huống áp dụng tương ứng | 10/29/2026 | 10/29/2026 | [Savings Plans Types](https://docs.aws.amazon.com/savingsplans/latest/userguide/plan-types.html) |
+| **Ngày 5** | Đánh giá tính ổn định của workload và các yếu tố cần cân nhắc khi cam kết tối ưu chi phí AWS | 10/30/2026 | 10/30/2026 | [Optimizing AWS Costs](https://cloudjourney.awsstudygroup.com/3-optimize/) |
 
 ## **3. Kết quả đạt được**
 
 ### **Cơ sở lý thuyết**
 
-* Hiểu rằng chữ trong ảnh cũng là dữ liệu người dùng và có thể mang tấn công prompt injection.
-* Học cách chọn model theo kết quả đo trên dữ liệu của chính mình, không theo tên tuổi.
+* Hiểu rõ sự khác biệt giữa mô hình On-Demand và mô hình định giá theo cam kết.
+* Nắm được cách AWS Savings Plans tối ưu chi phí compute qua cam kết mức sử dụng theo giờ.
+* So sánh rõ Compute Savings Plans và EC2 Instance Savings Plans cùng vai trò của tính dự đoán workload.
 
-### **Cài đặt & Thiết lập môi trường**
+### **Nghiên cứu kỹ thuật & Tài liệu**
 
-* Guardrail (PROMPT_ATTACK HIGH) áp cho đầu vào/đầu ra AI và chữ đọc được trong ảnh.
-* Model AI chuyển sang Kimi K3 trên Bedrock, vẫn dùng Converse với tool choice bắt buộc.
+* Nghiên cứu các chiến lược tối ưu chi phí tính toán và đối chiếu giữa Savings Plans với Reserved Instances.
+* Hệ thống hóa tài liệu giải thích về tính linh hoạt và yêu cầu cam kết của từng gói.
 
-### **Kỹ năng thực hành & Vận hành**
+### **Kỹ năng thực hành & Sản phẩm**
 
-* Red-team AI bằng ảnh chứa lệnh ẩn; tin bị gắn cờ giờ phải chờ Admin duyệt.
-* Tham gia tình nguyện tại sự kiện Gấu bông thông minh, lắp ráp gấu bông IoT cho trẻ em cùng Operation Smile Việt Nam.
+* Xuất bản bài blog kỹ thuật về AWS Savings Plans vào ngày 28/10/2026.
+* Nâng cao kỹ năng trình bày cơ chế tính phí AWS thông qua tình huống thực tiễn và quản trị tài chính đám mây.
+
+**Minh chứng bài Blog:** [Bài đăng AWS Savings Plans trên AWS Study Group (Facebook)](https://www.facebook.com/photo/?fbid=2567912610356380&set=gm.2318788625552763&idorvanity=660548818043427) | [Xem Blog 2](../../3-blogsposted/3.2-blog2/)

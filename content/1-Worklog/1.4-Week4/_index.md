@@ -6,39 +6,40 @@ chapter: false
 pre: " <b> 1.4. </b> "
 ---
 
-# **Week 4 Work Log: ReLoop Architecture, Proposal Part 1 & Start of Development**
+# **Week 4 Work Log: Team Onboarding & ReLoop Project Orientation**
 
 ## **1. Weekly Objectives**
 
-* Fix the system architecture: one Lambda behind an HTTP API, with small adapters for each AWS service.
-* Design every DynamoDB access pattern on paper before any code is written.
-* Finish the cost and feasibility check and submit Proposal Part 1.
-* Start ReLoop development on Friday: core table, image bucket, Cognito sign-in and the React front end.
+* Become familiar with the internship team and working environment.
+* Establish communication with team members.
+* Discuss potential project directions.
+* Define the initial concept and objectives of the ReLoop project.
 
 ## **2. Weekly Execution Schedule**
 
 | Day | Task Description | Start Date | Completion Date | Reference Material |
 | :--- | :--- | :--- | :--- | :--- |
-| **Day 2** | • Architecture review: single Lambda + HTTP API, adapters (Table, ImageStore, Analyzer, AuthProvider) so the same code can later run locally with in-memory fakes | 10/05/2026 | 10/05/2026 | Architecture notes |
-| **Day 3** | • Design all DynamoDB access patterns on paper: PK/SK and GSI1 key patterns (USER#, LISTING#, QUOTE#, TXN#…); rule: no table scans | 10/06/2026 | 10/06/2026 | Access-pattern sheet |
-| **Day 4** | • Cost and feasibility check: drop bank top-up/withdrawal in favour of payment at hand-over, choose arm64 Lambda, On-Demand DynamoDB; draft the proposal | 10/07/2026 | 10/07/2026 | AWS Pricing Calculator |
-| **Day 5** | • Finish and submit **Proposal Part 1** (problem, architecture, access patterns, cost estimate, timeline) | 10/08/2026 | 10/08/2026 | [Proposal](../../2-proposal/) |
-| **Day 6** | • **ReLoop development starts:** write backend/src/store/keys.ts from the access-pattern sheet; create reloop-core-table (On-Demand, PITR) and the reloop-device-images bucket; Cognito user pool with email verification, groups (Admins, FinanceAdmins, Partners), sign-up trigger writing USER#sub / PROFILE and a JWT authorizer on private routes; scaffold the Vite + React reloop-ui app with Amplify Authenticator; test sign-up → verify email → sign-in | 10/09/2026 | 10/09/2026 | Amazon Cognito Docs, reloop-ui |
+| **Day 1** | Continued familiarization with the internship environment and attempted to connect with team members | 10/05/2026 | 10/05/2026 | [FCJ Workforce Program](https://cloudjourney.awsstudygroup.com/8-fcjworkforce/) |
+| **Day 2** | Continued team communication and reviewed initial collaboration requirements | 10/06/2026 | 10/06/2026 | [AWS Study Group](https://www.youtube.com/@AWSStudyGroup) |
+| **Day 3** | Completed the initial team familiarization process and established communication with team members | 10/07/2026 | 10/07/2026 | [FCJ Workforce Program](https://cloudjourney.awsstudygroup.com/8-fcjworkforce/) |
+| **Day 4** | Discussed project ideas and selected ReLoop as the proposed project direction | 10/08/2026 | 10/08/2026 | [Modernize Applications on AWS](https://cloudjourney.awsstudygroup.com/4-modernize/) |
+| **Day 5** | Started outlining the ReLoop concept and identifying its initial functional requirements | 10/09/2026 | 10/09/2026 | [Modernize Applications on AWS](https://cloudjourney.awsstudygroup.com/4-modernize/) |
 
 ## **3. Key Achievements & Outcomes**
 
-### **Theoretical Foundation**
+### **Team Onboarding**
 
-* Learned how the adapter pattern keeps business logic independent of AWS, so tests run without an AWS bill.
-* Understood how a Cognito JWT carries the user ID and groups that API Gateway checks on every private route.
+* Completed the initial team familiarization process on 07/10/2026.
+* Established communication with team members.
+* Became familiar with the internship working environment and collaboration expectations.
 
-### **Environment Setup & Configuration**
+### **Project Orientation**
 
-* Proposal Part 1 submitted on 10/08/2026.
-* From 10/09/2026: reloop-core-table (On-Demand, PITR) and reloop-device-images bucket (private) in ap-southeast-1.
-* Cognito user pool with email verification, user groups and a JWT authorizer on the HTTP API.
+* Identified ReLoop as the proposed project direction on 08/10/2026.
+* Defined ReLoop as a circular-economy platform connecting owners of used electronic devices with reuse and recycling partners.
+* Identified device submissions, partner matching and quotation management as the initial functional areas.
 
-### **Practical Skills & Operations**
+### **Technical Planning**
 
-* Listed every access pattern before writing any query code, then turned the list into keys.ts on day one of development.
-* Demonstrated the first working sign-up and sign-in on the React app to the team at the end of the first development day.
+* Started identifying AWS services suitable for the proposed application.
+* Established an initial direction for further project research.

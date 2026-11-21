@@ -6,37 +6,43 @@ chapter: false
 pre: " <b> 1.10. </b> "
 ---
 
-# **Week 10 Work Log: Load Test, Throttling Fix, Single Deploy Path & Production Environment**
+# **Week 10 Work Log: ReLoop AWS Architecture Review & Service Integration Validation**
 
 ## **1. Weekly Objectives**
 
-* Prove the system handles bursts gracefully after the concurrency raise.
-* Move all deploys to one CI/CD path with one IAM user per member.
-* Create the production environment from the same Terraform code.
+* Review the overall ReLoop AWS architecture.
+* Verify service communication flows and architectural boundaries.
+* Examine authentication, storage, backend and AI integration.
+* Improve the accuracy and clarity of AWS architecture documentation.
 
 ## **2. Weekly Execution Schedule**
 
 | Day | Task Description | Start Date | Completion Date | Reference Material |
 | :--- | :--- | :--- | :--- | :--- |
-| **Day 2** | • Re-run loadtest.mjs (80 parallel requests) against the earlier baseline of 26% 5xx; with concurrency 1,000 the 5xx errors are gone | 11/16/2026 | 11/16/2026 | loadtest.mjs |
-| **Day 3** | • Throttling fix: API Gateway throttle 20 requests/s with burst 50; WAF rate limits and API return 429 with Retry-After instead of failing | 11/17/2026 | 11/17/2026 | API Gateway Docs |
-| **Day 4** | • Single CI/CD deploy path in GitHub Actions from a committed revision; one IAM user per team member; plan removal of root access keys | 11/18/2026 | 11/18/2026 | GitHub Actions, IAM |
-| **Day 5** | • Create the production stack from the same Terraform modules with separate variables | 11/19/2026 | 11/19/2026 | infra/*.tf |
-| **Day 6** | • Run the smoke test on production and fix the last environment-specific issues | 11/20/2026 | 11/20/2026 | smoke-aws.py |
+| **Day 1** | Started reviewing the ReLoop AWS architecture diagram and identifying its main service interactions | 11/16/2026 | 11/16/2026 | [Modernize Applications on AWS](https://cloudjourney.awsstudygroup.com/4-modernize/) |
+| **Day 2** | Reviewed CloudFront origins, S3 Origin Access Control and API Gateway request routing | 11/17/2026 | 11/17/2026 | [CloudFront Origin Access Control](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html) |
+| **Day 3** | Examined Cognito authentication, JWT authorization and Lambda user profile triggers | 11/18/2026 | 11/18/2026 | [API Gateway JWT Authorizer](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-jwt-authorizer.html) |
+| **Day 4** | Reviewed S3 Presigned URL workflows, DynamoDB data access and AI service integration | 11/19/2026 | 11/19/2026 | [S3 Presigned URLs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-presigned-url.html) |
+| **Day 5** | Refined the architecture diagram and reviewed EventBridge, AI processing and monitoring connections | 11/20/2026 | 11/20/2026 | [Kimi K3 – Amazon Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-moonshot-ai-kimi-k3.html) |
 
 ## **3. Key Achievements & Outcomes**
 
-### **Theoretical Foundation**
+### **Architecture Understanding**
 
-* Learned the difference between failing under load (5xx) and pushing back politely (429 + Retry-After).
-* Understood why one deploy path from a committed revision prevents two machines from overwriting each other.
+* Started a detailed review of the ReLoop architecture on 16/11/2026.
+* Improved understanding of the relationship between CloudFront, API Gateway and backend services.
+* Reviewed the authentication workflow involving Amazon Cognito and JWT authorization.
+* Examined the separation between static website storage and device image storage.
 
-### **Environment Setup & Configuration**
+### **Technical Analysis**
 
-* API Gateway throttle 20/s, burst 50; WAF rate limits returning 429.
-* Production stack built from the same Terraform modules as dev.
+* Reviewed the Presigned URL mechanism for direct browser-to-S3 image uploads and downloads.
+* Examined DynamoDB read and write operations in the backend architecture.
+* Reviewed the responsibilities of Amazon Rekognition in image moderation and text detection.
+* Researched Amazon Bedrock Kimi K3 and Guardrails for AI-assisted image analysis.
+* Reviewed EventBridge scheduling and CloudWatch monitoring flows.
 
-### **Practical Skills & Operations**
+### **Documentation & Deliverables**
 
-* Compared load-test results before and after the fix and recorded them for the final report.
-* Deployed through CI only, with no manual deploys from laptops.
+* Refined the ReLoop AWS architecture diagram and improved labeling and direction of service communication flows.
+* Identified unclear architectural relationships requiring additional verification and organized updated architecture information for the final project documentation.

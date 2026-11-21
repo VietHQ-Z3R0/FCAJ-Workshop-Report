@@ -6,37 +6,44 @@ chapter: false
 pre: " <b> 1.8. </b> "
 ---
 
-# **Nhật ký công việc Tuần 8: Ghép tin chạy nền, Các đợt QA, WAF và Tài liệu cho Lập trình viên**
+# **Nhật ký công việc Tuần 8: Kiểm kê hạ tầng AWS, Aurora Serverless v2 & Bảo mật ứng dụng Web**
 
 ## **1. Mục tiêu tuần**
 
-* Tự động ghép mỗi tin mới với chi nhánh bên mua ở gần, chạy ở nền.
-* Tìm và sửa lỗi qua các đợt QA có cấu trúc và lần load test đầu tiên.
-* Bảo vệ web và đăng nhập bằng AWS WAF, viết tài liệu cho lập trình viên.
+* Rà soát các tài nguyên AWS đang sử dụng trong môi trường phát triển ReLoop.
+* Hiểu rõ mối liên kết giữa CloudFront, S3 và API Gateway.
+* Nghiên cứu Amazon Aurora Serverless v2 và bài toán tối ưu chi phí cơ sở dữ liệu.
+* Tìm hiểu các cơ chế bảo mật và bảo vệ ứng dụng web.
 
 ## **2. Lịch trình thực hiện**
 
 | Ngày | Mô tả công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | :--- | :--- | :--- | :--- | :--- |
-| **Ngày 2** | • Ghép tin chạy nền bằng geohash + khoảng cách Haversine: mỗi tin được gửi tới mọi chi nhánh đã duyệt có vùng phục vụ (1–15 km) bao phủ; tin trong 5 km được xếp trước | 11/02/2026 | 11/02/2026 | matching.ts |
-| **Ngày 3** | • Tổng hợp 5 đợt QA: 146 mục được ghi nhận và xếp ưu tiên (03/11) | 11/03/2026 | 11/03/2026 | Bảng theo dõi QA |
-| **Ngày 4** | • Load test lần đầu (loadtest.mjs, 80 request song song): 26% lỗi 5xx khi giới hạn Lambda là 10; xin và được nâng giới hạn lên 1.000 | 11/04/2026 | 11/04/2026 | loadtest.mjs, Service Quotas |
-| **Ngày 5** | • Giới hạn AI 20 lượt phân tích/người/ngày (AI_DAILY_LIMIT); lưu gợi ý của AI cạnh giá trị người bán chốt (AILABEL) | 11/05/2026 | 11/05/2026 | aiService.ts |
-| **Ngày 6** | • Gắn AWS WAF cho CloudFront (bộ luật có sẵn + giới hạn tốc độ) và cho user pool Cognito (giới hạn đăng nhập) (06/11); viết RELOOP_TECHNICAL_REFERENCE (hơn 30 mẫu khóa, toàn bộ route API) | 11/06/2026 | 11/06/2026 | infra/waf.tf, RELOOP_TECHNICAL_REFERENCE |
+| **Ngày 1** | Rà soát kiến trúc Serverless và cách tích hợp lưu trữ, cơ sở dữ liệu cùng dịch vụ backend trên AWS | 11/02/2026 | 11/02/2026 | [Modernize Applications on AWS](https://cloudjourney.awsstudygroup.com/4-modernize/) |
+| **Ngày 2** | Rà soát danh mục hạ tầng AWS gồm CloudFront distributions, S3 buckets và tài nguyên API Gateway | 11/03/2026 | 11/03/2026 | [CloudFront Distribution Documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html) |
+| **Ngày 3** | Thu thập và tổng hợp thông tin tài nguyên AWS cho môi trường phát triển ReLoop | 11/04/2026 | 11/04/2026 | [AWS Management Console Documentation](https://docs.aws.amazon.com/console/) |
+| **Ngày 4** | Nghiên cứu Amazon Aurora Serverless v2 và xuất bản bài blog kỹ thuật về tính năng tự động tạm dừng & khởi động lại ([Blog 3](../../3-blogsposted/3.3-blog3/)) | 11/05/2026 | 11/05/2026 | [Aurora Serverless v2 – Automatic Pause and Resume](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2-auto-pause.html) |
+| **Ngày 5** | Tìm hiểu cơ chế bảo vệ ứng dụng web và quan sát hành vi AWS WAF trong quá trình kiểm thử môi trường phát triển | 11/06/2026 | 11/06/2026 | [Securing Applications with AWS WAF](https://cloudjourney.awsstudygroup.com/3-optimize/) |
 
 ## **3. Kết quả đạt được**
 
-### **Cơ sở lý thuyết**
+### **Rà soát hạ tầng AWS**
 
-* Hiểu cách tiền tố geohash thu hẹp vùng tìm kiếm để chỉ kiểm khoảng cách Haversine chính xác với chi nhánh ở gần.
-* Hiểu rằng giới hạn Lambda chạy song song mặc định của tài khoản mới có thể là nút thắt đầu tiên khi tải tăng.
+* Thu thập bảng kiểm kê tài nguyên AWS vào ngày 04/11/2026 tại region `ap-southeast-1`.
+* Rà soát CloudFront distributions cùng các origin tương ứng, nhận diện S3 bucket web hosting, bucket ảnh thiết bị và bucket Terraform state.
+* Kiểm tra mối liên kết định tuyến giữa CloudFront và API Gateway.
 
-### **Cài đặt & Thiết lập môi trường**
+### **Nghiên cứu Cơ sở dữ liệu & Tối ưu chi phí**
 
-* Hai WAF web ACL: reloop-dev-web (CloudFront) và reloop-dev-auth (Cognito).
-* Giới hạn Lambda song song nâng từ 10 lên 1.000; giới hạn AI mỗi ngày đặt 20 lượt/người.
+* Nghiên cứu Amazon Aurora Serverless v2, cơ chế tự động co giãn capacity và cấu hình 0 ACU (automatic pause & resume) cho workload gián đoạn cùng các giới hạn đi kèm.
 
-### **Kỹ năng thực hành & Vận hành**
+### **Nghiên cứu Bảo mật & Kỹ năng thực hành**
 
-* Đóng các mục QA ưu tiên cao nhất và kiểm thử lại các luồng liên quan.
-* Viết tài liệu tham chiếu để thành viên mới tìm được mọi mẫu khóa và route ở một nơi.
+* Tìm hiểu cơ chế bảo vệ ứng dụng web và vai trò của AWS WAF trong việc lọc các yêu cầu HTTP độc hại.
+* Nâng cao kỹ năng kiểm kê hạ tầng và lập tài liệu kiến trúc.
+
+### **Sản phẩm kỹ thuật**
+
+* Xuất bản bài blog kỹ thuật về Aurora Serverless v2 vào ngày 05/11/2026 và chuẩn hóa thông tin hạ tầng cho các đợt rà soát kiến trúc kế tiếp.
+
+**Minh chứng bài Blog:** [Bài đăng Aurora Serverless v2 trên AWS Study Group (Facebook)](https://www.facebook.com/photo/?fbid=2576398179507823&set=gm.2326664424765183&idorvanity=660548818043427) | [Xem Blog 3](../../3-blogsposted/3.3-blog3/)

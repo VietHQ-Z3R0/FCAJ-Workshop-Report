@@ -6,37 +6,46 @@ chapter: false
 pre: " <b> 1.11. </b> "
 ---
 
-# **Week 11 Work Log: Terraform State Migration, Resource Clean-up & Cost Review**
+# **Week 11 Work Log: ReLoop Project Integration Review & Final Validation**
+
+**Status:** *Planned – Update based on actual activities after the week is completed.*
 
 ## **1. Weekly Objectives**
 
-* Put all Terraform state in one safe, versioned place per environment.
-* Remove old resources left over from the early manual setup.
-* Compare real costs with the estimate and confirm the credits last until 28/02/2027.
+* Complete the remaining ReLoop development and integration tasks.
+* Review the photo upload, moderation and AI processing workflows.
+* Validate the existing AWS service interactions.
+* Prepare final project documentation and supporting evidence.
+* Target project completion around 28–30/11/2026.
 
 ## **2. Weekly Execution Schedule**
 
 | Day | Task Description | Start Date | Completion Date | Reference Material |
 | :--- | :--- | :--- | :--- | :--- |
-| **Day 2** | • Plan the state migration: list every resource, back up the current state files | 11/23/2026 | 11/23/2026 | Terraform Docs |
-| **Day 3** | • Migrate state to the versioned S3 backend (one key per environment) and confirm terraform plan shows no changes | 11/24/2026 | 11/24/2026 | infra/backend.tf |
-| **Day 4** | • Find resources created by hand in weeks 1–5 (old user pool, test API, practice buckets) that Terraform does not manage | 11/25/2026 | 11/25/2026 | AWS Console, Resource Explorer |
-| **Day 5** | • Delete the unused resources after team approval; re-run the smoke test on dev and production | 11/26/2026 | 11/26/2026 | smoke-aws.py |
-| **Day 6** | • Cost review in Cost Explorer against the estimate (about 18.70 USD/month, mostly WAF); confirm the credits cover the run until 28/02/2027 | 11/27/2026 | 11/27/2026 | AWS Cost Explorer |
+| **Day 1** | Review the remaining project tasks and verify the current ReLoop implementation status | 11/23/2026 | 11/23/2026 | [Modernize Applications on AWS](https://cloudjourney.awsstudygroup.com/4-modernize/) |
+| **Day 2** | Review the S3 image upload workflow, Presigned URL handling and image access restrictions | 11/24/2026 | 11/24/2026 | [S3 Presigned URLs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-presigned-url.html) |
+| **Day 3** | Review the image moderation and OCR workflow using Amazon Rekognition and Bedrock Guardrails | 11/25/2026 | 11/25/2026 | [Amazon Rekognition Moderation](https://docs.aws.amazon.com/rekognition/latest/dg/moderation-api.html) |
+| **Day 4** | Examine AI-assisted listing generation, asynchronous processing and result storage | 11/26/2026 | 11/26/2026 | [Amazon Bedrock Kimi K3](https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-moonshot-ai-kimi-k3.html) |
+| **Day 5** | Perform final architecture review and prepare the remaining project deliverables | 11/27/2026 | 11/27/2026 | [AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/the-pillars-of-the-framework.html) |
 
-## **3. Key Achievements & Outcomes**
+## **3. Expected Achievements & Outcomes**
 
-### **Theoretical Foundation**
+### **Project Integration Review**
 
-* Learned how to move Terraform state safely without recreating live resources.
-* Understood that most of our bill is fixed WAF cost, while usage-based services stay under 1 USD/month.
+* Complete the review of the main ReLoop application workflows.
+* Verify the relationship between frontend, backend, authentication and storage components.
+* Review image moderation and AI-assisted listing processing.
+* Identify and address remaining integration issues.
 
-### **Environment Setup & Configuration**
+### **Security & Reliability Review**
 
-* Versioned S3 state backend with one key per environment.
-* Account cleaned of unmanaged leftover resources.
+* Review IAM permissions and S3 access restrictions.
+* Verify the correct handling of image processing results and access status.
+* Review asynchronous processing and duplicate-event handling.
+* Examine scheduled expiration processing and monitoring behavior.
 
-### **Practical Skills & Operations**
+### **Project Completion Preparation**
 
-* Confirmed terraform plan was clean after the migration before deleting anything.
-* Wrote a short cost summary for the final report.
+* Consolidate the final architecture diagram.
+* Organize project screenshots and technical evidence.
+* Prepare the remaining project documentation and target final project completion around 28–30/11/2026.

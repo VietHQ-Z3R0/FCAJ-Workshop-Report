@@ -6,37 +6,44 @@ chapter: false
 pre: " <b> 1.7. </b> "
 ---
 
-# **Week 7 Work Log: New UI, Prompt-Injection Defence, Switch to Kimi K3 & Smart Plushies Community**
+# **Week 7 Work Log: AWS Cost Optimization – Savings Plans & Reserved Instances**
 
 ## **1. Weekly Objectives**
 
-* Rebuild the UI from the product owner's designs: public market, partner portal and Admin portal.
-* Stop malicious text inside photos from steering the AI (prompt injection).
-* Fix poor Vietnamese output from the AI; attend Event 5 (Smart Plushies with Operation Smile Vietnam).
+* Understand AWS compute pricing models.
+* Explore AWS Savings Plans and Reserved Instances.
+* Compare commitment-based pricing options.
+* Prepare and publish a technical blog about AWS cost optimization.
 
 ## **2. Weekly Execution Schedule**
 
 | Day | Task Description | Start Date | Completion Date | Reference Material |
 | :--- | :--- | :--- | :--- | :--- |
-| **Day 2** | • Participate in [Event 5: Smart Plushies for Children – In Collaboration with Operation Smile Vietnam](../../4-eventparticipated/4.5-event5/) (01:30 PM – 03:30 PM at AWS Vietnam Office, EC2 Level 36 Bitexco). Hands-on assembly and programming of interactive IoT plushies for pediatric patients. Start the new UI from the product owner's designs. | 10/26/2026 | 10/26/2026 | Event 5 / Operation Smile & AWS |
-| **Day 3** | • Rekognition DetectText reads text in photos; Bedrock Guardrail (PROMPT_ATTACK, HIGH) screens it; textScreener (12-character threshold) flags listings to IMGFLAG / REVIEWQ#LISTING for Admin review | 10/27/2026 | 10/27/2026 | Bedrock Guardrails Docs |
-| **Day 4** | • Benchmark on real device photos: Nova Pro's Vietnamese output is poor; switch AI to Kimi K3 on Bedrock (28/10). Same day, two machines deployed different code to the same Lambda, which showed why one deploy path is needed | 10/28/2026 | 10/28/2026 | AI benchmark sheet |
-| **Day 5** | • Vietnamese electronics glossary; split AI output into observedTextAndLabels and identifiedComponents; fix the Vietnamese diacritics bug found in red-team testing | 10/29/2026 | 10/29/2026 | Glossary, analyzer.ts |
-| **Day 6** | • Ship the new UI (public market, two-tier partner portal, Admin portal); re-run the AI benchmark: accuracy on our test set rose from about 40% to 92% | 10/30/2026 | 10/30/2026 | reloop-ui, AI benchmark |
+| **Day 1** | Reviewed AWS compute pricing models and the differences between On-Demand and commitment-based pricing | 10/26/2026 | 10/26/2026 | [Optimizing the System](https://cloudjourney.awsstudygroup.com/3-optimize/) |
+| **Day 2** | Studied AWS Savings Plans and the differences between Compute and EC2 Instance Savings Plans | 10/27/2026 | 10/27/2026 | [AWS Savings Plans Documentation](https://docs.aws.amazon.com/savingsplans/latest/userguide/what-is-savings-plans.html) |
+| **Day 3** | Prepared and published a technical blog explaining AWS Savings Plans ([Blog 2](../../3-blogsposted/3.2-blog2/)) | 10/28/2026 | 10/28/2026 | [AWS Study Group – Creating a Savings Plans Budget](https://www.youtube.com/watch?v=NoF8eEIEA6M) |
+| **Day 4** | Compared Savings Plans and Reserved Instances and reviewed their respective use cases | 10/29/2026 | 10/29/2026 | [Savings Plans Types](https://docs.aws.amazon.com/savingsplans/latest/userguide/plan-types.html) |
+| **Day 5** | Reviewed workload predictability and commitment considerations in AWS cost optimization | 10/30/2026 | 10/30/2026 | [Optimizing AWS Costs](https://cloudjourney.awsstudygroup.com/3-optimize/) |
 
 ## **3. Key Achievements & Outcomes**
 
 ### **Theoretical Foundation**
 
-* Learned that text inside an image is also user input and can carry prompt-injection attacks.
-* Learned to choose a model by measured results on our own data, not by brand.
+* Understood the differences between On-Demand and commitment-based pricing.
+* Learned how AWS Savings Plans provide pricing benefits through usage commitments.
+* Compared Compute Savings Plans and EC2 Instance Savings Plans.
+* Understood the role of workload predictability in selecting cost optimization options.
 
-### **Environment Setup & Configuration**
+### **Technical Research & Documentation**
 
-* Guardrail (PROMPT_ATTACK HIGH) applied to AI input/output and to text found in photos.
-* AI model switched to Kimi K3 on Bedrock, still using Converse with forced tool choice.
+* Researched AWS compute cost optimization strategies.
+* Compared Savings Plans with Reserved Instances.
+* Organized technical explanations of pricing flexibility and commitment requirements.
 
-### **Practical Skills & Operations**
+### **Practical Skills & Deliverables**
 
-* Red-teamed the AI with photos containing hidden instructions; flagged listings now wait for Admin review.
-* Volunteered at the Smart Plushies event, assembling IoT plushies for children with Operation Smile Vietnam.
+* Published a technical blog about AWS Savings Plans on 28/10/2026.
+* Improved the ability to explain AWS pricing mechanisms using practical scenarios.
+* Expanded knowledge of cloud cost management and financial efficiency.
+
+**Blog Evidence:** [AWS Study Group – AWS Savings Plans Post (Facebook)](https://www.facebook.com/photo/?fbid=2567912610356380&set=gm.2318788625552763&idorvanity=660548818043427) | [Blog 2 Summary](../../3-blogsposted/3.2-blog2/)
