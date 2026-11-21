@@ -38,4 +38,4 @@ pre: " <b> 4.2. </b> "
 ### **Hình ảnh sự kiện**
 
 
-![](/images/report/image5.png) ![](/images/report/image6.png) ![](/images/report/image7.png) 
+![AWS Cloud and AI Day Hanoi - Ảnh 1](/images/4-EventParticipated/event2-1.jpg) ![AWS Cloud and AI Day Hanoi - Ảnh 2](/images/4-EventParticipated/event2-2.jpg)
