@@ -35,11 +35,11 @@ Savings Plans reduce eligible compute rates; they do not automatically reduce ev
 
 ## Image
 
-<!-- Add the Savings Plans illustration, Cost Explorer screenshot, or comparison diagram here. -->
+![AWS Savings Plans](/images/3-BlogsPosted/blog2.jpg)
 
 ## Link
 
-<!-- Paste the Facebook AWS Study Group post URL here. -->
+[AWS Study Group - Facebook Post](https://www.facebook.com/photo/?fbid=2567912610356380&set=gm.2318788625552763&idorvanity=660548818043427)
 
 ## Guide
 

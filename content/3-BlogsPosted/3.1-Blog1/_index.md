@@ -35,11 +35,11 @@ Before enabling a lifecycle rule, define which objects it should affect and conf
 
 ## Image
 
-<!-- Add the S3 Lifecycle architecture diagram or a screenshot of the lifecycle rule here. -->
+![Amazon S3 Object Lifecycle Architecture](/images/3-BlogsPosted/blog1.jpg)
 
 ## Link
 
-<!-- Paste the Facebook AWS Study Group post URL here. -->
+[AWS Study Group - Facebook Post](https://www.facebook.com/photo?fbid=2560728657741442&set=gm.2312347569530202&idorvanity=660548818043427)
 
 ## Guide
 

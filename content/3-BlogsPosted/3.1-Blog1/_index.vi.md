@@ -35,11 +35,11 @@ Trước khi bật lifecycle rule, cần xác định chính xác nhóm đối t
 
 ## Hình ảnh
 
-<!-- Thêm sơ đồ kiến trúc S3 Lifecycle hoặc ảnh chụp cấu hình lifecycle rule tại đây. -->
+![Sơ đồ kiến trúc Amazon S3 Object Lifecycle](/images/3-BlogsPosted/blog1.jpg)
 
 ## Link
 
-<!-- Dán đường dẫn bài đăng Facebook trong AWS Study Group tại đây. -->
+[Bài đăng trên AWS Study Group (Facebook)](https://www.facebook.com/photo?fbid=2560728657741442&set=gm.2312347569530202&idorvanity=660548818043427)
 
 ## Tài liệu hướng dẫn
 

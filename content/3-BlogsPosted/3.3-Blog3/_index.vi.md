@@ -35,11 +35,11 @@ Automatic pause không xảy ra chỉ vì ứng dụng không gửi câu lệnh 
 
 ## Hình ảnh
 
-<!-- Thêm sơ đồ Aurora Serverless v2 hoặc ảnh chụp cấu hình minimum capacity và auto-pause tại đây. -->
+![Sơ đồ kiến trúc Aurora Serverless v2 Auto-Pause và Resume](/images/3-BlogsPosted/blog3.jpg)
 
 ## Link
 
-<!-- Dán đường dẫn bài đăng Facebook trong AWS Study Group tại đây. -->
+[Bài đăng trên AWS Study Group (Facebook)](https://www.facebook.com/photo/?fbid=2576398179507823&set=gm.2326664424765183&idorvanity=660548818043427)
 
 ## Tài liệu hướng dẫn
 

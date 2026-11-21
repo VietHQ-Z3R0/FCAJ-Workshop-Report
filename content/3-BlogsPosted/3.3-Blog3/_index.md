@@ -35,11 +35,11 @@ Automatic pause does not happen simply because an application sends no SQL state
 
 ## Image
 
-<!-- Add the Aurora Serverless v2 architecture diagram or a screenshot of the minimum-capacity and auto-pause settings here. -->
+![Aurora Serverless v2 Auto-Pause and Resume Architecture](/images/3-BlogsPosted/blog3.jpg)
 
 ## Link
 
-<!-- Paste the Facebook AWS Study Group post URL here. -->
+[AWS Study Group - Facebook Post](https://www.facebook.com/photo/?fbid=2576398179507823&set=gm.2326664424765183&idorvanity=660548818043427)
 
 ## Guide
 

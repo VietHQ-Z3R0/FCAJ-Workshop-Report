@@ -35,11 +35,11 @@ Savings Plans giảm mức giá cho các dịch vụ và loại usage đủ đi�
 
 ## Hình ảnh
 
-<!-- Thêm hình minh họa Savings Plans, ảnh Cost Explorer hoặc sơ đồ so sánh tại đây. -->
+![AWS Savings Plans](/images/3-BlogsPosted/blog2.jpg)
 
 ## Link
 
-<!-- Dán đường dẫn bài đăng Facebook trong AWS Study Group tại đây. -->
+[Bài đăng trên AWS Study Group (Facebook)](https://www.facebook.com/photo/?fbid=2567912610356380&set=gm.2318788625552763&idorvanity=660548818043427)
 
 ## Tài liệu hướng dẫn
 
