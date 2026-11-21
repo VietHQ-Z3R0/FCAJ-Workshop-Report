@@ -11,7 +11,7 @@ pre: " <b> 4.1. </b> "
 **Date:** Saturday, September 26, 2026  
 **Time:** 10:30 AM – 12:00 PM (GMT+7)  
 **Location:** AWS Vietnam Office, Bitexco Financial Tower, 02 Hai Trieu Street, Ho Chi Minh City, Vietnam.  
-**Role:** Participant  
+**Role:** Attendee  
 **Event Post:** [View on Facebook – AWS Study Group](https://www.facebook.com/share/p/19UirpT2JW/)
 
 ### **Event Objectives**
@@ -50,7 +50,7 @@ pre: " <b> 4.1. </b> "
 ### **Key Takeaways & Application**
 
 * **Architecture-First AI Mindset:** Effective AI features start with a well-defined user problem, a fitting cloud architecture, and continuous testing—never model hype alone.
-* **Applied to ReLoop:** Brought the structured requirement-analysis and technology-selection approach directly into our ReLoop project planning, helping evaluate AWS services for data pipelines and AI-assisted workflows.
+* **Preparation for Upcoming Team Projects:** Applied the structured problem-analysis and technology-selection mindset to later team discussions and AWS service research for data processing and AI workflows.
 * **Stronger Collaboration & Self-Learning:** Improved how I split tasks, document decisions with teammates, and pursue hands-on Cloud and Generative AI learning throughout the FCAJ program.
 
 ### **Event Experience**

@@ -40,7 +40,7 @@ pre: " <b> 4.2. </b> "
 
 * **Cloud & AI Convergence:** Reinforced that strong cloud fundamentals remain indispensable when shipping AI-powered applications.
 * **Pragmatic Architecture & FinOps:** Learned to evaluate architectures against workload scale and budget rather than chasing trends blindly.
-* **Applied to ReLoop:** Brought these architecture, performance, and cost-awareness principles into our ReLoop design discussions and ongoing AWS service research.
+* **Preparation for Cloud Practice & Team Work:** Used these architecture, performance, and cost-awareness principles as a foundation for subsequent AWS service research and team architecture discussions during the internship.
 
 ### **Event Experience**
 

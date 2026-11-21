@@ -11,7 +11,7 @@ pre: " <b> 4.1. </b> "
 **Ngày:** Thứ Bảy, ngày 26 tháng 09 năm 2026  
 **Thời gian:** 10:30 AM – 12:00 PM (GMT+7)  
 **Địa điểm:** Văn phòng AWS Việt Nam, Tòa nhà Bitexco Financial Tower, số 02 Hải Triều, TP. Hồ Chí Minh, Việt Nam.  
-**Vai trò:** Người tham gia  
+**Vai trò:** Người tham dự  
 **Bài đăng sự kiện:** [Xem trên Facebook – AWS Study Group](https://www.facebook.com/share/p/19UirpT2JW/)
 
 ### **Mục tiêu sự kiện**
@@ -50,7 +50,7 @@ pre: " <b> 4.1. </b> "
 ### **Bài học rút ra & Ứng dụng**
 
 * **Tư duy xây dựng giải pháp AI bài bản:** Luôn bắt đầu từ việc phân tích vấn đề thực tế và thiết kế kiến trúc phù hợp thay vì chỉ tập trung vào năng lực của mô hình, đi kèm kiểm thử và tinh chỉnh liên tục.
-* **Ứng dụng vào dự án ReLoop:** Áp dụng cách tiếp cận phân tích yêu cầu và chọn lọc công nghệ khi thảo luận, nghiên cứu dịch vụ AWS phục vụ xử lý dữ liệu và tích hợp AI cho dự án nhóm.
+* **Chuẩn bị cho dự án nhóm giai đoạn sau:** Vận dụng cách tiếp cận phân tích yêu cầu và chọn lọc công nghệ khi thảo luận ý tưởng, nghiên cứu dịch vụ AWS cho xử lý dữ liệu và tích hợp AI trong các tuần tiếp theo.
 * **Nâng cao kỹ năng làm việc nhóm & tự học:** Chú trọng hơn vào việc trao đổi yêu cầu rõ ràng, phân chia đầu việc hợp lý và duy trì thói quen tự nghiên cứu Cloud và Generative AI trong chương trình FCAJ.
 
 ### **Trải nghiệm sự kiện**

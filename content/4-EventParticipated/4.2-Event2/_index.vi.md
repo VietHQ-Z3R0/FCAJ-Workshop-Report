@@ -39,7 +39,7 @@ pre: " <b> 4.2. </b> "
 
 * **Gắn kết Cloud & AI:** Kiến thức nền tảng về điện toán đám mây luôn là bệ phóng không thể thiếu khi phát triển ứng dụng tích hợp AI.
 * **Kiến trúc thực dụng & Tối ưu chi phí:** Đánh giá kỹ yêu cầu quy mô hệ thống và giám sát chi phí dịch vụ ngay từ giai đoạn thiết kế.
-* **Ứng dụng vào dự án ReLoop:** Áp dụng các nguyên tắc lựa chọn kiến trúc, hiệu năng và kiểm soát chi phí vào quá trình thảo luận và nghiên cứu dịch vụ AWS cho dự án nhóm.
+* **Nền tảng cho thực hành Cloud & Làm việc nhóm:** Vận dụng các nguyên tắc lựa chọn kiến trúc, hiệu năng và kiểm soát chi phí làm cơ sở cho việc nghiên cứu dịch vụ AWS và thảo luận kỹ thuật nhóm ở các tuần tiếp theo.
 
 ### **Trải nghiệm sự kiện**
 
