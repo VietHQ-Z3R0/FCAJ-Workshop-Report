@@ -12,27 +12,37 @@ pre: " <b> 4.5. </b> "
 **Thời gian:** Buổi sáng (GMT+7)  
 **Địa điểm:** Văn phòng AWS Việt Nam, Bitexco Financial Tower, TP. Hồ Chí Minh.  
 **Vai trò:** Người tham dự  
+**Bài tổng kết sự kiện:** [Xem trên Facebook](https://www.facebook.com/share/p/1E3kZ8yC7h/)
 
 ### **Mục tiêu sự kiện**
 
-* Chia sẻ kiến thức Cloud và định hướng nghề nghiệp cho các bạn sinh viên trẻ đến từ khắp nơi tại Sài Gòn.  
-* Giải đáp các câu hỏi thực tế của sinh viên, từ định hướng đến chuyên môn về Cloud.  
-* Ôn lại nội dung một cách vui vẻ qua trò chơi Quiz trực tiếp cuối buổi.
+* Chia sẻ kiến thức điện toán đám mây và kinh nghiệm học tập thực tế đến các bạn sinh viên.
+* Giải đáp các thắc mắc xoay quanh nền tảng kỹ thuật, kỹ năng cốt lõi và lộ trình nghề nghiệp trong ngành Cloud.
+* Tạo không gian cởi mở để các bạn sinh viên cùng đam mê công nghệ giao lưu, học hỏi lẫn nhau.
 
 ### **Nội dung nổi bật**
 
-#### **Hỏi đáp – "Không có hồi kết"**
-* Phần hỏi đáp kéo dài hơn dự kiến rất nhiều. Các bạn sinh viên đặt những câu hỏi rất thực tế và hay: nên bắt đầu học Cloud từ đâu, kỹ năng nào quan trọng, và phát triển sự nghiệp Cloud như thế nào.
+#### **Chia sẻ kiến thức Cloud & Định hướng nghề nghiệp**
+* Thảo luận lộ trình tiếp cận điện toán đám mây hiệu quả và những kỹ năng cần thiết sinh viên nên tích lũy sớm.
+* Mở rộng góc nhìn về các hướng phát triển sự nghiệp Cloud thông qua những câu hỏi thực tế từ chính người tham dự.
 
-#### **Game Quiz cuối buổi**
-* Trò chơi Quiz.com trực tiếp khép lại buổi chia sẻ. Hơn 100 người chơi tham gia và được hưởng ứng rất nồng nhiệt.
+#### **Phiên Hỏi đáp (Q&A) sôi nổi**
+* Giải đáp trực tiếp các khó khăn thường gặp khi tự học Cloud, chọn đề tài thực hành và phát triển chuyên môn.
+* Không khí tương tác cao khiến phần hỏi đáp kéo dài hơn dự kiến nhờ sự chủ động đặt câu hỏi của đông đảo sinh viên.
 
-#### **Sự kiện sắp tới**
-* Ban tổ chức nhắc đến một buổi chia sẻ về Cloud khác dành cho sinh viên vào cuối tuần sau: **AWS Student Community Day Vietnam 2026**.
+#### **Trò chơi Quiz cuối buổi & Sự kiện cộng đồng sắp tới**
+* Hoạt động Quiz trực tiếp với sự hưởng ứng của hơn 100 người tham gia giúp củng cố nhanh kiến thức và khép lại chương trình đầy hào hứng.
+* Ban tổ chức cũng giới thiệu **AWS Student Community Day Vietnam 2026** diễn ra vào cuối tuần kế tiếp.
+
+### **Bài học rút ra & Ứng dụng**
+
+* **Kết hợp nền tảng và thực hành:** Kiến thức Cloud cơ bản cần song hành với thực hành dự án và tư duy an toàn thông tin để phát huy hiệu quả.
+* **Chủ động học hỏi cùng cộng đồng:** Đặt câu hỏi, lắng nghe trải nghiệm từ người đi trước và tham gia hoạt động cộng đồng giúp mở rộng góc nhìn nghề nghiệp nhanh hơn.
+* **Ứng dụng cho bản thân:** Nhìn lại chặng đường tích lũy kiến thức Cloud và An toàn thông tin trong kỳ thực tập First Cloud AI Journey để xác định các kỹ năng cần tiếp tục trau dồi sau thực tập.
 
 ### **Trải nghiệm sự kiện**
 
-Rất vui khi thấy nhiều bạn sinh viên quan tâm đến Cloud. Các câu hỏi đều thực tế, và nghe phần trả lời giúp tôi liên hệ những gì đang xây dựng trong ReLoop với cách người khác lên kế hoạch học tập và sự nghiệp Cloud. Game Quiz là cách vui để kiểm tra mình nhớ được gì sau buổi chia sẻ.
+Buổi sáng thứ Bảy ngày 14/11/2026 tại văn phòng AWS Việt Nam (Bitexco Financial Tower) mang lại bầu không khí cởi mở và giàu năng lượng. Sự chủ động của các bạn sinh viên trong phần Q&A cùng trò chơi Quiz cuối buổi giúp tôi nhìn lại hành trình thực tập của mình và tiếp thêm động lực để tiếp tục phát triển chuyên môn về Điện toán đám mây và An toàn thông tin.
 
 ### **Hình ảnh sự kiện**
 

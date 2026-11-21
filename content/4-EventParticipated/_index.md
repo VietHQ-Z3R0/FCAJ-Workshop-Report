@@ -11,16 +11,16 @@ During my 12-week internship, I actively participated in 5 major technology conf
 ### Events Overview
 
 1. **[Event 1: Buildrathon – Kickoff: Code the Future with CMC Global](4.1-Event1/)**  
-   *September 26, 2026 | Bitexco Financial Tower | Role: Participant*
+   *September 26, 2026 | Bitexco Financial Tower | Role: Attendee*
 
-2. **[Event 2: AWS Cloud and AI Day Hanoi – Watch Party](4.2-Event2/)**  
+2. **[Event 2: AWS Cloud & AI Day 2026 – HCMC Watch Party](4.2-Event2/)**  
    *September 29, 2026 | AWS Vietnam Office, Bitexco Level 26 | Role: Attendee*
 
 3. **[Event 3: Fireside Chat with Dr. Werner – Navigating the Future of Cloud & AI in Vietnam](4.3-Event3/)**  
-   *October 2, 2026 | Bitexco Financial Tower | Role: Attendee (Executive Keynote)*
+   *October 2, 2026 | Bitexco Financial Tower | Role: Attendee*
 
-4. **[Event 4: Cloud & AI Infrastructure Meetup](4.4-Event4/)**  
-   *October 24, 2026 | Bitexco Financial Tower | Role: Attendee*
+4. **[Event 4: First Cloud AI Journey – Weekly Meet Up (24/10)](4.4-Event4/)**  
+   *October 24, 2026 | AWS Vietnam Office, Bitexco Level 26 | Role: Attendee*
 
 5. **[Event 5: Cloud Mastery – Cloud Sharing Session for Students](4.5-Event5/)**  
    *November 14, 2026 | AWS Vietnam Office, Bitexco Financial Tower | Role: Attendee*
