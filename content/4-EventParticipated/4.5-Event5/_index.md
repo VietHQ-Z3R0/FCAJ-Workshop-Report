@@ -1,37 +1,39 @@
 ---
 title: "Event 5"
-date: 2026-11-07
+date: 2026-11-19
 weight: 5
 chapter: false
 pre: " <b> 4.5. </b> "
 ---
 
-# **Event 5: Smart Plushies for Children – In Collaboration with Operation Smile Vietnam**
+# **Event 5: Cloud Mastery – Cloud Sharing Session for Students**
 
-**Date:** Monday, October 26, 2026  
-**Time:** 01:30 PM – 03:30 PM (GMT+7)  
-**Location:** EC2, Level 36, AWS Vietnam Office, Bitexco Financial Tower, Ho Chi Minh City, Vietnam.  
-**Role:** Participant  
+**Date:** Saturday, November 14, 2026  
+**Time:** Morning (GMT+7)  
+**Location:** AWS Vietnam Office, Bitexco Financial Tower, Ho Chi Minh City, Vietnam.  
+**Role:** Attendee  
 
 ### **Event Objectives**
 
-* Apply technology and creative engineering toward meaningful social impact.  
-* Introduce interactive, IoT-enabled educational plush toys for pediatric patients.  
-* Collaborate with Operation Smile Vietnam to bring comfort to hospitalized children.
+* Share cloud knowledge and career guidance with young students from across Saigon.  
+* Answer real questions from students, from career direction to hands-on cloud skills.  
+* Review the content in a fun way with a live quiz game at the end.
 
 ### **Key Highlights**
 
-#### **Technology for Social Impact**
-* Demonstrating that engineering skills create tangible value when channeled toward empathetic, human-centric solutions.
+#### **Open Q&A – "With No End"**
+* The Q&A part ran much longer than planned. Students asked very practical questions about where to start in cloud, which skills matter, and how to grow a cloud career.
 
-#### **Hands-on Assembly & Collaboration**
-* Interactive sensor integration, audio feedback programming, and working alongside cross-functional colleagues.
+#### **Quiz Game at the End**
+* A live Quiz.com game closed the session. Over 100 players joined and the room was very lively.
+
+#### **What's Next**
+* The organizers mentioned another student-focused cloud event the following weekend: **AWS Student Community Day Vietnam 2026**.
 
 ### **Event Experience**
 
-Participating in this workshop stood out from purely technical cloud sessions. It served as a powerful reminder that technology achieves its highest purpose when improving human lives and bringing smiles to children.
+It was good to see so many students interested in cloud. The questions were real and practical, and hearing the answers helped me connect what I am building in ReLoop with how others plan their cloud learning and careers. The quiz was a fun way to check what stuck from the session.
 
 ### **Event Photos**
 
-
-![](/images/report/image11.png) ![](/images/report/image12.png) 
+![Joined the Cloud Mastery quiz game on Quiz.com](/images/4-EventParticipated/event5.jpg)

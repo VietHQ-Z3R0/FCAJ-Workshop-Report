@@ -1,37 +1,39 @@
 ---
 title: "Sự kiện 5"
-date: 2026-11-07
+date: 2026-11-19
 weight: 5
 chapter: false
 pre: " <b> 4.5. </b> "
 ---
 
-# **Sự kiện 5: Gấu bông thông minh cho trẻ em – Hoạt động vì cộng đồng phối hợp cùng Operation Smile Vietnam**
+# **Sự kiện 5: Cloud Mastery – Buổi chia sẻ về Cloud cho sinh viên**
 
-**Ngày:** Thứ Hai, ngày 26 tháng 10 năm 2026  
-**Thời gian:** 01:30 PM – 03:30 PM (GMT+7)  
-**Địa điểm:** Phòng EC2, Tầng 36, Văn phòng AWS Việt Nam, Bitexco Financial Tower, TP. Hồ Chí Minh.  
-**Vai trò:** Người tham gia  
+**Ngày:** Thứ Bảy, ngày 14 tháng 11 năm 2026  
+**Thời gian:** Buổi sáng (GMT+7)  
+**Địa điểm:** Văn phòng AWS Việt Nam, Bitexco Financial Tower, TP. Hồ Chí Minh.  
+**Vai trò:** Người tham dự  
 
 ### **Mục tiêu sự kiện**
 
-* Ứng dụng công nghệ và sự sáng tạo vào các hoạt động thiện nguyện mang lại giá trị nhân văn cho cộng đồng.  
-* Lắp ráp và lập trình đồ chơi gấu bông tương tác thông minh hỗ trợ các bệnh nhi trong quá trình điều trị y tế.  
-* Phối hợp chặt chẽ cùng tổ chức Operation Smile Vietnam mang lại niềm vui cho trẻ em.
+* Chia sẻ kiến thức Cloud và định hướng nghề nghiệp cho các bạn sinh viên trẻ đến từ khắp nơi tại Sài Gòn.  
+* Giải đáp các câu hỏi thực tế của sinh viên, từ định hướng đến chuyên môn về Cloud.  
+* Ôn lại nội dung một cách vui vẻ qua trò chơi Quiz trực tiếp cuối buổi.
 
 ### **Nội dung nổi bật**
 
-#### **Công nghệ vì cộng đồng**
-* Khẳng định vai trò của kỹ năng kỹ thuật khi được kết hợp với sự thấu cảm xã hội để tạo nên những sản phẩm giàu ý nghĩa.
+#### **Hỏi đáp – "Không có hồi kết"**
+* Phần hỏi đáp kéo dài hơn dự kiến rất nhiều. Các bạn sinh viên đặt những câu hỏi rất thực tế và hay: nên bắt đầu học Cloud từ đâu, kỹ năng nào quan trọng, và phát triển sự nghiệp Cloud như thế nào.
 
-#### **Thực hành lắp ráp & Làm việc nhóm**
-* Tích hợp cảm biến tương tác, cài đặt module phản hồi âm thanh và cùng nhau hoàn thiện sản phẩm với các đồng nghiệp.
+#### **Game Quiz cuối buổi**
+* Trò chơi Quiz.com trực tiếp khép lại buổi chia sẻ. Hơn 100 người chơi tham gia và được hưởng ứng rất nồng nhiệt.
+
+#### **Sự kiện sắp tới**
+* Ban tổ chức nhắc đến một buổi chia sẻ về Cloud khác dành cho sinh viên vào cuối tuần sau: **AWS Student Community Day Vietnam 2026**.
 
 ### **Trải nghiệm sự kiện**
 
-Sự kiện là một trải nghiệm đặc biệt và đáng nhớ trong kỳ thực tập tại AWS. Bên cạnh những giờ làm việc với hạ tầng kỹ thuật phức tạp, hoạt động này giúp tôi nhận thức sâu sắc rằng mục tiêu cao đẹp nhất của công nghệ là phục vụ con người và mang lại nụ cười cho trẻ em.
+Rất vui khi thấy nhiều bạn sinh viên quan tâm đến Cloud. Các câu hỏi đều thực tế, và nghe phần trả lời giúp tôi liên hệ những gì đang xây dựng trong ReLoop với cách người khác lên kế hoạch học tập và sự nghiệp Cloud. Game Quiz là cách vui để kiểm tra mình nhớ được gì sau buổi chia sẻ.
 
 ### **Hình ảnh sự kiện**
 
-
-![](/images/report/image11.png) ![](/images/report/image12.png) 
+![Tham gia game Quiz của Cloud Mastery trên Quiz.com](/images/4-EventParticipated/event5.jpg)
