@@ -9,9 +9,14 @@ pre: " <b> 2. </b> "
 ## An AI-assisted marketplace for used and broken electronics, built serverless on AWS
 
 ### 1. Executive Summary
-ReLoop is a web marketplace where people in Vietnam sell used or broken electronics (phones, laptops, monitors, components) to nearby repair shops, buyers, and recyclers. It is built by **AWSS3nt1n4L**, a 5-person team in the AWS First Cloud Journey (FCAJ) program in Ho Chi Minh City, during a 12-week internship (14/09–04/12/2026). A seller uploads device photos, and Amazon Bedrock pre-fills the listing details. The listing is then matched to every approved buyer whose branch service area (1–15 km) covers the seller, and the deal closes through a buyer quote or a price agreed in chat.
+ReLoop is a web marketplace where people in Vietnam sell used or broken electronics (phones, laptops, monitors, components) to nearby repair shops, resellers, and recyclers. It is built by **AWSS3nt1n4L**, a 5-person team in the AWS First Cloud AI Journey (FCAJ) program in Ho Chi Minh City, during a 12-week internship (14/09–04/12/2026). A seller uploads device photos, and Amazon Bedrock pre-fills the listing details. The listing is then matched to every approved buyer whose branch service area (1–15 km) serves the seller's location, and the deal closes through a buyer quote or a price agreed in chat.
 
-On 08/11/2026, the live environment had 14 registered accounts, 12 active listings from 7 sellers, and roughly 31,000 API requests in its first month. The serverless design scales automatically without re-architecture, with Lambda concurrency approved up to 1,000. The platform uses 12 managed AWS services: **CloudFront, AWS WAF, S3, Cognito, API Gateway, Lambda, DynamoDB, Rekognition, Bedrock, EventBridge, CloudWatch, and SNS**. Guests browse the public market without an account, signed-in users (`Owners`) chat and buy, Admin-approved `Partners` post listings and quotes, and `Admins` / `FinanceAdmins` moderate flagged content and handle monthly fee invoices.
+On 08/11/2026, the live environment had 14 registered accounts, 12 active listings from 7 sellers, and roughly 31,000 API requests in its first month. The serverless design scales automatically without re-architecture, with Lambda concurrency approved up to 1,000. The platform uses 12 managed AWS services (plus AWS IAM for least-privilege access): **CloudFront, AWS WAF, S3, Cognito, API Gateway, Lambda, DynamoDB, Rekognition, Bedrock, EventBridge, CloudWatch, and SNS**. Guests browse the public market without an account, signed-in `Owners` chat and buy, Admin-approved `Partners` unlock selling (Tier 1) or buying and quoting (Tier 2), and `Admins` / `FinanceAdmins` moderate flagged content and handle monthly fee invoices.
+
+{{% notice tip %}}
+**Live Demo:** [https://d1cjl1tvcp0r6q.cloudfront.net/](https://d1cjl1tvcp0r6q.cloudfront.net/) (verified live HTTPS CloudFront deployment of ReLoop)  
+**Companion Code & Terraform Repo:** [https://github.com/madlyham/ReLoop](https://github.com/madlyham/ReLoop)
+{{% /notice %}}
 
 #### Team
 
@@ -26,9 +31,9 @@ On 08/11/2026, the live environment had 14 registered accounts, 12 active listin
 ### 2. Problem Statement
 #### What's the Problem?
 The Global E-waste Monitor 2024 (UNITAR/ITU) reports that the world generated 62 million tonnes of e-waste in 2022, and only 22.3% was formally collected and recycled. The same report estimates that Vietnam generated about 516,000 tonnes (≈5.3 kg per person) in 2022. Owners of an old or broken device rarely know who will buy it or what it is worth. Today they post on general classifieds sites or social groups, describe the device by hand, call shops one by one, and often get no answer. General marketplaces such as Chợ Tốt or Facebook Marketplace are built for all kinds of goods and do not:
-- match a listing to repair shops whose service area covers the seller,
-- show a price estimate generated from each buyer's own pricing rules,
-- maintain a reputation record that rewards buyers who honour their quotes.
+- Match a listing to repair shops whose service area covers the seller.
+- Show a price estimate generated from each buyer's own pricing rules.
+- Maintain a reputation record that rewards buyers who honour their quotes.
 
 Small repair shops face the same gap from the other side: they have no low-cost channel to receive nearby devices that match what they buy.
 

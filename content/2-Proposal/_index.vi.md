@@ -9,9 +9,14 @@ pre: " <b> 2. </b> "
 ## Chợ đồ điện tử cũ, hỏng có AI hỗ trợ, xây dựng serverless trên AWS
 
 ### 1. Tóm tắt điều hành
-ReLoop là chợ trên web, nơi người dùng tại Việt Nam bán thiết bị điện tử cũ hoặc hỏng (điện thoại, laptop, màn hình, linh kiện) cho tiệm sửa chữa, người thu mua và đơn vị tái chế gần mình. Dự án do **AWSS3nt1n4L**, nhóm 5 người thuộc chương trình AWS First Cloud Journey (FCAJ) tại TP. Hồ Chí Minh, xây dựng trong 12 tuần thực tập (14/09–04/12/2026). Người bán tải ảnh thiết bị lên, Amazon Bedrock tự điền sẵn thông tin tin đăng. Tin sau đó được ghép tới mọi đơn vị thu mua đã được duyệt có vùng phục vụ của chi nhánh (1–15 km) bao phủ người bán, và giao dịch chốt bằng báo giá của bên mua hoặc giá hai bên thỏa thuận trong chat.
+ReLoop là chợ trên web, nơi người dùng tại Việt Nam bán thiết bị điện tử cũ hoặc hỏng (điện thoại, laptop, màn hình, linh kiện) cho tiệm sửa chữa, đơn vị thu mua lại và đơn vị tái chế gần mình. Dự án do **AWSS3nt1n4L**, nhóm 5 người thuộc chương trình AWS First Cloud AI Journey (FCAJ) tại TP. Hồ Chí Minh, xây dựng trong 12 tuần thực tập (14/09–04/12/2026). Người bán tải ảnh thiết bị lên, Amazon Bedrock tự điền sẵn thông tin tin đăng. Tin sau đó được ghép tới mọi đơn vị thu mua đã được duyệt có vùng phục vụ của chi nhánh (1–15 km) bao phủ vị trí người bán, và giao dịch chốt bằng báo giá của bên mua hoặc giá hai bên thỏa thuận trong chat.
 
-Ngày 08/11/2026, môi trường chạy thực tế có 14 tài khoản đăng ký, 12 tin đang mở của 7 người bán và khoảng 31.000 request API trong tháng đầu. Thiết kế serverless tự mở rộng mà không cần viết lại kiến trúc, với giới hạn Lambda chạy song song đã được duyệt tới 1.000. Nền tảng dùng 12 dịch vụ AWS được quản lý: **CloudFront, AWS WAF, S3, Cognito, API Gateway, Lambda, DynamoDB, Rekognition, Bedrock, EventBridge, CloudWatch và SNS**. Khách xem Chợ công khai không cần tài khoản, người đã đăng nhập (`Owners`) có thể chat và mua, đối tác được Admin duyệt (`Partners`) được đăng bán và gửi báo giá, còn `Admins` và `FinanceAdmins` kiểm duyệt nội dung bị gắn cờ và quản lý hóa đơn phí hàng tháng.
+Ngày 08/11/2026, môi trường chạy thực tế có 14 tài khoản đăng ký, 12 tin đang mở của 7 người bán và khoảng 31.000 request API trong tháng đầu. Thiết kế serverless tự mở rộng mà không cần viết lại kiến trúc, với giới hạn Lambda chạy song song đã được duyệt tới 1.000. Nền tảng dùng 12 dịch vụ AWS được quản lý (cùng AWS IAM phân quyền tối thiểu): **CloudFront, AWS WAF, S3, Cognito, API Gateway, Lambda, DynamoDB, Rekognition, Bedrock, EventBridge, CloudWatch và SNS**. Khách xem Chợ công khai không cần tài khoản, người đã đăng nhập (`Owners`) có thể chat và mua, đối tác được Admin duyệt (`Partners`) mở quyền đăng bán (Cấp 1) hoặc thu mua & báo giá (Cấp 2), còn `Admins` và `FinanceAdmins` kiểm duyệt nội dung bị gắn cờ và quản lý hóa đơn phí hàng tháng.
+
+{{% notice tip %}}
+**Bản Demo trực tuyến (Live Demo):** [https://d1cjl1tvcp0r6q.cloudfront.net/](https://d1cjl1tvcp0r6q.cloudfront.net/) (bản triển khai HTTPS trực tiếp của ReLoop trên CloudFront)  
+**Mã nguồn đồng hành & Terraform Repo:** [https://github.com/madlyham/ReLoop](https://github.com/madlyham/ReLoop)
+{{% /notice %}}
 
 #### Thành viên nhóm
 
@@ -26,9 +31,9 @@ Ngày 08/11/2026, môi trường chạy thực tế có 14 tài khoản đăng k
 ### 2. Tuyên bố vấn đề
 #### Vấn đề hiện tại
 Theo Global E-waste Monitor 2024 (UNITAR/ITU), năm 2022 thế giới thải ra 62 triệu tấn rác điện tử, nhưng chỉ 22,3% được thu gom và tái chế chính thức. Cũng theo báo cáo này, Việt Nam thải ra khoảng 516.000 tấn (≈5,3 kg mỗi người) năm 2022. Người có thiết bị cũ hoặc hỏng hiếm khi biết ai sẽ mua và thiết bị đáng giá bao nhiêu. Hiện họ đăng lên các trang rao vặt chung hoặc nhóm mạng xã hội, tự mô tả bằng tay, gọi từng tiệm và nhiều khi không có phản hồi. Các chợ chung như Chợ Tốt hay Facebook Marketplace làm cho mọi loại hàng, nên không:
-- ghép tin với các tiệm sửa chữa có vùng phục vụ bao phủ vị trí người bán,
-- hiện giá dự kiến tính từ bảng giá của chính bên mua,
-- lưu hồ sơ uy tín ghi nhận những bên mua giữ đúng báo giá.
+- Ghép tin với các tiệm sửa chữa có vùng phục vụ bao phủ vị trí người bán.
+- Hiện giá dự kiến tính từ bảng giá của chính bên mua.
+- Lưu hồ sơ uy tín ghi nhận những bên mua giữ đúng báo giá.
 
 Tiệm sửa chữa nhỏ gặp khoảng trống tương tự từ phía bên kia: họ thiếu kênh chi phí thấp để tiếp nhận thiết bị gần mình đúng loại cần thu mua.
 
