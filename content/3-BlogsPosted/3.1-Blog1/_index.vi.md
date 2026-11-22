@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 3.1. </b> "
 ---
 
-# QUẢN LÝ VÒNG ĐỜI ĐỐI TƯỢNG TRÊN AMAZON S3 ĐỂ TỐI ƯU CHI PHÍ LƯU TRỮ
+# Quản lý vòng đời đối tượng trên Amazon S3 để tối ưu chi phí lưu trữ
 
 ## Tổng quan
 

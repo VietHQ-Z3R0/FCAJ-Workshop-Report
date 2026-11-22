@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 3.1. </b> "
 ---
 
-# MANAGING AMAZON S3 OBJECT LIFECYCLE TO OPTIMIZE STORAGE COSTS
+# Managing Amazon S3 Object Lifecycle to Optimize Storage Costs
 
 ## Overview
 

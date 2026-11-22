@@ -170,17 +170,105 @@ div.notices p:first-child:before {
 
 body {
   color: var(--MAIN-TEXT-color) !important;
-  font-family: "Amazon Ember", "Work Sans", sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 16px;
+  line-height: 1.7;
   text-align: left;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   color: var(--MAIN-TITLES-TEXT-color) !important;
-  font-family: "Amazon Ember", "Montserrat", sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+}
+
+/* Consistent heading scale across all pages */
+#body-inner > h1:first-of-type {
+  font-size: 2.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--MENU-HEADER-BG-color) !important;
+}
+
+#body-inner h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: none;
+  text-align: left;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#body-inner h2 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  text-transform: none;
+  margin-top: 1.8rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #eaecef;
+}
+
+#body-inner h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-transform: none;
+  margin-top: 1.4rem;
+  margin-bottom: 0.55rem;
+}
+
+#body-inner h4 {
+  font-size: 1.02rem;
+  font-weight: 600;
+  text-transform: none;
+  margin-top: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+#body-inner h5 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+/* Prevent double-bold look inside headings */
+#body-inner h1 strong,
+#body-inner h2 strong,
+#body-inner h3 strong,
+#body-inner h4 strong {
+  font-weight: inherit;
+}
+
+#body-inner p,
+#body-inner li {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+#body-inner table {
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+#body-inner code,
+#body-inner pre {
+  font-family: "JetBrains Mono", "Fira Code", Consolas, Monaco, monospace;
+  font-size: 0.88em;
+}
+
+#sidebar {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
 }
 
 .ui-state-default,

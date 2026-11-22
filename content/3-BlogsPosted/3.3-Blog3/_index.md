@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 3.3. </b> "
 ---
 
-# AURORA SERVERLESS V2: AUTOMATIC PAUSE AND RESUME FOR DATABASE COST OPTIMIZATION
+# Aurora Serverless v2: Automatic Pause and Resume for Database Cost Optimization
 
 ## Overview
 
