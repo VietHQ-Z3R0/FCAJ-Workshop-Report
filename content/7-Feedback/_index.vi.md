@@ -35,20 +35,18 @@ Lịch trình linh hoạt, kho tài liệu học tập bài bản, hướng dẫ
 * **Điều bạn hài lòng nhất trong thời gian thực tập?**  
   Được nhìn thấy trọn vẹn cách các dịch vụ AWS riêng lẻ kết nối thành một hệ thống serverless hoàn chỉnh ngoài thực tế — từ CloudFront + WAF ở lớp biên đến Cognito, API Gateway, Lambda, DynamoDB, S3, Rekognition và Bedrock — đồng thời trực tiếp tham gia rà soát, kiểm chứng và chuẩn hóa tài liệu kiến trúc cho ReLoop. Buổi trò chuyện cùng TS. Werner Vogels và các buổi Weekly Meet Up cũng là những trải nghiệm vô cùng đáng nhớ.
 
-* **Điều bạn nghĩ chương trình nên cải thiện cho các khóa thực tập sinh sau?**  
-  Trong tuần đầu tiên, quá trình đăng ký tài khoản AWS và xác minh thẻ thanh toán đôi khi gặp độ trễ, làm chậm tiến độ thực hành trên Console. Nếu chương trình có thêm một bản hướng dẫn chuẩn bị trước kỳ thực tập (liệt kê các loại thẻ hỗ trợ tốt, lỗi xác minh thường gặp và bài tập dự phòng trong lúc chờ kích hoạt) thì các bạn khóa sau sẽ bắt nhịp nhanh hơn nhiều.
+* **Cảm nhận chung về công tác tổ chức của chương trình?**  
+  Mọi khâu trong suốt 12 tuần — từ tài liệu nhập môn, các bài lab theo tuần, sự đồng hành của mentor, chuỗi sự kiện cộng đồng cho đến các buổi rà soát đồ án — đều được tổ chức rất bài bản, chu đáo và hợp lý. Tôi hoàn toàn hài lòng với toàn bộ trải nghiệm thực tập tại đây.
 
 * **Nếu giới thiệu cho bạn bè, bạn có khuyên họ thực tập ở đây không? Vì sao?**  
   **Chắc chắn có.** FCAJ là một trong những chương trình thực tập chất lượng nhất tại Việt Nam dành cho sinh viên muốn tiếp cận thực chiến với AWS Cloud, AI và bảo mật đám mây thay vì chỉ dừng ở lý thuyết. Chỉ cần chủ động học hỏi và kiên trì, bất kỳ bạn sinh viên nào cũng sẽ thu nhận được nền tảng kỹ thuật vững chắc cùng mạng lưới cộng đồng rất tích cực.
 
 ---
 
-### Đề xuất & mong muốn
+### Mong muốn & Lời cảm ơn
 
-* **Đề xuất để cải thiện trải nghiệm thực tập:**  
-  1. Gửi sớm một **checklist tạo tài khoản AWS trước Tuần 1** để thực tập sinh kịp xử lý các vướng mắc xác minh thẻ trước khi vào bài lab.  
-  2. Bổ sung một buổi **hướng dẫn ngắn về quy trình Git, Terraform và quản lý IAM user riêng theo nhóm** ngay đầu giai đoạn làm đồ án để các nhóm chuẩn hóa quy trình ngay từ đầu.  
-  3. Tiếp tục duy trì chuỗi **Weekly Meet Up** và **Cloud Mastery**, vì đây là cầu nối rất hiệu quả giữa sinh viên và kinh nghiệm vận hành thực tế từ doanh nghiệp.
+* **Mong muốn dành cho chương trình:**  
+  Tôi chỉ mong đội ngũ FCAJ tiếp tục duy trì chất lượng tuyệt vời, không khí cởi mở và các chuỗi hoạt động giàu cảm hứng như **Weekly Meet Up**, **Buildrathon** và **Cloud Mastery** để mang lại nhiều giá trị hơn nữa cho các thế hệ sinh viên tiếp theo.
 
 * **Bạn có muốn tiếp tục đồng hành cùng chương trình trong tương lai?**  
   Có. Sau khi hoàn thành 12 tuần thực tập, tôi rất mong muốn tiếp tục gắn bó với cộng đồng **AWS Study Group**, viết thêm các bài chia sẻ về Cloud và Bảo mật đám mây, cũng như hỗ trợ các bạn thực tập sinh khóa sau đúng với tinh thần *"Pay It Forward"*.

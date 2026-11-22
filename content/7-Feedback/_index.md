@@ -35,20 +35,18 @@ The flexible hybrid schedule, access to AWS learning resources, Free Tier / cred
 * **What did you find most satisfying during your internship?**  
   Seeing how individual AWS services connect into one cohesive, real-world serverless system—from CloudFront + WAF at the edge down to Cognito, API Gateway, Lambda, DynamoDB, S3, Rekognition, and Bedrock—and being able to review, verify, and document that entire architecture for ReLoop. Attending the Fireside Chat with Dr. Werner Vogels and connecting with builders at the weekly meetups were also unforgettable highlights.
 
-* **What do you think the program should improve for future interns?**  
-  During Week 1, AWS account registration and payment card verification can occasionally take longer than expected, delaying hands-on console practice. Providing a short pre-onboarding checklist (covering supported payment cards, common verification pitfalls, and fallback sandbox exercises while waiting for activation) would help new interns hit the ground running faster.
+* **What do you think about the overall organization of the program?**  
+  Everything throughout the 12-week program—from onboarding materials and weekly labs to mentor support, community events, and capstone reviews—was already very well organized and thoughtfully structured. I have no complaints and am genuinely satisfied with how smoothly the program ran.
 
 * **If recommending to a friend, would you suggest they intern here? Why or why not?**  
   **Yes, definitely.** FCAJ is one of the best programs in Vietnam for students who want real exposure to AWS Cloud, modern AI engineering, and cloud security rather than purely theoretical exercises. Anyone who is proactive and willing to learn independently will gain both strong technical depth and a supportive community network.
 
 ---
 
-### Suggestions & Expectations
+### Expectations & Appreciation
 
-* **Suggestions to improve the internship experience:**  
-  1. Share a brief **pre-Week 1 AWS account setup guide** before the official start date so interns can resolve card verification delays early.  
-  2. Include a short **team-formation & Git/Terraform workflow kickoff** early in the internship so new teams align on branching conventions, IAM user hygiene, and cost monitoring from day one.  
-  3. Continue hosting hands-on **Weekly Meet Ups** and **Cloud Mastery** sessions—they bridge the gap between university studies and enterprise engineering very effectively.
+* **Hopes for the program moving forward:**  
+  I simply hope the FCAJ team continues maintaining the same high quality, supportive atmosphere, and inspiring series of **Weekly Meet Ups**, **Buildrathon**, and **Cloud Mastery** sessions for many future cohorts of students.
 
 * **Would you like to continue with this community in the future?**  
   Yes. Even after completing the 12-week internship, I would love to stay active in the **AWS Study Group**, continue sharing technical notes and security-focused cloud articles, and support future FCAJ cohorts in the spirit of *"Pay It Forward"*.
