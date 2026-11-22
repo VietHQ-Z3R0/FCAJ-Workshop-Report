@@ -8,7 +8,7 @@ pre: " <b> 6. </b> "
 
 # Self-Evaluation Report
 
-During my internship at **Amazon Web Services Viet Nam Company Limited (Workforce Bootcamp – First Cloud AI Journey)** from **14/09/2026 to 04/12/2026**, I had the opportunity to develop my knowledge of cloud computing, explore AWS services, and apply concepts from my Information Assurance studies at FPT University to practical technical activities.
+During my internship at **Amazon Web Services Viet Nam Company Limited (Workforce Bootcamp – First Cloud AI Journey)** from **14/09/2026 to 14/12/2026**, I had the opportunity to develop my knowledge of cloud computing, explore AWS services, and apply concepts from my Information Assurance studies at FPT University to practical technical activities.
 
 During the internship, I participated as an **AWS Cloud Engineering Intern**, contributing to research and technical activities related to **ReLoop**, a circular-economy platform designed to connect owners of used electronic devices with reuse and recycling partners. My work focused on understanding system requirements, researching AWS architecture, reviewing cloud infrastructure resources, and examining how different AWS services could support the application's functionality.
 

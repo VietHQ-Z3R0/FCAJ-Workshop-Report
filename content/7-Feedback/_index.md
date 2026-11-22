@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 7. </b> "
 ---
 
-During my 12-week internship in the **Workforce Bootcamp – First Cloud AI Journey (FCAJ)** program at **Amazon Web Services Viet Nam Company Limited** (14/09/2026 – 04/12/2026), I gained valuable hands-on experience in cloud computing, serverless architecture, and real-world team collaboration. Below are my honest reflections and constructive feedback for the program.
+During my 12-week internship in the **Workforce Bootcamp – First Cloud AI Journey (FCAJ)** program at **Amazon Web Services Viet Nam Company Limited** (14/09/2026 – 14/12/2026), I gained valuable hands-on experience in cloud computing, serverless architecture, and real-world team collaboration. Below are my honest reflections and constructive feedback for the program.
 
 ### Overall Evaluation
 
