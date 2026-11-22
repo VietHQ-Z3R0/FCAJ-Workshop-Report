@@ -21,7 +21,7 @@ This guide uses `reloop2` as the workshop prefix and `123456789012` / `alerts@ex
 3. [5.3. Single-Table Data Layer with Amazon DynamoDB](5.3-dynamodb/)
 4. [5.4. Authentication & User Profiles with Amazon Cognito](5.4-cognito/)
 5. [5.5. Private Image Storage with Amazon S3, CORS & Lifecycle Rules](5.5-s3-images/)
-6. [5.6. Serverless Backend with AWS Lambda & HTTP API Gateway](5.6-backend-api/)
+6. [5.6. Serverless Backend with IAM, AWS Lambda & HTTP API Gateway](5.6-backend-api/)
 7. [5.7. Content Safety with Amazon Bedrock Guardrails](5.7-bedrock-guardrails/)
 8. [5.8. Frontend Hosting & Edge Routing with CloudFront & OAC](5.8-cloudfront-frontend/)
 9. [5.9. Edge & Identity Protection with AWS WAFv2](5.9-waf/)

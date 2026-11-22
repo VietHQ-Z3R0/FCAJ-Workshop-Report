@@ -1,5 +1,5 @@
 ---
-title : "Backend Lambda & HTTP API Gateway"
+title : "IAM, Backend Lambda & HTTP API Gateway"
 date : 2026-11-14
 weight : 6
 chapter : false

@@ -21,7 +21,7 @@ Bài hướng dẫn dùng tiền tố tài nguyên `reloop2` và các giá trị
 3. [5.3. Tầng dữ liệu Single-Table với Amazon DynamoDB](5.3-dynamodb/)
 4. [5.4. Xác thực & Hồ sơ người dùng với Amazon Cognito](5.4-cognito/)
 5. [5.5. Lưu trữ ảnh riêng tư với Amazon S3, CORS & Lifecycle](5.5-s3-images/)
-6. [5.6. Backend API với AWS Lambda & HTTP API Gateway](5.6-backend-api/)
+6. [5.6. Backend API với IAM, AWS Lambda & HTTP API Gateway](5.6-backend-api/)
 7. [5.7. An toàn nội dung AI với Amazon Bedrock Guardrails](5.7-bedrock-guardrails/)
 8. [5.8. Lưu trữ Frontend SPA & Định tuyến Edge với CloudFront + OAC](5.8-cloudfront-frontend/)
 9. [5.9. Bảo vệ Edge & Danh tính với AWS WAFv2](5.9-waf/)
