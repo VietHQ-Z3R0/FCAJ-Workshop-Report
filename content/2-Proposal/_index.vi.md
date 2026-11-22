@@ -143,9 +143,8 @@ ReLoop chạy hoàn toàn serverless tại **Asia Pacific (Singapore) `ap-southe
 | Tuần 8 | 02/11–06/11 | Đã xong | Kiểm kê hạ tầng AWS ReLoop (`ap-southeast-1`, 04/11); ghép chi nhánh bất đồng bộ; 5 đợt QA (xử lý 146 mục, 03/11); nâng Lambda song song lên 1.000; trần AI 20 lượt/ngày; gắn AWS WAF trên CloudFront (06/11) |
 | Tuần 9 | 09/11–13/11 | Đã xong | Rà soát bảo mật, triển khai idempotency & các bản vá bảo mật; nộp Đề xuất Phần 2 kèm số liệu chi phí thực tế trên AWS (13/11) |
 | Tuần 10 | 16/11–21/11 | Đã xong | Rà soát tổng thể & tinh chỉnh sơ đồ kiến trúc AWS ReLoop; chạy lại load test sau tinh chỉnh throttling (20 request/giây, burst 50); chuẩn hóa luồng triển khai kèm IAM user riêng; kiểm chứng Workshop trọn luồng (Mũi tên 1 → 10) |
-| Tuần 11 | 23/11–27/11 | Dự kiến | Kiểm chứng tích hợp cuối cùng (giới hạn tải ảnh S3, kiểm duyệt Rekognition/Guardrail, luồng AI tạo tin), dọn tài nguyên thừa và đối chiếu chi phí với credit còn lại |
+| Tuần 11 | 23/11–27/11 | Đã xong | Kiểm chứng tích hợp cuối cùng (giới hạn tải ảnh S3, kiểm duyệt Rekognition/Guardrail, luồng AI tạo tin), dọn tài nguyên thừa và đối chiếu chi phí với credit còn lại |
 | Tuần 12 | 30/11–04/12 | Dự kiến | Hoàn thiện dự án ReLoop (mục tiêu 28–30/11), tổng hợp tài liệu kiến trúc AWS, demo trực tiếp và đóng gói tài liệu bàn giao trước 04/12/2026 |
-| Sau ra mắt | 12/2026–02/2027 | Dự kiến | Vận hành trong hạn credit AWS (đến 28/02/2027); thu thập số liệu thực tế cho AI và thuật toán ghép tin |
 
 ### 6. Ước tính ngân sách
 Ước tính dựa trên bảng giá công khai của AWS cho **`ap-southeast-1` (Singapore)** (có thể tính lại trên [AWS Pricing Calculator](https://calculator.aws/)). Bảng chi tiết từng dòng nằm tại [reloop-cost-estimate.csv](/files/2-proposal/reloop-cost-estimate.csv).

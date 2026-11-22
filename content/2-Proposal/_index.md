@@ -143,9 +143,8 @@ ReLoop runs fully serverless in **Asia Pacific (Singapore) `ap-southeast-1`**, p
 | Week 8 | 02/11–06/11 | Done | ReLoop AWS infrastructure inventory (`ap-southeast-1`, 04/11); async branch matching; 5 QA rounds (146 findings resolved, 03/11); Lambda concurrency raised to 1,000; AI cap 20/day; CloudFront AWS WAF attached (06/11) |
 | Week 9 | 09/11–13/11 | Done | Security review, webhook/API idempotency & hardening fixes deployed; Proposal Part 2 submitted with observed AWS costs (13/11) |
 | Week 10 | 16/11–21/11 | Done | End-to-end ReLoop AWS architecture review & diagram refinement; load-test re-run after throttling tuning (20 req/s, burst 50); single deployment workflow with per-member IAM users; full live Workshop verification (Arrows 1 → 10) |
-| Week 11 | 23/11–27/11 | Planned | Final integration validation (S3 upload restrictions, Rekognition/Guardrail moderation, AI listing workflow), unused-resource cleanup, and cost verification against remaining credits |
+| Week 11 | 23/11–27/11 | Done | Final integration validation (S3 upload restrictions, Rekognition/Guardrail moderation, AI listing workflow), unused-resource cleanup, and cost verification against remaining credits |
 | Week 12 | 30/11–04/12 | Planned | ReLoop project completion (target 28–30/11), final AWS architecture documentation, live demo, and hand-over package by 04/12/2026 |
-| Post-launch | 12/2026–02/2027 | Planned | Operate within remaining AWS credit window (until 28/02/2027); gather real AI accuracy and matching data |
 
 ### 6. Budget Estimation
 The estimate uses AWS public list prices for **`ap-southeast-1` (Singapore)** (reproducible in the [AWS Pricing Calculator](https://calculator.aws/)). The line-by-line spreadsheet is in [reloop-cost-estimate.csv](/files/2-proposal/reloop-cost-estimate.csv).
