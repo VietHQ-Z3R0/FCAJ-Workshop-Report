@@ -237,3 +237,17 @@ div.notices.info p {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
+/* Uniform light-blue title color across all pages */
+#body-inner h1,
+#body-inner h2,
+#body-inner h3,
+#body-inner h4,
+#body-inner h5 {
+  color: var(--MAIN-TITLES-TEXT-color) !important;
+}
+
+/* Hide duplicate top H1 when page content has its own detailed H1 below */
+#body-inner > h1:first-of-type:has(~ h1) {
+  display: none;
+}
+
