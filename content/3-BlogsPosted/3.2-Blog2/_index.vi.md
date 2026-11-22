@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 3.2. </b> "
 ---
 
-# AWS Savings Plans: Tối ưu chi phí compute bằng cam kết sử dụng dài hạn
+# AWS SAVINGS PLANS: TỐI ƯU CHI PHÍ COMPUTE BẰNG CAM KẾT SỬ DỤNG DÀI HẠN
 
 ## Tổng quan
 

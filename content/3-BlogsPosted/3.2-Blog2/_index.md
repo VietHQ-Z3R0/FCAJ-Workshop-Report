@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 3.2. </b> "
 ---
 
-# AWS Savings Plans: Optimizing Compute Costs Through Long-Term Usage Commitments
+# AWS SAVINGS PLANS: OPTIMIZING COMPUTE COSTS THROUGH LONG-TERM USAGE COMMITMENTS
 
 ## Overview
 

@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 3.3. </b> "
 ---
 
-# Aurora Serverless v2: Tự động tạm dừng và khởi động lại để tối ưu chi phí database
+# AURORA SERVERLESS V2: TỰ ĐỘNG TẠM DỪNG VÀ KHỞI ĐỘNG LẠI ĐỂ TỐI ƯU CHI PHÍ DATABASE
 
 ## Tổng quan
 

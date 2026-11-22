@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-# Báo cáo tự đánh giá
+# BÁO CÁO TỰ ĐÁNH GIÁ
 
 Trong thời gian thực tập tại **Công ty TNHH Amazon Web Services Việt Nam (Workforce Bootcamp – First Cloud AI Journey)** từ **14/09/2026 đến 04/12/2026**, tôi có cơ hội mở rộng kiến thức về Điện toán đám mây, tìm hiểu các dịch vụ AWS và vận dụng những kiến thức chuyên ngành An toàn thông tin tại Đại học FPT vào các hoạt động kỹ thuật thực tế.
 
