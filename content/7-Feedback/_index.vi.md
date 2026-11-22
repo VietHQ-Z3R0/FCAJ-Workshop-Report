@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 7. </b> "
 ---
 
-Trong suốt 12 tuần tham gia chương trình **Workforce Bootcamp – First Cloud AI Journey (FCAJ)** tại **Công ty TNHH Amazon Web Services Việt Nam** (14/09/2026 – 14/12/2026), tôi đã có cơ hội tích lũy nhiều kinh nghiệm thực tiễn quý giá về điện toán đám mây, kiến trúc serverless và làm việc nhóm trong môi trường chuyên nghiệp. Dưới đây là những chia sẻ và góp ý chân thành của tôi dành cho chương trình.
+Trong suốt 12 tuần tham gia chương trình **Workforce Bootcamp – First Cloud AI Journey (FCAJ)** tại **Công ty TNHH Amazon Web Services Việt Nam** (14/09/2026 – 04/12/2026), tôi đã có cơ hội tích lũy nhiều kinh nghiệm thực tiễn quý giá về điện toán đám mây, kiến trúc serverless và làm việc nhóm trong môi trường chuyên nghiệp. Dưới đây là những chia sẻ và góp ý chân thành của tôi dành cho chương trình.
 
 ### Đánh giá chung
 

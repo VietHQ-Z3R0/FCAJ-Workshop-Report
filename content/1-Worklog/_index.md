@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1. </b> "
 ---
 
-During my 12-week internship at **Amazon Web Services Viet Nam Company Limited** (*Workforce Bootcamp – First Cloud AI Journey*, from **14/09/2026 to 14/12/2026**), I progressed from AWS cloud fundamentals and account management to core infrastructure services, cost optimization research, serverless architecture, and the **ReLoop – AI-Assisted Circular Economy Platform** capstone project.
+During my 12-week internship at **Amazon Web Services Viet Nam Company Limited** (*Workforce Bootcamp – First Cloud AI Journey*, from **14/09/2026 to 04/12/2026**), I progressed from AWS cloud fundamentals and account management to core infrastructure services, cost optimization research, serverless architecture, and the **ReLoop – AI-Assisted Circular Economy Platform** capstone project.
 
 In parallel with my weekly engineering and research tasks, I published **3 technical blogs** on the AWS Study Group ([Blogs Posted](../3-blogsposted/)) and participated in **5 major technology conferences, executive roundtables, and community workshops** hosted by AWS Vietnam and industry partners (cross-referenced throughout the schedule and detailed in the [Events Participated](../4-eventparticipated/) section).
 

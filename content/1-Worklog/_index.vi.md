@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1. </b> "
 ---
 
-Trong suốt 12 tuần thực tập tại **Công ty TNHH Amazon Web Services Việt Nam** (*Workforce Bootcamp – First Cloud AI Journey*, từ **14/09/2026 đến 14/12/2026**), tôi đã đi từ nền tảng điện toán đám mây và quản lý tài khoản AWS đến các dịch vụ hạ tầng cốt lõi, nghiên cứu tối ưu chi phí, kiến trúc Serverless và dự án đồ án **ReLoop – Nền tảng kinh tế tuần hoàn hỗ trợ AI**.
+Trong suốt 12 tuần thực tập tại **Công ty TNHH Amazon Web Services Việt Nam** (*Workforce Bootcamp – First Cloud AI Journey*, từ **14/09/2026 đến 04/12/2026**), tôi đã đi từ nền tảng điện toán đám mây và quản lý tài khoản AWS đến các dịch vụ hạ tầng cốt lõi, nghiên cứu tối ưu chi phí, kiến trúc Serverless và dự án đồ án **ReLoop – Nền tảng kinh tế tuần hoàn hỗ trợ AI**.
 
 Song song với lịch trình kỹ thuật và nghiên cứu hàng tuần, tôi đã xuất bản **3 bài blog kỹ thuật** trên cộng đồng AWS Study Group ([Các bài blogs đã đăng](../3-blogsposted/)) và tích cực tham gia **5 sự kiện công nghệ, tọa đàm lãnh đạo và hội thảo cộng đồng** do AWS Việt Nam cùng đối tác tổ chức (được đối chiếu xuyên suốt lịch trình và trình bày chi tiết tại mục [Các events đã tham gia](../4-eventparticipated/)).
 

@@ -8,7 +8,7 @@ pre: " <b> 6. </b> "
 
 # BÁO CÁO TỰ ĐÁNH GIÁ
 
-Trong thời gian thực tập tại **Công ty TNHH Amazon Web Services Việt Nam (Workforce Bootcamp – First Cloud AI Journey)** từ **14/09/2026 đến 14/12/2026**, tôi có cơ hội mở rộng kiến thức về Điện toán đám mây, tìm hiểu các dịch vụ AWS và vận dụng những kiến thức chuyên ngành An toàn thông tin tại Đại học FPT vào các hoạt động kỹ thuật thực tế.
+Trong thời gian thực tập tại **Công ty TNHH Amazon Web Services Việt Nam (Workforce Bootcamp – First Cloud AI Journey)** từ **14/09/2026 đến 04/12/2026**, tôi có cơ hội mở rộng kiến thức về Điện toán đám mây, tìm hiểu các dịch vụ AWS và vận dụng những kiến thức chuyên ngành An toàn thông tin tại Đại học FPT vào các hoạt động kỹ thuật thực tế.
 
 Trong quá trình thực tập, tôi tham gia với vai trò **Thực tập sinh AWS Cloud Engineering**, đóng góp vào các hoạt động nghiên cứu và kỹ thuật liên quan đến dự án **ReLoop** – nền tảng kinh tế tuần hoàn kết nối người sở hữu thiết bị điện tử đã qua sử dụng với các đối tác tái sử dụng và tái chế. Công việc của tôi tập trung vào nghiên cứu các dịch vụ AWS, rà soát kiến trúc đám mây, tìm hiểu tài nguyên hạ tầng và phân tích cách các thành phần cloud hỗ trợ chức năng của ứng dụng.
 
