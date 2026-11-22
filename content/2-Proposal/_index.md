@@ -27,7 +27,7 @@ On 08/11/2026, the live environment had 14 registered accounts, 12 active listin
 #### What's the Problem?
 The Global E-waste Monitor 2024 (UNITAR/ITU) reports that the world generated 62 million tonnes of e-waste in 2022, and only 22.3% was formally collected and recycled. The same report estimates that Vietnam generated about 516,000 tonnes (≈5.3 kg per person) in 2022. Owners of an old or broken device rarely know who will buy it or what it is worth. Today they post on general classifieds sites or social groups, describe the device by hand, call shops one by one, and often get no answer. General marketplaces such as Chợ Tốt or Facebook Marketplace are built for all kinds of goods and do not:
 - match a listing to repair shops whose service area covers the seller,
-- show a price estimate generated from each buyer's own pricing rules, or
+- show a price estimate generated from each buyer's own pricing rules,
 - maintain a reputation record that rewards buyers who honour their quotes.
 
 Small repair shops face the same gap from the other side: they have no low-cost channel to receive nearby devices that match what they buy.
@@ -131,18 +131,15 @@ ReLoop runs fully serverless in **Asia Pacific (Singapore) `ap-southeast-1`**, p
 
 | Week | Dates | Status | Deliverables |
 |---|---|---|---|
-| Week 1 | 14/09–18/09 | Done | AWS internship onboarding, AWS account registration & payment card verification, AWS Management Console & basic cloud familiarization |
-| Week 2 | 21/09–26/09 | Done | AWS cloud fundamentals, global infrastructure, Shared Responsibility Model, AWS Billing & Budgets; attended Buildrathon Kickoff (26/09) |
-| Week 3 | 28/09–02/10 | Done | AWS core services (IAM, VPC, EC2, S3, RDS, DynamoDB); attended AWS Cloud & AI Day HCMC Watch Party (29/09) & Fireside Chat with Dr. Werner Vogels (02/10) |
-| Week 4 | 05/10–09/10 | Done | Team onboarding completed (07/10); ReLoop selected as project direction (08/10); initial concept & functional requirements outlined; Proposal Part 1 submitted (08/10) |
-| Week 5 | 12/10–16/10 | Done | ReLoop requirements analysis, user roles & device/partner workflows; AWS serverless architecture planning (S3, CloudFront OAC, Cognito, API Gateway, Lambda, DynamoDB) |
-| Week 6 | 19/10–24/10 | Done | Amazon S3 storage classes & lifecycle optimization; published Blog 1 – S3 Lifecycle (22/10); team Terraform dev environment & full market flow on AWS; attended FCAJ Weekly Meet Up (24/10) |
-| Week 7 | 26/10–30/10 | Done | AWS compute cost optimization (Savings Plans vs. Reserved Instances); published Blog 2 – AWS Savings Plans (28/10); UI redesign, Rekognition OCR + Bedrock Guardrail & Kimi K3 migration (28/10) |
-| Week 8 | 02/11–06/11 | Done | ReLoop AWS infrastructure inventory in `ap-southeast-1` (04/11); Aurora Serverless v2 research & published Blog 3 (05/11); AWS WAF & web application security testing (06/11) |
-| Week 9 | 09/11–14/11 | Done | Serverless integration patterns (API Gateway/Lambda, webhook idempotency, SQS/SNS/DLQ, Step Functions); Proposal Part 2 submitted (13/11); attended Cloud Mastery for Students (14/11) |
-| Week 10 | 16/11–21/11 | Done | End-to-end ReLoop AWS architecture review & diagram refinement (CloudFront OAC, Cognito JWT, S3 Presigned URLs, DynamoDB, Rekognition, Bedrock Kimi K3 + Guardrail, EventBridge, CloudWatch/SNS); load-test & live Workshop verification (Arrows 1 → 10) |
-| Week 11 | 23/11–27/11 | Planned | Final integration review (S3 upload restrictions, Rekognition/Guardrail moderation, AI listing workflow), resource audit, unused-asset cleanup, and cost verification against remaining credits |
-| Week 12 | 30/11–04/12 | Planned | ReLoop project completion (target 28–30/11), final AWS architecture documentation, 12-week worklog & internship report, live demo, and hand-over by 04/12/2026 |
+| Week 4 | 05/10–09/10 | Done | ReLoop selected as project direction (08/10); initial concept, architecture & DynamoDB access patterns; Proposal Part 1 submitted (08/10); core table, Cognito sign-in & React app started (09/10) |
+| Week 5 | 12/10–16/10 | Done | ReLoop requirements analysis, user roles & workflows; AWS serverless architecture planning (S3, CloudFront OAC, Cognito, API Gateway, Lambda, DynamoDB); direct S3 upload & Rekognition moderation |
+| Week 6 | 19/10–24/10 | Done | Terraform dev environment live; full market flow running on AWS (19/10); end-to-end smoke test passing (22/10); EventBridge 15-min expiry sweep |
+| Week 7 | 26/10–30/10 | Done | Redesigned UI (public market, partner portal, Admin portal); Rekognition text extraction + Bedrock Guardrail; AI listing analysis migrated to Kimi K3 (28/10) |
+| Week 8 | 02/11–06/11 | Done | ReLoop AWS infrastructure inventory (`ap-southeast-1`, 04/11); async branch matching; 5 QA rounds (146 findings resolved, 03/11); Lambda concurrency raised to 1,000; AI cap 20/day; CloudFront AWS WAF attached (06/11) |
+| Week 9 | 09/11–13/11 | Done | Security review, webhook/API idempotency & hardening fixes deployed; Proposal Part 2 submitted with observed AWS costs (13/11) |
+| Week 10 | 16/11–21/11 | Done | End-to-end ReLoop AWS architecture review & diagram refinement; load-test re-run after throttling tuning (20 req/s, burst 50); single deployment workflow with per-member IAM users; full live Workshop verification (Arrows 1 → 10) |
+| Week 11 | 23/11–27/11 | Planned | Final integration validation (S3 upload restrictions, Rekognition/Guardrail moderation, AI listing workflow), unused-resource cleanup, and cost verification against remaining credits |
+| Week 12 | 30/11–04/12 | Planned | ReLoop project completion (target 28–30/11), final AWS architecture documentation, live demo, and hand-over package by 04/12/2026 |
 | Post-launch | 12/2026–02/2027 | Planned | Operate within remaining AWS credit window (until 28/02/2027); gather real AI accuracy and matching data |
 
 ### 6. Budget Estimation

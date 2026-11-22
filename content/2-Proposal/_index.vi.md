@@ -27,7 +27,7 @@ Ngày 08/11/2026, môi trường chạy thực tế có 14 tài khoản đăng k
 #### Vấn đề hiện tại
 Theo Global E-waste Monitor 2024 (UNITAR/ITU), năm 2022 thế giới thải ra 62 triệu tấn rác điện tử, nhưng chỉ 22,3% được thu gom và tái chế chính thức. Cũng theo báo cáo này, Việt Nam thải ra khoảng 516.000 tấn (≈5,3 kg mỗi người) năm 2022. Người có thiết bị cũ hoặc hỏng hiếm khi biết ai sẽ mua và thiết bị đáng giá bao nhiêu. Hiện họ đăng lên các trang rao vặt chung hoặc nhóm mạng xã hội, tự mô tả bằng tay, gọi từng tiệm và nhiều khi không có phản hồi. Các chợ chung như Chợ Tốt hay Facebook Marketplace làm cho mọi loại hàng, nên không:
 - ghép tin với các tiệm sửa chữa có vùng phục vụ bao phủ vị trí người bán,
-- hiện giá dự kiến tính từ bảng giá của chính bên mua, hay
+- hiện giá dự kiến tính từ bảng giá của chính bên mua,
 - lưu hồ sơ uy tín ghi nhận những bên mua giữ đúng báo giá.
 
 Tiệm sửa chữa nhỏ gặp khoảng trống tương tự từ phía bên kia: họ thiếu kênh chi phí thấp để tiếp nhận thiết bị gần mình đúng loại cần thu mua.
@@ -131,18 +131,15 @@ ReLoop chạy hoàn toàn serverless tại **Asia Pacific (Singapore) `ap-southe
 
 | Tuần | Thời gian | Trạng thái | Kết quả bàn giao |
 |---|---|---|---|
-| Tuần 1 | 14/09–18/09 | Đã xong | Nhập môn thực tập AWS, đăng ký tài khoản AWS & xác minh thẻ thanh toán, làm quen AWS Management Console và điện toán đám mây cơ bản |
-| Tuần 2 | 21/09–26/09 | Đã xong | Nền tảng AWS Cloud, hạ tầng toàn cầu, mô hình Trách nhiệm chia sẻ, AWS Billing & Budgets; tham dự khởi động Buildrathon (26/09) |
-| Tuần 3 | 28/09–02/10 | Đã xong | Dịch vụ cốt lõi AWS (IAM, VPC, EC2, S3, RDS, DynamoDB); tham dự AWS Cloud & AI Day Watch Party TP.HCM (29/09) & Fireside Chat cùng TS. Werner Vogels (02/10) |
-| Tuần 4 | 05/10–09/10 | Đã xong | Hoàn tất hòa nhập nhóm (07/10); chọn ReLoop làm đề tài dự án (08/10); phác thảo ý tưởng & yêu cầu chức năng ban đầu; nộp Đề xuất Phần 1 (08/10) |
-| Tuần 5 | 12/10–16/10 | Đã xong | Phân tích yêu cầu ReLoop, vai trò người dùng & luồng thiết bị/đối tác; lập kế hoạch kiến trúc Serverless AWS (S3, CloudFront OAC, Cognito, API Gateway, Lambda, DynamoDB) |
-| Tuần 6 | 19/10–24/10 | Đã xong | Nghiên cứu lớp lưu trữ & tối ưu S3 Lifecycle; đăng Blog 1 – S3 Lifecycle (22/10); nhóm dựng môi trường dev bằng Terraform & luồng Chợ trên AWS; tham dự FCAJ Weekly Meet Up (24/10) |
-| Tuần 7 | 26/10–30/10 | Đã xong | Tối ưu chi phí compute AWS (Savings Plans vs. Reserved Instances); đăng Blog 2 – AWS Savings Plans (28/10); giao diện mới, Rekognition OCR + Bedrock Guardrail & chuyển sang Kimi K3 (28/10) |
-| Tuần 8 | 02/11–06/11 | Đã xong | Kiểm kê hạ tầng AWS của ReLoop tại `ap-southeast-1` (04/11); nghiên cứu Aurora Serverless v2 & đăng Blog 3 (05/11); kiểm thử bảo mật web & AWS WAF (06/11) |
-| Tuần 9 | 09/11–14/11 | Đã xong | Nghiên cứu mô hình tích hợp Serverless (API Gateway/Lambda, webhook idempotency, SQS/SNS/DLQ, Step Functions); nộp Đề xuất Phần 2 (13/11); tham dự Cloud Mastery cho sinh viên (14/11) |
-| Tuần 10 | 16/11–21/11 | Đã xong | Rà soát tổng thể & tinh chỉnh sơ đồ kiến trúc AWS ReLoop (CloudFront OAC, Cognito JWT, S3 Presigned URLs, DynamoDB, Rekognition, Bedrock Kimi K3 + Guardrail, EventBridge, CloudWatch/SNS); chạy lại load test & kiểm chứng Workshop trọn luồng (Mũi tên 1 → 10) |
-| Tuần 11 | 23/11–27/11 | Dự kiến | Rà soát tích hợp cuối cùng (giới hạn tải ảnh S3, kiểm duyệt Rekognition/Guardrail, luồng AI tạo tin), kiểm tra tài nguyên thừa và đối chiếu chi phí với credit còn lại |
-| Tuần 12 | 30/11–04/12 | Dự kiến | Hoàn thiện dự án ReLoop (mục tiêu 28–30/11), tổng hợp tài liệu kiến trúc AWS, nhật ký 12 tuần & báo cáo thực tập, demo trực tiếp và bàn giao trước 04/12/2026 |
+| Tuần 4 | 05/10–09/10 | Đã xong | Chọn ReLoop làm đề tài dự án (08/10); phác thảo ý tưởng, kiến trúc & mẫu truy vấn DynamoDB; nộp Đề xuất Phần 1 (08/10); khởi chạy bảng chính, Cognito & web React (09/10) |
+| Tuần 5 | 12/10–16/10 | Đã xong | Phân tích yêu cầu ReLoop, vai trò người dùng & luồng nghiệp vụ; lập kế hoạch kiến trúc Serverless AWS (S3, CloudFront OAC, Cognito, API Gateway, Lambda, DynamoDB); tải ảnh trực tiếp S3 & kiểm duyệt Rekognition |
+| Tuần 6 | 19/10–24/10 | Đã xong | Dựng môi trường dev bằng Terraform; luồng Chợ đầy đủ chạy trên AWS (19/10); smoke test trọn luồng đạt (22/10); lịch EventBridge quét hết hạn mỗi 15 phút |
+| Tuần 7 | 26/10–30/10 | Đã xong | Giao diện mới (Chợ công khai, cổng đối tác, cổng Admin); đọc chữ Rekognition + Bedrock Guardrail; chuyển phân tích tin bằng AI sang Kimi K3 (28/10) |
+| Tuần 8 | 02/11–06/11 | Đã xong | Kiểm kê hạ tầng AWS ReLoop (`ap-southeast-1`, 04/11); ghép chi nhánh bất đồng bộ; 5 đợt QA (xử lý 146 mục, 03/11); nâng Lambda song song lên 1.000; trần AI 20 lượt/ngày; gắn AWS WAF trên CloudFront (06/11) |
+| Tuần 9 | 09/11–13/11 | Đã xong | Rà soát bảo mật, triển khai idempotency & các bản vá bảo mật; nộp Đề xuất Phần 2 kèm số liệu chi phí thực tế trên AWS (13/11) |
+| Tuần 10 | 16/11–21/11 | Đã xong | Rà soát tổng thể & tinh chỉnh sơ đồ kiến trúc AWS ReLoop; chạy lại load test sau tinh chỉnh throttling (20 request/giây, burst 50); chuẩn hóa luồng triển khai kèm IAM user riêng; kiểm chứng Workshop trọn luồng (Mũi tên 1 → 10) |
+| Tuần 11 | 23/11–27/11 | Dự kiến | Kiểm chứng tích hợp cuối cùng (giới hạn tải ảnh S3, kiểm duyệt Rekognition/Guardrail, luồng AI tạo tin), dọn tài nguyên thừa và đối chiếu chi phí với credit còn lại |
+| Tuần 12 | 30/11–04/12 | Dự kiến | Hoàn thiện dự án ReLoop (mục tiêu 28–30/11), tổng hợp tài liệu kiến trúc AWS, demo trực tiếp và đóng gói tài liệu bàn giao trước 04/12/2026 |
 | Sau ra mắt | 12/2026–02/2027 | Dự kiến | Vận hành trong hạn credit AWS (đến 28/02/2027); thu thập số liệu thực tế cho AI và thuật toán ghép tin |
 
 ### 6. Ước tính ngân sách
