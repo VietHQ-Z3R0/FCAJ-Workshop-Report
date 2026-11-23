@@ -6,40 +6,38 @@ chapter: false
 pre: " <b> 1.12. </b> "
 ---
 
-# **Week 12 Work Log: Final Demo Presentation, Feedback Wrap-up & Internship Hand-over**
+# **Week 12 Work Log: Architecture Extension Research, Cloud Security Deep-Dive & Internship Wrap-up**
 
 **Period:** 30/11/2026 – 04/12/2026
 
 ## **1. Weekly Objectives**
 
-* Conduct final live demo rehearsal and technical Q&A preparation for the ReLoop presentation.
-* Present and defend the ReLoop capstone project before FCAJ mentors and reviewers.
-* Incorporate post-presentation feedback and finalize the hand-over package (code, Terraform IaC, and documentation).
-* Perform post-demo AWS cost, IAM, and resource hygiene checks and wrap up the 12-week internship.
+* Explore long-term scalability and feature extension paths for the ReLoop platform.
+* Deepen knowledge of advanced AWS security services aligned with Information Assurance.
+* Review Terraform IaC reproducibility and finalize repository hand-over notes.
+* Perform final AWS account hygiene, IAM review, and billing/credit checks before concluding the internship.
 
 ## **2. Weekly Execution Schedule**
 
 | Day | Task Description | Start Date | Completion Date | Reference Material |
 | :--- | :--- | :--- | :--- | :--- |
-| **Day 1** | Final full-team rehearsal of the live ReLoop demo and technical Q&A preparation covering architecture, security, and FinOps trade-offs | 11/30/2026 | 11/30/2026 | [AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/the-pillars-of-the-framework.html) |
-| **Day 2** | Delivered the final ReLoop capstone presentation and live end-to-end demo to FCAJ mentors and collected review feedback | 12/01/2026 | 12/01/2026 | [FCJ Workforce Program](https://cloudjourney.awsstudygroup.com/8-fcjworkforce/) |
-| **Day 3** | Addressed post-demo comments, polished minor documentation notes, and finalized the Terraform & repository hand-over checklist | 12/02/2026 | 12/02/2026 | [Modernize Applications on AWS](https://cloudjourney.awsstudygroup.com/4-modernize/) |
-| **Day 4** | Performed post-demo AWS resource cleanup, IAM access hygiene check, and final AWS Billing / credit balance review | 12/03/2026 | 12/03/2026 | [Managing Costs with AWS Budgets](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html) |
-| **Day 5** | Completed final internship wrap-up, hand-over sign-off, and planned post-internship AWS certification and Cloud Security learning goals | 12/04/2026 | 12/04/2026 | [The First Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
+| **Day 1** | Researched architectural scaling & extension topics for ReLoop: multi-city geohash matching, AI accuracy feedback datasets, and adapter-based integration for payment/notification services | 11/30/2026 | 11/30/2026 | [AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/the-pillars-of-the-framework.html) |
+| **Day 2** | Studied advanced AWS security & threat detection services (AWS Security Hub, Amazon GuardDuty, IAM Access Analyzer) to connect cloud engineering with Information Assurance | 12/01/2026 | 12/01/2026 | [AWS Security Documentation](https://docs.aws.amazon.com/security/) |
+| **Day 3** | Reviewed Terraform IaC modules, verified clean documentation references, and organized final repository hand-over notes | 12/02/2026 | 12/02/2026 | [Modernize Applications on AWS](https://cloudjourney.awsstudygroup.com/4-modernize/) |
+| **Day 4** | Performed final AWS account hygiene: verified no leftover test resources, audited IAM user/role permissions, and checked AWS Billing & remaining credit balance | 12/03/2026 | 12/03/2026 | [Managing Costs with AWS Budgets](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html) |
+| **Day 5** | Wrapped up the 12-week internship, reviewed accumulated technical skills, and outlined a roadmap for AWS certifications and continued Cloud Security learning | 12/04/2026 | 12/04/2026 | [The First Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
 
 ## **3. Expected Achievements & Outcomes**
 
-### **Capstone Presentation & Live Demo**
+### **Extension & Advanced Cloud Security Research**
 
-* Successfully demonstrate the live ReLoop serverless marketplace end to end and defend architectural, security, and cost decisions during Q&A.
-* Record mentor feedback and key lessons learned from the final evaluation.
+* Identified clear technical pathways to scale ReLoop beyond MVP (custom SES email, WebSocket chat, multi-city matching, and labelled AI feedback loops).
+* Broadened understanding of enterprise AWS security services (Security Hub, GuardDuty, IAM Access Analyzer) relevant to Information Assurance.
 
-### **Hand-over & Account Hygiene**
+### **Account Hygiene & Hand-over**
 
-* Complete final repository and Terraform IaC hand-over with zero leftover test resources or unexpected AWS charges.
-* Verify IAM credentials, budgets, and remaining AWS credits remain clean and controlled after the demo.
+* Completed final Terraform and repository hand-over notes with clean IAM configurations and zero unexpected AWS charges.
 
 ### **Internship Wrap-up**
 
-* Conclude the 12-week First Cloud AI Journey internship with a complete portfolio (live serverless project, 3 technical blogs, 5 AWS community events, and full bilingual report).
-* Define next steps for pursuing AWS certifications and continuing community contributions in the AWS Study Group.
+* Concluded the 12-week First Cloud AI Journey internship with a complete portfolio (live serverless project, 3 technical blogs, 5 AWS community events, and full bilingual report) and a clear plan for AWS certification preparation.

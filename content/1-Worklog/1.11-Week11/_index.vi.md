@@ -6,14 +6,14 @@ chapter: false
 pre: " <b> 1.11. </b> "
 ---
 
-# **Nhật ký công việc Tuần 11: Kiểm chứng tích hợp cuối cùng, Nộp báo cáo & Chuẩn bị Demo**
+# **Nhật ký công việc Tuần 11: Kiểm chứng tích hợp cuối cùng, Nộp báo cáo & Nghiên cứu mở rộng**
 
 ## **1. Mục tiêu tuần**
 
 * Hoàn tất kiểm chứng tích hợp toàn trình trên môi trường AWS của ReLoop.
 * Dọn dẹp tài nguyên/ảnh thừa và đối chiếu chi phí AWS thực tế với số credit còn lại.
 * Hoàn thiện và nộp báo cáo thực tập cùng trọn bộ tài liệu dự án ReLoop (24–25/11/2026).
-* Chuẩn bị slide thuyết trình và chạy thử demo trực tiếp trước tuần bảo vệ cuối kỳ.
+* Nghiên cứu các hướng mở rộng kiến trúc và nâng cao bảo mật AWS cho giai đoạn phát triển tiếp theo của ReLoop.
 
 ## **2. Lịch trình thực hiện**
 
@@ -22,8 +22,8 @@ pre: " <b> 1.11. </b> "
 | **Ngày 1** | Hoàn tất kiểm chứng tích hợp cuối cùng (S3 Presigned URLs, kiểm duyệt Rekognition + Bedrock Guardrail, luồng AI Kimi K3) và dọn sạch ảnh/tài nguyên thừa | 11/23/2026 | 11/23/2026 | [AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/the-pillars-of-the-framework.html) |
 | **Ngày 2** | Tổng hợp sơ đồ kiến trúc AWS hoàn chỉnh (`draw.io` + PNG), đối chiếu AWS Billing/Credits và rà soát toàn bộ Worklog, Proposal, Blogs, Events, Workshop, Tự đánh giá & Góp ý | 11/24/2026 | 11/24/2026 | [FCJ Workforce Program](https://cloudjourney.awsstudygroup.com/8-fcjworkforce/) |
 | **Ngày 3** | Nộp báo cáo thực tập hoàn chỉnh và bộ tài liệu kỹ thuật dự án ReLoop trên GitHub Pages | 11/25/2026 | 11/25/2026 | [The First Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
-| **Ngày 4** | Chuẩn bị slide trình bày cuối kỳ và hệ thống hóa nội dung thuyết trình về kiến trúc, bảo mật và chi phí vận hành ReLoop | 11/26/2026 | 11/26/2026 | [Modernize Applications on AWS](https://cloudjourney.awsstudygroup.com/4-modernize/) |
-| **Ngày 5** | Chạy thử luồng demo trực tiếp trên môi trường CloudFront và kiểm tra trạng thái ổn định của CloudWatch Logs, Alarm và AWS WAF | 11/27/2026 | 11/27/2026 | [Amazon CloudWatch Alarms](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Alarms.html) |
+| **Ngày 4** | Nghiên cứu hướng mở rộng cho ReLoop: chuyển gửi email Cognito sang Amazon SES (vượt giới hạn mặc định 50 email/ngày) và nâng cấp chat thời gian thực qua API Gateway WebSockets | 11/26/2026 | 11/26/2026 | [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/dg/Welcome.html) |
+| **Ngày 5** | Tìm hiểu tích hợp quét bảo mật Terraform IaC tự động (Shift-Left Security) trong GitHub Actions và kiểm tra trạng thái CloudWatch Logs, Alarm cùng AWS WAF trên môi trường thực tế | 11/27/2026 | 11/27/2026 | [Amazon CloudWatch Alarms](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Alarms.html) |
 
 ## **3. Kết quả đạt được**
 
@@ -36,6 +36,6 @@ pre: " <b> 1.11. </b> "
 
 * Hoàn tất xuất bản báo cáo thực tập song ngữ (EN/VI) gồm Worklog 12 tuần, Proposal, 3 bài blog kỹ thuật, 5 sự kiện tham gia, Workshop 12 học phần, Tự đánh giá và Chia sẻ trong mốc 24–25/11/2026.
 
-### **Sẵn sàng Demo cuối kỳ**
+### **Nghiên cứu hướng mở rộng**
 
-* Hoàn thiện tài liệu thuyết trình và chạy thử bản demo trực tuyến sẵn sàng cho tuần bảo vệ và bàn giao (Tuần 12).
+* Ghi nhận các đề xuất mở rộng khả thi cho ReLoop: tích hợp Amazon SES gửi email tùy chỉnh, chat thời gian thực bằng WebSocket thay cho cơ chế polling 5 giây và tự động kiểm tra bảo mật Terraform trong CI/CD.
