@@ -13,11 +13,6 @@ ReLoop is a web marketplace where people in Vietnam sell used or broken electron
 
 On 08/11/2026, the live environment had 14 registered accounts, 12 active listings from 7 sellers, and roughly 31,000 API requests in its first month. The serverless design scales automatically without re-architecture, with Lambda concurrency approved up to 1,000. The platform uses 12 managed AWS services (plus AWS IAM for least-privilege access): **CloudFront, AWS WAF, S3, Cognito, API Gateway, Lambda, DynamoDB, Rekognition, Bedrock, EventBridge, CloudWatch, and SNS**. Guests browse the public market without an account, signed-in `Owners` chat and buy, Admin-approved `Partners` unlock selling (Tier 1) or buying and quoting (Tier 2), and `Admins` / `FinanceAdmins` moderate flagged content and handle monthly fee invoices.
 
-{{% notice tip %}}
-**Live Demo:** [https://d1cjl1tvcp0r6q.cloudfront.net/](https://d1cjl1tvcp0r6q.cloudfront.net/) (verified live HTTPS CloudFront deployment of ReLoop)  
-**Companion Code & Terraform Repo:** [https://github.com/madlyham/ReLoop](https://github.com/madlyham/ReLoop)
-{{% /notice %}}
-
 #### Team
 
 | Member | Role |

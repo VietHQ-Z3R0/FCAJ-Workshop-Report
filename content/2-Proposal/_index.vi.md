@@ -13,11 +13,6 @@ ReLoop là chợ trên web, nơi người dùng tại Việt Nam bán thiết b�
 
 Ngày 08/11/2026, môi trường chạy thực tế có 14 tài khoản đăng ký, 12 tin đang mở của 7 người bán và khoảng 31.000 request API trong tháng đầu. Thiết kế serverless tự mở rộng mà không cần viết lại kiến trúc, với giới hạn Lambda chạy song song đã được duyệt tới 1.000. Nền tảng dùng 12 dịch vụ AWS được quản lý (cùng AWS IAM phân quyền tối thiểu): **CloudFront, AWS WAF, S3, Cognito, API Gateway, Lambda, DynamoDB, Rekognition, Bedrock, EventBridge, CloudWatch và SNS**. Khách xem Chợ công khai không cần tài khoản, người đã đăng nhập (`Owners`) có thể chat và mua, đối tác được Admin duyệt (`Partners`) mở quyền đăng bán (Cấp 1) hoặc thu mua & báo giá (Cấp 2), còn `Admins` và `FinanceAdmins` kiểm duyệt nội dung bị gắn cờ và quản lý hóa đơn phí hàng tháng.
 
-{{% notice tip %}}
-**Bản Demo trực tuyến (Live Demo):** [https://d1cjl1tvcp0r6q.cloudfront.net/](https://d1cjl1tvcp0r6q.cloudfront.net/) (bản triển khai HTTPS trực tiếp của ReLoop trên CloudFront)  
-**Mã nguồn đồng hành & Terraform Repo:** [https://github.com/madlyham/ReLoop](https://github.com/madlyham/ReLoop)
-{{% /notice %}}
-
 #### Thành viên nhóm
 
 | Thành viên | Vai trò |
