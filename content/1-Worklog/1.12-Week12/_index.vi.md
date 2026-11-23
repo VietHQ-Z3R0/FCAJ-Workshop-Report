@@ -8,7 +8,8 @@ pre: " <b> 1.12. </b> "
 
 # **Nhật ký công việc Tuần 12: Nghiên cứu mở rộng kiến trúc, Bảo mật AWS nâng cao & Tổng kết thực tập**
 
-**Thời gian:** 30/11/2026 – 04/12/2026
+**Thời gian:** 30/11/2026 – 04/12/2026  
+**Trạng thái:** *Dự kiến*
 
 ## **1. Mục tiêu tuần**
 
