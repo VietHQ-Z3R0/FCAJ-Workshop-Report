@@ -59,4 +59,4 @@ Không khí kết nối của hơn 300 bạn trẻ yêu công nghệ tại văn 
 
 ### **Hình ảnh sự kiện**
 
-![](/images/report/image4.png)
+![Buildrathon Khởi động - Ảnh](/images/4-EventParticipated/event1.png)

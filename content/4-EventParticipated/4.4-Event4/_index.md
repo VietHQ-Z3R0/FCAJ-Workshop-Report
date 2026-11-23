@@ -64,4 +64,4 @@ Attending the October 24 weekly meetup on the 26th floor of Bitexco Financial To
 
 ### **Event Photos**
 
-![](/images/report/image9.png) ![](/images/report/image10.png)
+![FCAJ Weekly Meet Up 24/10 - Photo 1](/images/4-EventParticipated/event4-1.png) ![FCAJ Weekly Meet Up 24/10 - Photo 2](/images/4-EventParticipated/event4-2.png)

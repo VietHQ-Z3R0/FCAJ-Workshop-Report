@@ -53,4 +53,4 @@ Following the fireside chat with Dr. Werner Vogels offered rare strategic perspe
 
 ### **Event Photos**
 
-![](/images/report/image8.png)
+![Fireside Chat with Dr. Werner Vogels - Photo](/images/4-EventParticipated/event3.png)

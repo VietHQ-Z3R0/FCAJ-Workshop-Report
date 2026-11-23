@@ -64,4 +64,4 @@ Tham dự buổi Weekly Meet Up ngày 24/10 tại tầng 26 tòa nhà Bitexco ma
 
 ### **Hình ảnh sự kiện**
 
-![](/images/report/image9.png) ![](/images/report/image10.png)
+![FCAJ Weekly Meet Up 24/10 - Ảnh 1](/images/4-EventParticipated/event4-1.png) ![FCAJ Weekly Meet Up 24/10 - Ảnh 2](/images/4-EventParticipated/event4-2.png)

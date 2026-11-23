@@ -50,4 +50,4 @@ Buổi trò chuyện cùng TS. Werner Vogels mang lại góc nhìn chiến lư�
 
 ### **Hình ảnh sự kiện**
 
-![](/images/report/image8.png)
+![Trò chuyện thân mật cùng TS. Werner Vogels - Ảnh](/images/4-EventParticipated/event3.png)
