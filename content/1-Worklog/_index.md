@@ -28,8 +28,8 @@ In parallel with my weekly engineering and research tasks, I published **3 techn
 * **Week 9:** [Serverless Integration, Event-Driven Architecture & Cloud Mastery Session](1.9-Week9/)  
   *(Cross-ref: [Event 5: Cloud Mastery – Cloud Sharing Session for Students](../4-eventparticipated/4.5-event5/) on Nov 14, 2026)*
 * **Week 10:** [ReLoop AWS Architecture Review & Service Integration Validation](1.10-Week10/)
-* **Week 11:** [ReLoop Project Integration Review & Final Validation](1.11-Week11/)
-* **Week 12:** [ReLoop Project Completion & Final Internship Documentation](1.12-Week12/)
+* **Week 11:** [Final Integration Validation, Report Submission & Demo Preparation](1.11-Week11/)
+* **Week 12:** [Final Demo Presentation, Feedback Wrap-up & Internship Hand-over](1.12-Week12/)
 
 ---
 

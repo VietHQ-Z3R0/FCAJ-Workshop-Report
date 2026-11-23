@@ -1,44 +1,41 @@
 ---
 title: "Nhật ký công việc Tuần 11"
-date: 2026-11-07
+date: 2026-11-23
 weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
 
-# **Nhật ký công việc Tuần 11: Rà soát tích hợp dự án ReLoop & Kiểm chứng cuối cùng**
-
-**Trạng thái:** *Dự kiến – Sẽ cập nhật theo kết quả thực tế sau khi hoàn thành tuần.*
+# **Nhật ký công việc Tuần 11: Kiểm chứng tích hợp cuối cùng, Nộp báo cáo & Chuẩn bị Demo**
 
 ## **1. Mục tiêu tuần**
 
-* Hoàn tất các đầu việc phát triển và tích hợp còn lại của ReLoop.
-* Rà soát luồng tải ảnh, kiểm duyệt nội dung và xử lý AI.
-* Kiểm chứng các tương tác giữa các dịch vụ AWS hiện có.
-* Chuẩn bị tài liệu dự án cuối kỳ cùng các minh chứng kỹ thuật.
-* Hướng tới hoàn thiện dự án vào khoảng 28–30/11/2026.
+* Hoàn tất kiểm chứng tích hợp toàn trình trên môi trường AWS của ReLoop.
+* Dọn dẹp tài nguyên/ảnh thừa và đối chiếu chi phí AWS thực tế với số credit còn lại.
+* Hoàn thiện và nộp báo cáo thực tập cùng trọn bộ tài liệu dự án ReLoop (24–25/11/2026).
+* Chuẩn bị slide thuyết trình và chạy thử demo trực tiếp trước tuần bảo vệ cuối kỳ.
 
 ## **2. Lịch trình thực hiện**
 
 | Ngày | Mô tả công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | :--- | :--- | :--- | :--- | :--- |
-| **Ngày 1** | Rà soát các đầu việc còn lại của dự án và xác minh trạng thái triển khai hiện tại của ReLoop | 11/23/2026 | 11/23/2026 | [Modernize Applications on AWS](https://cloudjourney.awsstudygroup.com/4-modernize/) |
-| **Ngày 2** | Rà soát luồng tải ảnh lên S3, xử lý Presigned URL và các giới hạn truy cập hình ảnh | 11/24/2026 | 11/24/2026 | [S3 Presigned URLs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-presigned-url.html) |
-| **Ngày 3** | Rà soát luồng kiểm duyệt ảnh và OCR sử dụng Amazon Rekognition và Bedrock Guardrails | 11/25/2026 | 11/25/2026 | [Amazon Rekognition Moderation](https://docs.aws.amazon.com/rekognition/latest/dg/moderation-api.html) |
-| **Ngày 4** | Kiểm tra tính năng tạo tin đăng hỗ trợ AI, xử lý bất đồng bộ và lưu trữ kết quả | 11/26/2026 | 11/26/2026 | [Amazon Bedrock Kimi K3](https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-moonshot-ai-kimi-k3.html) |
-| **Ngày 5** | Thực hiện rà soát kiến trúc cuối cùng và chuẩn bị các sản phẩm bàn giao còn lại của dự án | 11/27/2026 | 11/27/2026 | [AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/the-pillars-of-the-framework.html) |
+| **Ngày 1** | Hoàn tất kiểm chứng tích hợp cuối cùng (S3 Presigned URLs, kiểm duyệt Rekognition + Bedrock Guardrail, luồng AI Kimi K3) và dọn sạch ảnh/tài nguyên thừa | 11/23/2026 | 11/23/2026 | [AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/the-pillars-of-the-framework.html) |
+| **Ngày 2** | Tổng hợp sơ đồ kiến trúc AWS hoàn chỉnh (`draw.io` + PNG), đối chiếu AWS Billing/Credits và rà soát toàn bộ Worklog, Proposal, Blogs, Events, Workshop, Tự đánh giá & Góp ý | 11/24/2026 | 11/24/2026 | [FCJ Workforce Program](https://cloudjourney.awsstudygroup.com/8-fcjworkforce/) |
+| **Ngày 3** | Nộp báo cáo thực tập hoàn chỉnh và bộ tài liệu kỹ thuật dự án ReLoop trên GitHub Pages | 11/25/2026 | 11/25/2026 | [The First Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
+| **Ngày 4** | Chuẩn bị slide trình bày cuối kỳ và hệ thống hóa nội dung thuyết trình về kiến trúc, bảo mật và chi phí vận hành ReLoop | 11/26/2026 | 11/26/2026 | [Modernize Applications on AWS](https://cloudjourney.awsstudygroup.com/4-modernize/) |
+| **Ngày 5** | Chạy thử luồng demo trực tiếp trên môi trường CloudFront và kiểm tra trạng thái ổn định của CloudWatch Logs, Alarm và AWS WAF | 11/27/2026 | 11/27/2026 | [Amazon CloudWatch Alarms](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Alarms.html) |
 
-## **3. Kết quả dự kiến**
+## **3. Kết quả đạt được**
 
-### **Rà soát tích hợp dự án**
+### **Kiểm chứng cuối cùng & Dọn dẹp tài nguyên**
 
-* Hoàn tất kiểm tra các luồng nghiệp vụ chính của ứng dụng ReLoop và mối liên kết giữa frontend, backend, xác thực và lưu trữ.
-* Rà soát quy trình kiểm duyệt ảnh, xử lý tin đăng bằng AI và khắc phục các lỗi tích hợp còn tồn đọng.
+* Xác minh thông suốt 10 luồng kiến trúc từ CloudFront, WAF, Cognito, API Gateway, Lambda, DynamoDB, S3, Rekognition đến Bedrock Kimi K3.
+* Dọn sạch tài nguyên thừa trong mã nguồn và đối chiếu chi phí thực tế nằm gọn trong hạn mức credit AWS.
 
-### **Rà soát Bảo mật & Độ tin cậy**
+### **Hoàn thiện & Nộp báo cáo thực tập**
 
-* Kiểm tra phân quyền IAM, giới hạn truy cập S3, xử lý bất đồng bộ, chống trùng lặp sự kiện, lịch hết hạn và giám sát CloudWatch.
+* Hoàn tất xuất bản báo cáo thực tập song ngữ (EN/VI) gồm Worklog 12 tuần, Proposal, 3 bài blog kỹ thuật, 5 sự kiện tham gia, Workshop 12 học phần, Tự đánh giá và Chia sẻ trong mốc 24–25/11/2026.
 
-### **Chuẩn bị hoàn thiện dự án**
+### **Sẵn sàng Demo cuối kỳ**
 
-* Tổng hợp sơ đồ kiến trúc hoàn chỉnh, ảnh chụp minh chứng kỹ thuật và hoàn thiện tài liệu dự án theo mốc 28–30/11/2026.
+* Hoàn thiện tài liệu thuyết trình và chạy thử bản demo trực tuyến sẵn sàng cho tuần bảo vệ và bàn giao (Tuần 12).

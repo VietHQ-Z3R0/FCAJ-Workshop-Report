@@ -28,8 +28,8 @@ Song song với lịch trình kỹ thuật và nghiên cứu hàng tuần, tôi 
 * **Tuần 9:** [Tích hợp Serverless, Kiến trúc hướng sự kiện & Buổi chia sẻ Cloud Mastery](1.9-Week9/)  
   *(Đối chiếu: [Sự kiện 5: Cloud Mastery – Buổi chia sẻ về Cloud cho sinh viên](../4-eventparticipated/4.5-event5/) ngày 14/11/2026)*
 * **Tuần 10:** [Rà soát kiến trúc AWS của ReLoop & Kiểm chứng tích hợp dịch vụ](1.10-Week10/)
-* **Tuần 11:** [Rà soát tích hợp dự án ReLoop & Kiểm chứng cuối cùng](1.11-Week11/)
-* **Tuần 12:** [Hoàn thiện dự án ReLoop & Tổng kết tài liệu thực tập](1.12-Week12/)
+* **Tuần 11:** [Kiểm chứng tích hợp cuối cùng, Nộp báo cáo & Chuẩn bị Demo](1.11-Week11/)
+* **Tuần 12:** [Bảo vệ Demo cuối kỳ, Tiếp thu phản hồi & Bàn giao thực tập](1.12-Week12/)
 
 ---
 
