@@ -18,7 +18,7 @@ home = [ "HTML", "RSS", "JSON"]
   themeVariant = "workshop"
   # Git hub repo link
   editURL = ""
-  description = "Internship Report - Kung Cam Thanh - First Cloud AI Journey (FCAJ)"
+  description = "Internship Report - Hoang Quoc Viet - First Cloud AI Journey (FCAJ)"
   author = "viet03948@gmail.com"
   showVisitedLinks = true
   disableBreadcrumb = false
