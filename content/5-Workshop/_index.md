@@ -11,7 +11,6 @@ pre : " <b> 5. </b> "
 Welcome to the **ReLoop AWS Serverless Workshop**. Across Modules **5.1 through 5.12**, you build and verify a complete serverless web application on AWS following the exact request flow of the architecture diagram — from **Arrow 1** at the global edge all the way through **Arrow 10** in AI processing, plus scheduled cleanup, monitoring, live verification, and teardown.
 
 {{% notice tip %}}
-**Live Demo:** [https://d1cjl1tvcp0r6q.cloudfront.net/](https://d1cjl1tvcp0r6q.cloudfront.net/) (verified live HTTPS CloudFront deployment of ReLoop)  
 **Companion Code & Terraform Repo:** [https://github.com/madlyham/ReLoop](https://github.com/madlyham/ReLoop)
 {{% /notice %}}
 

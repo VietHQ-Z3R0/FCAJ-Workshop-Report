@@ -11,7 +11,6 @@ pre : " <b> 5. </b> "
 Chào mừng bạn đến với **ReLoop AWS Serverless Workshop**. Qua các học phần **5.1 đến 5.12**, bạn sẽ xây dựng và kiểm chứng trọn vẹn ứng dụng web serverless trên AWS theo đúng luồng yêu cầu của sơ đồ kiến trúc — từ **Mũi tên 1** ở lớp biên toàn cầu cho tới **Mũi tên 10** ở lớp xử lý AI, cùng lịch dọn tin định kỳ, giám sát cảnh báo, kiểm thử thực tế và dọn dẹp tài nguyên.
 
 {{% notice tip %}}
-**Bản Demo trực tuyến (Live Demo):** [https://d1cjl1tvcp0r6q.cloudfront.net/](https://d1cjl1tvcp0r6q.cloudfront.net/) (bản triển khai HTTPS trực tiếp của ReLoop trên CloudFront)  
 **Mã nguồn đồng hành & Terraform Repo:** [https://github.com/madlyham/ReLoop](https://github.com/madlyham/ReLoop)
 {{% /notice %}}
 
