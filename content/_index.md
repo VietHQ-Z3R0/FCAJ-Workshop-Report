@@ -16,7 +16,7 @@ chapter: false
 
 &emsp; **University:** FPT University
 
-&emsp; **Major:** Cyber-Security
+&emsp; **Major:** Information Assurance
 
 &emsp; **Class:** OJT202
 
