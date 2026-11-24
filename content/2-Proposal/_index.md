@@ -117,9 +117,8 @@ ReLoop runs fully serverless in **Asia Pacific (Singapore) `ap-southeast-1`**, p
    - moved AI analysis to Kimi K3 with Bedrock Guardrail in `ap-southeast-1` (28/10);
    - completed 5 QA rounds (146 findings resolved, 03/11);
    - raised Lambda concurrency from 10 to 1,000 and attached AWS WAF to CloudFront (06/11).
-5. **Verification, Hardening & Hand-over (09/11–04/12/2026 — In Progress):**
-   - *Completed (09/11–21/11):* Proposal Part 2 submitted (13/11), load-test re-run verifying API throttling (20 req/s, burst 50) with zero 5xx errors, standardized deployment workflow with per-member IAM users, and full streamlined Workshop rebuild + live end-to-end verification across Arrows 1 → 10.
-   - *Remaining (23/11–04/12):* final unused-resource cleanup, final cost check against remaining credits, live demo rehearsal, and hand-over package.
+5. **Verification, Hardening & Hand-over (09/11–25/11/2026 — Completed):**
+   - *Completed (09/11–25/11):* Proposal Part 2 submitted (13/11), load-test re-run verifying API throttling (20 req/s, burst 50) with zero 5xx errors, standardized deployment workflow with per-member IAM users, full streamlined Workshop rebuild + live end-to-end verification across Arrows 1 → 10, unused-resource cleanup, final cost check against remaining credits, and final report submission (25/11).
 
 #### Technical Requirements
 - **Application Stack:** Node.js 22, TypeScript 5, React 18 + Vite 5, Leaflet, Cognito client SDK, AWS SDK v3, esbuild, Vitest; Python 3.12 for the Post-confirm Lambda and end-to-end verification scripts.
@@ -138,8 +137,7 @@ ReLoop runs fully serverless in **Asia Pacific (Singapore) `ap-southeast-1`**, p
 | Week 8 | 02/11–06/11 | Done | ReLoop AWS infrastructure inventory (`ap-southeast-1`, 04/11); async branch matching; 5 QA rounds (146 findings resolved, 03/11); Lambda concurrency raised to 1,000; AI cap 20/day; CloudFront AWS WAF attached (06/11) |
 | Week 9 | 09/11–13/11 | Done | Security review, webhook/API idempotency & hardening fixes deployed; Proposal Part 2 submitted with observed AWS costs (13/11) |
 | Week 10 | 16/11–21/11 | Done | End-to-end ReLoop AWS architecture review & diagram refinement; load-test re-run after throttling tuning (20 req/s, burst 50); single deployment workflow with per-member IAM users; full live Workshop verification (Arrows 1 → 10) |
-| Week 11 | 23/11–27/11 | Done | Final integration validation (S3 upload restrictions, Rekognition/Guardrail moderation, AI listing workflow), unused-resource cleanup, cost verification, and final report submission (24–25/11) |
-| Week 12 | 30/11–04/12 | Planned | Architecture extension research (SES, WebSockets, multi-city scaling), AWS security deep-dive, final resource/IAM hygiene, and hand-over wrap-up by 04/12/2026 |
+| Week 11 | 23/11–25/11 | Done | Final integration validation (S3 upload restrictions, Rekognition/Guardrail moderation, AI listing workflow), unused-resource cleanup, cost verification, and final report submission (25/11) |
 
 ### 6. Budget Estimation
 The estimate uses AWS public list prices for **`ap-southeast-1` (Singapore)** (reproducible in the [AWS Pricing Calculator](https://calculator.aws/)). The line-by-line spreadsheet is in [reloop-cost-estimate.csv](/files/2-proposal/reloop-cost-estimate.csv).

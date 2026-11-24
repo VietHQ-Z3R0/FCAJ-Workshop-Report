@@ -117,9 +117,8 @@ ReLoop chạy hoàn toàn serverless tại **Asia Pacific (Singapore) `ap-southe
    - chuyển AI sang Kimi K3 kèm Bedrock Guardrail tại `ap-southeast-1` (28/10);
    - hoàn tất 5 đợt QA (xử lý 146 mục, 03/11);
    - nâng giới hạn Lambda chạy song song từ 10 lên 1.000 và gắn AWS WAF lên CloudFront (06/11).
-5. **Kiểm chứng, hoàn thiện & bàn giao (09/11–04/12/2026 — Đang thực hiện):**
-   - *Đã xong (09/11–21/11):* nộp Đề xuất Phần 2 (13/11), chạy lại load test kiểm chứng throttling API Gateway (20 request/giây, burst 50) không còn lỗi 5xx, chuẩn hóa một luồng triển khai kèm IAM user riêng từng thành viên và dựng lại trọn vẹn Workshop + kiểm chứng trực tiếp các mũi tên 1 → 10 trên AWS.
-   - *Còn lại (23/11–04/12):* rà soát dọn tài nguyên thừa cuối kỳ, đối chiếu chi phí thực tế với credit còn lại, diễn tập demo trực tiếp và đóng gói tài liệu bàn giao.
+5. **Kiểm chứng, hoàn thiện & bàn giao (09/11–25/11/2026 — Đã xong):**
+   - *Đã xong (09/11–25/11):* nộp Đề xuất Phần 2 (13/11), chạy lại load test kiểm chứng throttling API Gateway (20 request/giây, burst 50) không còn lỗi 5xx, chuẩn hóa một luồng triển khai kèm IAM user riêng từng thành viên, dựng lại trọn vẹn Workshop + kiểm chứng trực tiếp các mũi tên 1 → 10 trên AWS, dọn tài nguyên thừa, đối chiếu chi phí với credit còn lại và nộp báo cáo hoàn chỉnh (25/11).
 
 #### Yêu cầu kỹ thuật
 - **Ngăn xếp ứng dụng:** Node.js 22, TypeScript 5, React 18 + Vite 5, Leaflet, Cognito client SDK, AWS SDK v3, esbuild, Vitest; Python 3.12 cho Lambda Post-confirm và bộ kiểm chứng trọn luồng.
@@ -138,8 +137,7 @@ ReLoop chạy hoàn toàn serverless tại **Asia Pacific (Singapore) `ap-southe
 | Tuần 8 | 02/11–06/11 | Đã xong | Kiểm kê hạ tầng AWS ReLoop (`ap-southeast-1`, 04/11); ghép chi nhánh bất đồng bộ; 5 đợt QA (xử lý 146 mục, 03/11); nâng Lambda song song lên 1.000; trần AI 20 lượt/ngày; gắn AWS WAF trên CloudFront (06/11) |
 | Tuần 9 | 09/11–13/11 | Đã xong | Rà soát bảo mật, triển khai idempotency & các bản vá bảo mật; nộp Đề xuất Phần 2 kèm số liệu chi phí thực tế trên AWS (13/11) |
 | Tuần 10 | 16/11–21/11 | Đã xong | Rà soát tổng thể & tinh chỉnh sơ đồ kiến trúc AWS ReLoop; chạy lại load test sau tinh chỉnh throttling (20 request/giây, burst 50); chuẩn hóa luồng triển khai kèm IAM user riêng; kiểm chứng Workshop trọn luồng (Mũi tên 1 → 10) |
-| Tuần 11 | 23/11–27/11 | Đã xong | Kiểm chứng tích hợp cuối cùng (giới hạn tải ảnh S3, kiểm duyệt Rekognition/Guardrail, luồng AI tạo tin), dọn tài nguyên thừa, đối chiếu chi phí và nộp báo cáo hoàn chỉnh (24–25/11) |
-| Tuần 12 | 30/11–04/12 | Dự kiến | Nghiên cứu hướng mở rộng kiến trúc (SES, WebSockets, đa khu vực), tìm hiểu bảo mật AWS nâng cao, rà soát tài nguyên/IAM và hoàn tất bàn giao trước 04/12/2026 |
+| Tuần 11 | 23/11–25/11 | Đã xong | Kiểm chứng tích hợp cuối cùng (giới hạn tải ảnh S3, kiểm duyệt Rekognition/Guardrail, luồng AI tạo tin), dọn tài nguyên thừa, đối chiếu chi phí và nộp báo cáo hoàn chỉnh (25/11) |
 
 ### 6. Ước tính ngân sách
 Ước tính dựa trên bảng giá công khai của AWS cho **`ap-southeast-1` (Singapore)** (có thể tính lại trên [AWS Pricing Calculator](https://calculator.aws/)). Bảng chi tiết từng dòng nằm tại [reloop-cost-estimate.csv](/files/2-proposal/reloop-cost-estimate.csv).

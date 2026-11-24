@@ -28,8 +28,7 @@ In parallel with my weekly engineering and research tasks, I published **3 techn
 * **Week 9:** [Serverless Integration, Event-Driven Architecture & Cloud Mastery Session](1.9-Week9/)  
   *(Cross-ref: [Event 5: Cloud Mastery – Cloud Sharing Session for Students](../4-eventparticipated/4.5-event5/) on Nov 14, 2026)*
 * **Week 10:** [ReLoop AWS Architecture Review & Service Integration Validation](1.10-Week10/)
-* **Week 11:** [Final Integration Validation, Report Submission & Expansion Research](1.11-Week11/)
-* **Week 12:** [Architecture Extension Research, Cloud Security Deep-Dive & Internship Wrap-up](1.12-Week12/)
+* **Week 11:** [Final Integration Validation & Report Submission](1.11-Week11/)
 
 ---
 
