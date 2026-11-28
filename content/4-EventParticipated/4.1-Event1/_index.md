@@ -59,4 +59,4 @@ Joining over 300 fellow builders at the AWS Vietnam office made the kickoff genu
 
 ### **Event Photos**
 
-![Buildrathon Kickoff - Photo](/images/4-EventParticipated/event1.png)
+![Buildrathon Kickoff - Photo](/images/4-EventParticipated/event1.jpg)
